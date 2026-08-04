@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<!--─── HTML ────────────────────────────────────────-->
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Línguas e Culturas — COLTEC · UFMG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/css2?family=Miranda+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    
+    <!--─── CSS ────────────────────────────────────────-->
+    <style>
+    /* ── RESET GLOBAL ─────────────────────────────────────────────────────── */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+        --black:    #000000;
+        --white:    #ffffff;
+        --muted:    #666666;
+        --border:   rgba(0,0,0,0.1);
+        --hover-bg: #f5f5f5;
+        --ease:     cubic-bezier(0.4, 0, 0.2, 1);
+        --font:     'Miranda Sans', sans-serif;
+        }
+
+        body {
+        font-family: var(--font);
+        background: transparent;
+        -webkit-font-smoothing: antialiased;
+        color: var(--black);
+        line-height: 1.5;
+        overflow-x: hidden;
+        }
+        img {
+        display: block;
+        max-width: 100%;
+        }
+    /*----------------------------------------------- CSS DO CABEÇALHO -----------------------------------------------*/
+    /* ── HEADER ─────────────────────────────────────────────────────── */
+        header {
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        position: relative;
+        z-index: 100;
+        }
+
+        .header-inner {
+        width: 100%;
+        padding: 0 4%;
+        height: 68px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        }
+
+    /* ── LOGO ───────────────────────────────────────────────────────── */
+        .header-inner .logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        flex-shrink: 0;
+        margin-right: 3%;
+        }
+
+        .header-inner .logo-mark {
+        width: clamp(44px, 4vw, 52px);
+        height: clamp(44px, 4vw, 52px);
+        flex-shrink: 0;
+        display: block;
+        }
+
+        .header-inner .logo-name {
+        font-size: clamp(14px, 1.2vw, 17px);
+        font-weight: 600;
+        color: var(--black);
+        display: block;
+        }
+
+        .header-inner .logo-sub {
+        font-size: clamp(9px, 0.7vw, 10px);
+        font-weight: 500;
+        color: var(--muted);
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        margin-top: 3px;
+        display: block;
+        }
+
+    /* ── NAV (desktop) ──────────────────────────────────────────────── */
+        .header-inner nav {
+        display: flex;
+        align-items: stretch;
+        height: 100%;
+        flex: 1;
+        }
+
+        .header-inner .nav-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        }
+
+        .header-inner .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 0 clamp(8px, 1.2vw, 16px);
+        font-size: clamp(12px, 1vw, 13.5px);
+        font-weight: 500;
+        color: var(--muted);
+        text-decoration: none !important;
+        cursor: pointer;
+        height: 100%;
+        border-bottom: 2px solid transparent;
+        transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+        white-space: nowrap;
+        user-select: none;
+        }
+
+        .header-inner .nav-item:hover > .nav-link {
+        color: var(--black);
+        border-bottom-color: var(--black);
+        }
+
+        .header-inner .chevron {
+        width: 13px;
+        height: 13px;
+        opacity: 0.4;
+        transition: transform 0.2s var(--ease);
+        flex-shrink: 0;
+        }
+
+        .header-inner .nav-item:hover > .nav-link .chevron {
+        transform: rotate(180deg);
+        opacity: 0.7;
+        }
+
+    /* ── DROPDOWN ───────────────────────────────────────────────────── */
+        .header-inner .dropdown {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-top: 2px solid var(--black);
+        border-radius: 0 0 10px 10px;
+        min-width: 200px;
+        padding: 6px 0;
+        box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+        z-index: 9999;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-6px);
+        transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+        }
+
+        /* evita que dropdowns nos últimos itens “escapem” para fora da tela */
+        .header-inner .nav-item:last-child .dropdown,
+        .header-inner .nav-item:nth-last-child(2) .dropdown {
+        left: auto;
+        right: 0;
+        }
+
+        /* ponte invisível entre o nav-link e o dropdown para o mouse não "cair" */
+        .header-inner .nav-item::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 12px;
+        }
+
+        .header-inner .nav-item:hover .dropdown {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0);
+        transition-delay: 0s;
+        z-index: 2;
+        }
+
+        .header-inner .nav-item:not(:hover) .dropdown {
+        transition-delay: 0s;
+        }
+
+        .header-inner .dropdown-link {
+        display: block;
+        padding: 10px 20px;
+        font-size: 13.5px;
+        color: #333;
+        text-decoration: none !important;
+        transition: background 0.15s;
+        }
+
+        .header-inner .dropdown-link:hover {
+        background: var(--hover-bg);
+        color: var(--black);
+        }
+
+        .header-inner .dropdown-divider {
+        height: 1px;
+        background: var(--border);
+        margin: 4px 0;
+        }
+
+        /* Línguas em grid */
+        .header-inner .dropdown.languages {
+        min-width: 240px;
+        padding: 10px;
+        }
+
+        .header-inner .dd-section-label {
+        font-size: 10px;
+        font-weight: 500;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: var(--muted);
+        padding: 2px 8px 8px;
+        }
+
+        .header-inner .lang-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2px;
+        }
+
+        .header-inner .lang-chip {
+        display: block;
+        padding: 8px 10px;
+        border-radius: 6px;
+        font-size: 13px;
+        color: #333;
+        text-decoration: none;
+        transition: background 0.15s;
+        }
+
+        .header-inner .lang-chip:hover {
+        background: var(--hover-bg);
+        color: var(--black);
+        }
+
+        /* evita cor azul herdada de temas/plugins do WordPress */
+        header .nav-link,
+        header .nav-link:link,
+        header .nav-link:visited {
+        color: var(--muted) !important;
+        }
+
+        header .nav-item:hover > .nav-link,
+        header .nav-item:hover > .nav-link:visited {
+        color: var(--black) !important;
+        }
+
+        header .dropdown-link,
+        header .dropdown-link:link,
+        header .dropdown-link:visited,
+        header .lang-chip,
+        header .lang-chip:link,
+        header .lang-chip:visited,
+        header .mobile-link,
+        header .mobile-link:link,
+        header .mobile-link:visited,
+        header .mobile-sub a,
+        header .mobile-sub a:link,
+        header .mobile-sub a:visited {
+        color: #333 !important;
+        }
+
+        header .mobile-link,
+        header .mobile-link:link,
+        header .mobile-link:visited {
+        color: var(--black) !important;
+        }
+
+    /* ── HAMBÚRGUER ─────────────────────────────────────────────────── */
+        .hamburger {
+        display: none;           /* escondido no desktop */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        margin-left: auto;
+        appearance: none;
+        background: transparent !important;
+        border: 0 !important;
+        padding: 4px;
+        box-shadow: none !important;
+        }
+
+        .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--black);
+        border-radius: 2px;
+        transition: transform 0.25s var(--ease), opacity 0.2s;
+        }
+
+        /* animação → X quando aberto */
+        .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── MENU MOBILE ────────────────────────────────────────────────── */
+        .mobile-menu {
+        display: none;           /* escondido no desktop */
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        overflow-y: auto;
+        max-height: calc(100vh - 68px);
+        z-index: 9999;
+        box-shadow: 0 18px 32px rgba(0,0,0,0.12);
+        }
+
+        .mobile-menu.open { display: block; }
+
+        /* item simples */
+        .mobile-menu .mobile-link {
+        display: block;
+        padding: 14px 6%;
+        min-height: 44px;
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--black);
+        text-decoration: none;
+        border-bottom: 1px solid var(--border);
+        cursor: pointer;
+        user-select: none;
+        }
+
+        .mobile-menu .mobile-link:hover { background: var(--hover-bg); }
+
+        /* grupo com submenu */
+        .mobile-menu .mobile-group summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 6%;
+        min-height: 44px;
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--black);
+        border-bottom: 1px solid var(--border);
+        cursor: pointer;
+        list-style: none;
+        user-select: none;
+        }
+
+        .mobile-menu .mobile-group summary::-webkit-details-marker { display: none; }
+
+        .mobile-menu .mobile-group summary svg {
+        width: 14px;
+        height: 14px;
+        opacity: 0.4;
+        transition: transform 0.2s var(--ease);
+        }
+
+        .mobile-menu .mobile-group[open] summary svg { transform: rotate(180deg); opacity: 0.7; }
+
+        .mobile-menu .mobile-sub {
+        background: var(--hover-bg);
+        border-bottom: 1px solid var(--border);
+        }
+
+        .mobile-menu .mobile-sub a {
+        display: block;
+        padding: 11px 8%;
+        min-height: 44px;
+        font-size: 14px;
+        color: #333 !important;
+        text-decoration: none !important;
+        border-bottom: 1px solid var(--border);
+        }
+
+        .mobile-menu .mobile-sub a:last-child { border-bottom: none; }
+        .mobile-menu .mobile-sub a:hover { color: var(--black); }
+
+        /* tablet e telas médias: prioriza menu hambúrguer para evitar quebra do nav */
+        @media (max-width: 1024px) {
+        header .header-inner nav {
+            display: none !important;
+        }
+        header .hamburger {
+            display: flex !important;
+        }
+        header {
+            position: relative;
+        }
+        header .header-inner {
+            height: 64px;
+        }
+        header .mobile-menu {
+            top: 64px;
+            max-height: calc(100vh - 64px);
+        }
+        header .mobile-menu.open {
+            display: block !important;
+        }
+        }
+
+        /* mobile menor: reduz ruído visual do logo e preserva espaço útil */
+        @media (max-width: 480px) {
+        header .header-inner { padding: 0 5%; }
+        header .logo { gap: 10px; margin-right: 0; }
+        header .logo-mark {
+            width: 36px;
+            height: 36px;
+        }
+        header .logo-sub { display: none; }
+        header .logo-name { font-size: 13px; }
+        header .hamburger {
+            width: 40px;
+            height: 40px;
+        }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation: none !important;
+            transition: none !important;
+            scroll-behavior: auto !important;
+        }
+        }
+
+        .nav-link:focus-visible,
+        .dropdown-link:focus-visible,
+        .mobile-link:focus-visible,
+        .mobile-sub a:focus-visible,
+        .mobile-group summary:focus-visible,
+        .hamburger:focus-visible {
+        outline: 2px solid var(--black);
+        outline-offset: 2px;
+        }
+
+        /*---------------------------- BANNER -----------------------------------*/
+        .banner {
+            width: 100%;
+            height: clamp(280px, 42vw, 520px);
+            display: flex;
+            position: relative; 
+            align-items: center;
+            justify-content: center;    
+            margin: 0;
+            overflow: hidden;
+        }
+        .imgBanner {
+            padding: 0;
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+        /*Overlay para legibilidade*/
+        .banner::after {
+            height: inherit;
+            inset: 0;
+            content: "";
+            position: absolute;
+            background: rgba(0,0,0,0.4);
+            z-index: -1;
+        }
+        .titulo {
+            position: absolute;
+            font-family: "Miranda Sans", Helvetica, Sans-Serif;
+            font-size: clamp(48px, 11vw, 100px);
+            color: white;
+            z-index: 1;
+            padding: 0 20px;
+            text-align: center;
+        }
+        
+        /*Divisor*/
+        .divider {
+            margin-top: 10px;
+            content: "";
+            position: relative;
+            justify-self: center;
+            border-radius: 10px;
+            height: 5px;
+            width: 95vw;
+            background-color: #92b300;
+        }
+        /*-----------------------------DESCRICAO----------------------------------------------*/
+        .subtitulo {
+            /*Ativa display flexivel para o subtitulo*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: black;
+            font-family: "Miranda Sans", Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: clamp(26px, 4vw, 44px);
+            text-align: center;
+            gap: 10px;
+            width: min(1180px, 94vw);
+            margin: 34px auto 18px;
+            padding: 0;
+        }
+        /*Atribui estilo aos containers antes (a esquerda) e depois (a direita) de subtitulo*/
+            .subtitulo::before, .subtitulo::after {
+                content:"";
+                border-radius: 10px;
+                align-items: center;
+                flex: 1;
+                height: 4px;
+                background:goldenrod;
+            }
+            .descricao {
+                width: min(1180px, 94vw);
+                margin: 0 auto;
+            }
+            .descricao .presentation {
+                display: grid;
+                grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr);
+                align-items: center;
+                gap: clamp(18px, 4vw, 48px);
+                width: 100%;
+            }
+            .descricao .presImg {
+                border-radius: 20px;
+                overflow: hidden;
+                min-height: 260px;
+            }
+            .descricao .presImg img {
+                width: 100%;
+                height: 100%;
+                aspect-ratio: 4 / 3;
+                object-fit: cover;
+            }
+            .descricao .presEffect {
+                margin-bottom: 8px;
+                font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: clamp(30px, 5vw, 50px);
+                color: black;
+            }
+            .descricao .text {
+                font-size: clamp(16px, 1.8vw, 23px);
+                font-family: "Miranda Sans", Helvetica, sans-serif;
+                align-self: center;
+                text-align: justify;
+            }
+
+        /*-----------CURIOSIDADES--------------------------*/
+        .curiosidades {
+          margin: 34px auto 0;
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: clamp(12px, 2vw, 22px);
+          width: min(1000px, 94vw);
+        } 
+        .info {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border: 2px solid rgba(0,0,0,0.08);
+          border-radius: 18px;
+          padding: clamp(14px, 2vw, 24px);
+          transition: all 1s ease;
+        
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        .info.visivel {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .info:hover {
+          transform: scale(1.02) translateY(-5px);
+        }
+        .info h3 {
+          margin: 10px;
+          font-size: clamp(28px, 3vw, 48px);
+          font-weight: bold;
+          align-self: center;
+        }
+        .info p {
+          font-family: "Miranda Sans";
+          font-size: clamp(12px, 1.2vw, 20px);
+          text-align: center;
+          padding: 0 10px;
+        }
+        .info-icone {
+          width: clamp(64px, 9vw, 110px);
+          height: auto;
+          margin: 0 auto;
+        }
+        /*-------MATERIAIS DIDATICOS-----------------------*/
+        .materiais {
+            width: min(1180px, 94vw);
+            margin: 0 auto;
+        }
+        .materiais .material-destaque {
+            margin: 28px 0;
+            display: grid;
+            grid-template-columns: minmax(220px, 360px) minmax(280px, 1fr);
+            align-items: center;
+            justify-content: center;
+            gap: clamp(22px, 5vw, 56px);
+            transition: opacity .3s ease;
+        }
+        .materiais .texto-destaque h3 {
+            font-size: clamp(26px, 4vw, 44px);
+            line-height: 1.1;
+            margin-bottom: 12px;
+        }
+        .materiais .texto-destaque {
+            font-family: "Miranda-sans", Helvetica, sans-serif;
+            font-size: clamp(16px, 1.8vw, 22px);
+        }
+        .materiais .capa-destaque {
+            aspect-ratio: 12/16;
+            width: min(100%, 340px);
+            height: auto;
+            border-radius: 25px;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+        }
+        .materiais .capa-container {
+          position: relative;
+          justify-self: center;
+        }
+        .materiais .capa-container a {
+          display: block;
+        }
+        .materiais .capa-container:hover .overlay{
+          opacity: 1;
+        }
+        .materiais .overlay {
+          position: absolute;
+          inset: 0;
+          
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: rgba(0,0,0,0.4);
+          border-radius: 25px;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          backdrop-filter: blur(1px);
+          cursor: pointer;  
+        }
+        .materiais .button {
+          position: relative;
+          background: goldenrod;
+          padding: 10px 18px;
+          color: black;
+          font-weight: bold;
+          border-radius: 8px;
+          transition: 0.3s;
+        }
+        .materiais .button:hover {
+          background: white;
+        }
+        .materiais .botao-destaque {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 18px;
+          padding: 10px 16px;
+          background: goldenrod;
+          color: black !important;
+          font-weight: bold;
+          text-decoration: none !important;
+          border-radius: 8px;
+          transition: background 0.25s ease, transform 0.25s ease;
+        }
+        .materiais .botao-destaque:hover {
+          background: #f4c542;
+          transform: translateY(-2px);
+        }
+        .materiais .grade-miniaturas {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            justify-content: center;
+            gap: clamp(14px, 2vw, 24px);  
+            width: min(900px, 100%);
+            margin: 0 auto;
+        }
+        .materiais .grade-miniaturas a {
+          text-decoration: none;
+          color: inherit;
+        }
+        .materiais .grade-miniaturas h3 {
+          font-size: clamp(14px, 1.5vw, 18px);
+          line-height: 1.2;
+          text-align: center;
+          margin-top: 10px;
+        }
+        .materiais .miniatura {
+          cursor: pointer;
+          border: 5px solid transparent;
+          border-radius:30px;
+          padding: 10px;
+          text-align: center;
+          transition: all .3s ease;
+        }
+        .materiais .capa-miniatura:hover {
+          box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+          transform: scale(1.02) translateY(-4px);
+        }
+        .materiais .capa-miniatura {
+          width: min(100%, 210px);
+          aspect-ratio: 12 / 16;
+          height: auto;
+          margin: 0 auto;
+          object-fit: cover;
+          border-radius: 25px;
+          transition: all 0.25s ease;
+        }
+        .materiais .material-destaque.fade {
+          opacity:0;
+        }
+        .materiais .miniatura.ativa {
+          border-color: goldenrod;
+          border-radius: 30px;
+        }
+        /*-----------CTA E OUTROS IDIOMAS-----------------------------*/
+        .cta-inscricao,
+        .explorar-idiomas {
+          width: min(1180px, 94vw);
+          margin: 42px auto 0;
+        }
+        .cta-card {
+          display: grid;
+          grid-template-columns: auto minmax(0, 1fr) auto;
+          align-items: center;
+          gap: clamp(18px, 4vw, 46px);
+          padding: clamp(24px, 4vw, 42px);
+          border-radius: 22px;
+          background:
+            linear-gradient(120deg, rgba(255,255,255,0.92), rgba(255,248,232,0.86)),
+            url("https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/06/IMG_4201.png");
+          background-size: cover;
+          background-position: center;
+          box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+          overflow: hidden;
+        }
+        .cta-icone,
+        .idiomas-icone {
+          display: grid;
+          place-items: center;
+          width: clamp(76px, 9vw, 104px);
+          aspect-ratio: 1;
+          border-radius: 50%;
+          background: white;
+          color: goldenrod;
+          box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+          flex-shrink: 0;
+        }
+        .cta-icone svg,
+        .idiomas-icone svg {
+          width: 48%;
+          height: 48%;
+        }
+        .cta-texto h2,
+        .explorar-texto h2 {
+          font-size: clamp(30px, 4vw, 48px);
+          line-height: 1.1;
+          margin-bottom: 10px;
+        }
+        .cta-texto p,
+        .explorar-texto p {
+          font-size: clamp(16px, 1.8vw, 22px);
+          max-width: 620px;
+        }
+        .cta-botao {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          min-width: 190px;
+          padding: 14px 22px;
+          border-radius: 8px;
+          background: goldenrod;
+          color: black !important;
+          font-size: 17px;
+          font-weight: bold;
+          text-decoration: none !important;
+          transition: transform 0.25s ease, background 0.25s ease;
+        }
+        .cta-botao:hover {
+          background: #f4c542;
+          transform: translateY(-2px);
+        }
+        .explorar-card {
+          display: grid;
+          grid-template-columns: auto minmax(240px, 0.75fr) minmax(320px, 1.25fr);
+          align-items: center;
+          gap: clamp(18px, 3vw, 36px);
+          padding: clamp(24px, 4vw, 38px);
+          border-radius: 22px;
+          background: linear-gradient(120deg, #fff, #f7f7ff);
+          border: 1px solid rgba(0,0,0,0.06);
+          box-shadow: 0 14px 34px rgba(0,0,0,0.08);
+        }
+        .explorar-idiomas .filtro-idiomas {
+          display: flex;
+          justify-content: center;
+          gap: clamp(12px, 2vw, 22px);
+          flex-wrap: wrap;
+        }
+        .explorar-idiomas .circulo {
+          display: inline-block;
+          width: clamp(84px, 8vw, 112px);
+          aspect-ratio: 1;
+          perspective: 1000px;
+          text-decoration: none !important;
+        }
+        .explorar-idiomas .circulo-inner {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          transform-style: preserve-3d;
+          transition: transform 0.6s ease;
+          border-radius: 50%;
+        }
+        .explorar-idiomas .circulo:hover .circulo-inner,
+        .explorar-idiomas .circulo:focus-visible .circulo-inner,
+        .explorar-idiomas .circulo.animando .circulo-inner {
+          transform: rotateY(180deg) scale(1.05);
+        }
+        .explorar-idiomas .frente,
+        .explorar-idiomas .verso {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          backface-visibility: hidden;
+          box-shadow: 0 6px 18px rgba(0,0,0,0.16);
+          font-size: clamp(13px, 1.1vw, 16px);
+          font-weight: bold;
+          text-align: center;
+        }
+        .explorar-idiomas .frente {
+          background: goldenrod;
+          color: white;
+        }
+        .explorar-idiomas .verso {
+          background-size: cover;
+          background-position: center;
+          transform: rotateY(180deg);
+        }
+        .explorar-idiomas .espanhol .verso {
+          background-image: url("https://cdn-icons-png.flaticon.com/512/197/197593.png");
+        }
+        .explorar-idiomas .frances .verso {
+          background-image: url("https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/03/Copia-de-frances-20261.png");
+        }
+        .explorar-idiomas .mandarim .verso {
+          background-image: url("https://cdn-icons-png.flaticon.com/512/197/197375.png");
+        }
+        .explorar-idiomas .japones .verso {
+          background-image: url("https://cdn-icons-png.flaticon.com/512/197/197604.png");
+        }
+        .explorar-idiomas .italiano .verso {
+          background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc4ItvnXU5d6JQX3hrfbemeK7Na8lr5uIenA&s");
+        }
+        .explorar-idiomas .latim .verso {
+          background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d3/Roman_Empire_Flag.png");
+        }
+        .explorar-idiomas .grego .verso {
+          background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT28GqF1oJPJ5HyCKljpvMF51lZC01Oxdv2sQ&s");
+        }
+        /*-----------GALERIA-----------------------------------------*/
+        .galeria {
+          width: min(1180px, 94vw);
+          margin: 40px auto 0;
+        }
+        .galeria-grid {
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          grid-auto-rows: clamp(150px, 16vw, 230px);
+          gap: clamp(10px, 1.5vw, 18px);
+          margin-top: 10px;
+        }
+        .galeria .foto,
+        .galeria .foto-grande,
+        .galeria .foto-vertical {
+          position: relative;
+          overflow: hidden;
+          border-radius: 16px;
+          background: #f5f5f5;
+          box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+        }
+        .galeria .foto-grande {
+          grid-column: span 2;
+          grid-row: span 2;
+        }
+        .galeria-coluna {
+          grid-row: span 2;
+          display: grid;
+          grid-template-rows: repeat(2, minmax(0, 1fr));
+          gap: clamp(10px, 1.5vw, 18px);
+        }
+        .galeria .foto-vertical {
+          grid-row: span 2;
+        }
+        .galeria img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .galeria .overlay {
+          position: absolute;
+          inset: auto 0 0;
+          padding: 28px 16px 14px;
+          color: white;
+          background: linear-gradient(to top, rgba(0,0,0,0.72), transparent);
+          opacity: 0;
+          transform: translateY(10px);
+          transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+        }
+        .galeria .foto:hover .overlay,
+        .galeria .foto-grande:hover .overlay,
+        .galeria .foto-vertical:hover .overlay {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        .galeria .overlay h3 {
+          font-size: clamp(15px, 1.5vw, 20px);
+        }
+        @media (max-width: 760px) {
+          .galeria-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-auto-rows: clamp(140px, 40vw, 220px);
+          }
+          .galeria .foto-grande {
+            grid-column: span 2;
+            grid-row: span 1;
+          }
+          .galeria .foto-vertical {
+            grid-row: span 1;
+          }
+          .galeria-coluna {
+            grid-column: span 2;
+            grid-row: span 1;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-rows: none;
+          }
+          .galeria .overlay {
+            opacity: 1;
+            transform: none;
+          }
+        }
+        @media (max-width: 900px) {
+          .descricao .presentation,
+          .materiais .material-destaque,
+          .cta-card,
+          .explorar-card {
+            grid-template-columns: 1fr;
+          }
+          .descricao .presContent,
+          .materiais .texto-destaque {
+            max-width: 720px;
+            margin: 0 auto;
+          }
+          .curiosidades {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+          .cta-card,
+          .explorar-card {
+            text-align: center;
+          }
+          .cta-icone,
+          .idiomas-icone {
+            margin: 0 auto;
+          }
+          .cta-botao {
+            justify-self: center;
+          }
+        }
+        @media (max-width: 620px) {
+          .banner {
+            height: clamp(240px, 70vw, 360px);
+          }
+          .subtitulo {
+            gap: 8px;
+            margin-top: 28px;
+          }
+          .subtitulo::before,
+          .subtitulo::after {
+            min-width: 28px;
+          }
+          .descricao .text {
+            text-align: left;
+          }
+          .curiosidades,
+          .materiais .grade-miniaturas {
+            grid-template-columns: 1fr;
+          }
+          .materiais .material-destaque {
+            grid-template-columns: 104px minmax(0, 1fr);
+            align-items: start;
+            gap: 14px;
+            margin: 18px 0 14px;
+            padding: 14px;
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 18px;
+            background: #fff;
+            box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+            text-align: left;
+          }
+          .materiais .capa-container {
+            align-self: stretch;
+          }
+          .materiais .capa-destaque {
+            width: 104px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.16);
+          }
+          .materiais .capa-container .overlay {
+            display: none;
+          }
+          .materiais .texto-destaque h3 {
+            font-size: 22px;
+            margin-bottom: 6px;
+          }
+          .materiais .texto-destaque {
+            min-width: 0;
+            font-size: 15px;
+          }
+          .materiais .texto-destaque p {
+            display: -webkit-box;
+            line-clamp: 4;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+          }
+          .materiais .botao-destaque {
+            width: 100%;
+            margin-top: 10px;
+            padding: 9px 12px;
+            font-size: 14px;
+          }
+          .materiais .grade-miniaturas {
+            display: flex;
+            justify-content: flex-start;
+            gap: 10px;
+            width: 100%;
+            margin-top: 12px;
+            padding: 2px 2px 12px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+          }
+          .materiais .miniatura {
+            flex: 0 0 128px;
+            scroll-snap-align: start;
+            border-width: 2px;
+            border-radius: 14px;
+            padding: 8px;
+            background: #fff;
+          }
+          .materiais .miniatura:hover {
+            transform: none;
+          }
+          .materiais .capa-miniatura {
+            width: 70px;
+            border-radius: 10px;
+          }
+          .materiais .grade-miniaturas h3 {
+            font-size: 12px;
+            margin-top: 6px;
+          }
+          .cta-inscricao,
+          .explorar-idiomas {
+            margin-top: 34px;
+          }
+          .cta-card,
+          .explorar-card {
+            padding: 22px 18px;
+            border-radius: 18px;
+          }
+          .cta-texto h2,
+          .explorar-texto h2 {
+            font-size: 28px;
+          }
+          .cta-texto p,
+          .explorar-texto p {
+            font-size: 16px;
+          }
+          .cta-botao {
+            width: 100%;
+          }
+          .explorar-idiomas .filtro-idiomas {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            width: 100%;
+          }
+          .explorar-idiomas .circulo {
+            width: min(100%, 132px);
+            justify-self: center;
+          }
+        }
+    </style>
+</head>
+<body>
+    <!--CABECALHO-->
+    <header>
+        <div class="header-inner">
+
+      <!-- LOGO -->
+      <a href="#" class="logo">
+        <svg class="logo-mark" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Línguas - Culturas" role="img">
+          <g transform="translate(40,40)">
+            <polygon points="0,-34 10,-12 0,-8 -10,-12" fill="none" stroke="#E0196A" stroke-width="2.2" stroke-linejoin="round"/>
+            <g transform="rotate(60)"><polygon points="0,-34 10,-12 0,-8 -10,-12" fill="none" stroke="#F27B22" stroke-width="2.2" stroke-linejoin="round"/></g>
+            <g transform="rotate(120)"><polygon points="0,-34 10,-12 0,-8 -10,-12" fill="none" stroke="#0DC9A2" stroke-width="2.2" stroke-linejoin="round"/></g>
+            <g transform="rotate(180)"><polygon points="0,-34 10,-12 0,-8 -10,-12" fill="none" stroke="#3B9EE8" stroke-width="2.2" stroke-linejoin="round"/></g>
+            <g transform="rotate(240)"><polygon points="0,-34 10,-12 0,-8 -10,-12" fill="none" stroke="#8C5CF7" stroke-width="2.2" stroke-linejoin="round"/></g>
+            <g transform="rotate(300)"><polygon points="0,-34 10,-12 0,-8 -10,-12" fill="none" stroke="#C2E020" stroke-width="2.2" stroke-linejoin="round"/></g>
+            <circle cx="0" cy="0" r="2" fill="#ffffff" stroke="#ccc" stroke-width="0.5"/>
+          </g>
+        </svg>
+        <div>
+          <span class="logo-name">Línguas - Culturas</span>
+          <span class="logo-sub">COLTEC · UFMG</span>
+        </div>
+      </a>
+
+      <!-- NAV DESKTOP -->
+      <nav>
+
+        <div class="nav-item">
+          <div class="nav-link">
+            Línguas
+            <svg class="chevron" viewBox="0 0 16 16" fill="none">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="dropdown languages">
+            <div class="dd-section-label">Idiomas do projeto</div>
+            <div class="lang-grid">
+              <a class="lang-chip" href="#">Espanhol</a>
+              <a class="lang-chip" href="#">Mandarim</a>
+              <a class="lang-chip" href="#">Francês</a>
+              <a class="lang-chip" href="#">Japonês</a>
+              <a class="lang-chip" href="#">Italiano</a>
+              <a class="lang-chip" href="#">Latim</a>
+              <a class="lang-chip" href="#">Grego</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <div class="nav-link">
+            Tareas de Casa
+            <svg class="chevron" viewBox="0 0 16 16" fill="none">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="dropdown">
+            <a class="dropdown-link" href="#">1º Trimestre</a>
+            <a class="dropdown-link" href="#">2º Trimestre</a>
+            <a class="dropdown-link" href="#">3º Trimestre</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <div class="nav-link">
+            Publicações
+            <svg class="chevron" viewBox="0 0 16 16" fill="none">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="dropdown">
+            <a class="dropdown-link" href="#">Livro teórico</a>
+            <a class="dropdown-link" href="#">Livros didáticos</a>
+            <a class="dropdown-link" href="https://sites.google.com/teiacoltec.org/francophonart/in%C3%ADcio">Site Francês</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-link" href="https://www.coltec.ufmg.br/coltec-ufmg/?page_id=17098&preview=true">Videoblogs</a>
+            <a class="dropdown-link" href="#">Reportagens</a>
+            <a class="dropdown-link" href="#">Podcasts</a>
+            <a class="dropdown-link" href="#">Prêmios</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-link" href="#">Exposição Yo Artista</a>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-link" href="#">Eventos de Formação Docente</a>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-link" href="#">Quem somos</a>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-link" href="#">Sobre o projeto</a>
+        </div>
+
+      </nav>
+
+      <!-- HAMBÚRGUER (só mobile) -->
+      <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+    <!-- MENU MOBILE -->
+    <div class="mobile-menu" id="mobile-menu">
+
+      <details class="mobile-group">
+        <summary>
+          Línguas
+          <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mobile-sub">
+          <a href="#">Espanhol</a>
+          <a href="#">Mandarim</a>
+          <a href="#">Francês</a>
+          <a href="#">Japonês</a>
+          <a href="#">Italiano</a>
+          <a href="#">Latim</a>
+          <a href="#">Grego</a>
+        </div>
+      </details>
+
+      <details class="mobile-group">
+        <summary>
+          Tareas de Casa
+          <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mobile-sub">
+          <a href="#">1º Trimestre</a>
+          <a href="#">2º Trimestre</a>
+          <a href="#">3º Trimestre</a>
+        </div>
+      </details>
+
+      <details class="mobile-group">
+        <summary>
+          Publicações
+          <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mobile-sub">
+          <a href="#">Livro teórico</a>
+          <a href="#">Livros didáticos</a>
+          <a href="https://sites.google.com/teiacoltec.org/francophonart/in%C3%ADcio">Site Francês</a>
+          <a href="#">Videoblogs</a>
+          <a href="#">Reportagens</a>
+          <a href="#">Podcasts</a>
+          <a href="#">Prêmios</a>
+        </div>
+      </details>
+
+      <a class="mobile-link" href="#">Exposição Yo Artista</a>
+
+      <a class="mobile-link" href="#">Eventos de Formação Docente</a>
+
+      <a class="mobile-link" href="#">Quem somos</a>
+      <a class="mobile-link" href="#">Sobre o projeto</a>
+
+    </div>
+    </header>
+
+    <section class="banner">
+        <img src="https://t4.ftcdn.net/jpg/09/53/11/47/360_F_953114714_Hd0Kw2CLPC5ahBbEwfbGQjg55UqLMyRr.jpg" class="imgBanner">
+        <h1 class="titulo">Francês</h1>
+    </section>
+
+    <section class="descricao">
+        <h1 class="subtitulo">Sobre o Idioma</h1>
+        <div class="presentation">
+            <div class="presImg">
+                <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/03/IMG_4083-scaled.jpg" alt="">
+        </div>
+        <div class="presContent">
+            <p class="presEffect">Frase de Efeito</p>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget purus diam. Duis velit metus, tincidunt vel nulla id, accumsan porta mauris. 
+                            Sed nec interdum turpis, id faucibus nibh. Donec eu leo pretium, bibendum lacus ac, semper risus. Mauris condimentum posuere lobortis. Integer congue fringilla tristique. 
+                            In ornare, nisi in tristique faucibus, arcu felis varius leo, eu venenatis justo orci ut orci.
+            </p>
+        </div>
+        </div>
+    </section>
+
+    <section class="curiosidades">
+        <div class="info">
+          <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/06/noun-globe-8346924.png" alt="" class="info-icone">
+          <h3 class="numero" data-final="29">0</h3>
+          <p>Países Francófonos</p>
+        </div>
+        <div class="info">
+          <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/06/noun-people-6426018.png" alt="" class="info-icone">
+          <h3 class="numero" data-final="320">0</h3>
+          <p>Milhões de Falantes</p>
+        </div>
+        <div class="info">
+          <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/06/noun-graduation-2626819.png" alt="" class="info-icone">
+          <h3 class="numero" data-final="5">0</h3>
+          <p>Idioma Mais Estudado do Mundo</p>
+        </div>
+        <div class="info">
+          <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/06/Logo_of_the_United_Nations_BW.svg_.png" alt="" class="info-icone">
+          <h3>ONU</h3>
+          <p>idioma de trabalho da ONU</p>
+        </div>
+    </section>
+
+    <section class="materiais">
+        <h1 class="subtitulo">Materiais e Publicações</h1>
+
+        <div class="material-destaque">
+            <div class="capa-container">
+              <a id="link-destaque" href="https://www.canva.com/design/DAGcUe5GBx8/ccynI9bwmA5rFbpj74rDLg/view?utm_content=DAGcUe5GBx8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8fc10f5804">
+                <img id="img-destaque" class="capa-destaque" src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/Art-Et-Francophonie.png">
+                <div class="overlay">
+                  <span class="button">Ver Material</span>
+                </div>
+              </a>
+        </div>
+            <div class="texto-destaque">
+                <h3 id="titulo-destaque">
+                    Art et Francophonie
+                </h3>
+                <p id="descricao-destaque">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget purus diam. Duis velit metus, tincidunt vel nulla id, accumsan porta mauris. 
+                                           Sed nec interdum turpis, id faucibus nibh. Donec eu leo pretium, bibendum lacus ac, semper risus. Mauris condimentum posuere lobortis. Integer congue fringilla tristique. 
+                                           In ornare, nisi in tristique faucibus, arcu felis varius leo, eu venenatis justo orci ut orci.
+                </p>
+                <a id="botao-destaque" class="botao-destaque" href="https://www.canva.com/design/DAGcUe5GBx8/ccynI9bwmA5rFbpj74rDLg/view?utm_content=DAGcUe5GBx8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8fc10f5804">
+                  Acessar material
+                </a>
+            </div>
+            
+        </div>
+
+        <div class="grade-miniaturas">
+          <a class="miniatura ativa"
+             data-titulo="Art Et Francophonie"
+             data-img="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/Art-Et-Francophonie.png"
+             data-link="https://www.canva.com/design/DAGcUe5GBx8/ccynI9bwmA5rFbpj74rDLg/view?utm_content=DAGcUe5GBx8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8fc10f5804"
+             data-desc="1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget purus diam. Duis velit metus, tincidunt vel nulla id, accumsan porta mauris. 
+                            Sed nec interdum turpis, id faucibus nibh. Donec eu leo pretium, bibendum lacus ac, semper risus. Mauris condimentum posuere lobortis. Integer congue fringilla tristique. 
+                            In ornare, nisi in tristique faucibus, arcu felis varius leo, eu venenatis justo orci ut orci."
+          >
+            <img class="capa-miniatura" src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/Art-Et-Francophonie.png">
+            <h3>Art Et Francophonie</h3>
+          </a>
+          <a class="miniatura"
+              data-titulo="Cahier de Exercises"
+              data-img="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/Cahier-dexercices.png"
+              data-link="https://canva.link/sbq6r8u1sbddaed"
+              data-desc="2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget purus diam. Duis velit metus, tincidunt vel nulla id, accumsan porta mauris. 
+                            Sed nec interdum turpis, id faucibus nibh. Donec eu leo pretium, bibendum lacus ac, semper risus. Mauris condimentum posuere lobortis. Integer congue fringilla tristique. 
+                            In ornare, nisi in tristique faucibus, arcu felis varius leo, eu venenatis justo orci ut orci."  
+          >
+              <img class="capa-miniatura" src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/Cahier-dexercices.png">
+              <h3>Cahier de Exercises</h3>
+          </a>
+          <a class="miniatura"
+              data-titulo="Mon Petit Journal"
+              data-img="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/06/monpetitcapa.png"
+              data-link="https://canva.link/8gpqfusxzfwbzjs"
+              data-desc="3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget purus diam. Duis velit metus, tincidunt vel nulla id, accumsan porta mauris. 
+                            Sed nec interdum turpis, id faucibus nibh. Donec eu leo pretium, bibendum lacus ac, semper risus. Mauris condimentum posuere lobortis. Integer congue fringilla tristique. 
+                            In ornare, nisi in tristique faucibus, arcu felis varius leo, eu venenatis justo orci ut orci."
+          >
+              <img class = "capa-miniatura" src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/06/monpetitcapa.png" alt="">
+              <h3>Mon Petit Journal</h3>
+          </a>
+        </div>
+    </section>
+
+    <section class="galeria">
+      <h1 class="subtitulo">Galeria</h1>
+
+      <div class="galeria-grid">
+        <div class="foto-grande">
+          <img src="https://cdn.jsdelivr.net/gh/Avansse3Casas/MIDIAS/fotos-frances/IMG_1369recorte.jpeg" alt="Atividade do projeto de frances">
+          <div class="overlay">
+            <h3>Titulo da foto</h3>
+          </div>
+        </div>
+
+        <div class="galeria-coluna">
+          <div class="foto">
+            <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/06/IMG_1185-scaled.jpeg" alt="Estudantes em atividade do projeto">
+            <div class="overlay">
+              <h3>Titulo da foto</h3>
+            </div>
+          </div>
+
+          <div class="foto">
+            <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/06/IMG_1228-scaled.jpeg" alt="Estudantes em atividade do projeto">
+            <div class="overlay">
+              <h3>Titulo da foto</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="foto-vertical">
+          <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/06/IMG_1291-scaled.jpeg" alt="Registro vertical de atividade cultural">
+          <div class="overlay">
+            <h3>Titulo da foto</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-inscricao" aria-labelledby="cta-titulo">
+      <div class="cta-card">
+        <div class="cta-icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M3.5 19c.6-3.2 2.1-5 4.5-5s3.9 1.8 4.5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M11.5 19c.6-3.2 2.1-5 4.5-5s3.9 1.8 4.5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="cta-texto">
+          <h2 id="cta-titulo">Gostou do Francês?</h2>
+          <p>Participe gratuitamente das oficinas do projeto Línguas e Culturas. Aprenda, compartilhe experiências e descubra o mundo pelo idioma.</p>
+        </div>
+
+        <a class="cta-botao" href="#">Quero participar</a>
+      </div>
+    </section>
+
+    <section class="explorar-idiomas" aria-labelledby="explorar-titulo">
+      <div class="explorar-card">
+        <div class="idiomas-icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M3.5 12h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            <path d="M12 3c2.3 2.4 3.4 5.4 3.4 9S14.3 18.6 12 21c-2.3-2.4-3.4-5.4-3.4-9S9.7 5.4 12 3Z" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+        </div>
+
+        <div class="explorar-texto">
+          <h2 id="explorar-titulo">Explore outros idiomas</h2>
+          <p>Cada língua abre uma nova janela para o mundo. Conheça também as outras frentes do projeto.</p>
+        </div>
+
+        <div class="filtro-idiomas">
+          <a href="#" class="circulo espanhol">
+            <div class="circulo-inner">
+              <div class="frente">Espanhol</div>
+              <div class="verso"></div>
+            </div>
+          </a>
+
+          <a href="#" class="circulo mandarim">
+            <div class="circulo-inner">
+              <div class="frente">Mandarim</div>
+              <div class="verso"></div>
+            </div>
+          </a>
+
+          <a href="#" class="circulo japones">
+            <div class="circulo-inner">
+              <div class="frente">Japonês</div>
+              <div class="verso"></div>
+            </div>
+          </a>
+
+          <a href="#" class="circulo italiano">
+            <div class="circulo-inner">
+              <div class="frente">Italiano</div>
+              <div class="verso"></div>
+            </div>
+          </a>
+
+          <a href="#" class="circulo latim">
+            <div class="circulo-inner">
+              <div class="frente">Latim</div>
+              <div class="verso"></div>
+            </div>
+          </a>
+
+          <a href="#" class="circulo grego">
+            <div class="circulo-inner">
+              <div class="frente">Grego</div>
+              <div class="verso"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  
+  <script>
+    // Script do cabecalho mobile
+    const btn = document.getElementById("hamburger");
+    const menu = document.getElementById("mobile-menu");
+
+    if (btn && menu) {
+      btn.addEventListener("click", () => {
+        const aberto = menu.classList.toggle("open");
+        btn.classList.toggle("open", aberto);
+        btn.setAttribute("aria-label", aberto ? "Fechar menu" : "Abrir menu");
+        btn.setAttribute("aria-expanded", String(aberto));
+      });
+    }
+
+    //Script das bolinhas de idiomas
+    document.querySelectorAll(".explorar-idiomas .circulo").forEach(el => {
+      el.addEventListener("mouseenter", () => {
+        el.classList.add("animando");
+      });
+      el.addEventListener("mouseleave", () => {
+        setTimeout(() => {
+          el.classList.remove("animando");
+        }, 600);
+      });
+    });
+
+    //Script das curiosidades
+    //Crio uma funcao que aumenta o numero atual do card
+    function iniciarContador(numero) {
+      let atual = Number(numero.textContent);
+      let final = Number(numero.dataset.final);
+      //Ja que sao 60fps, significa que terei 120 quadros de animacao
+      const duracao = 2000;
+      const fps = 60;
+      const passo = (final-atual)/120;
+      //SetInterval é tipo um loop while em C, com um timer entre iteracoes (50ms aqui)
+      const intervalo = setInterval(() => {
+        atual += passo;
+        numero.textContent = Math.ceil(atual);
+        if (atual >= final) {
+          atual = final;
+          numero.textContent = final;
+          //Encerra o loop
+          clearInterval(intervalo);
+        }
+      }, 17);
+    }
+    const curiosidades = document.querySelectorAll(".info");
+    //Crio uma constante observadora / vigia, que vigiará "entries"
+    const observador = new IntersectionObserver((entries) => {
+        entries.forEach((item, index) => {
+          //se o item de entries for observado...
+          if(item.isIntersecting) {
+            setTimeout(() => {
+              //Torna o item visivel, coleta o numero que ele contem e incia o contador
+              item.target.classList.add("visivel");
+              const numero = item.target.querySelector(".numero");
+              //Nao inicia o contador caso o card nao tenha um numero (ONU)
+              if (numero) {
+                iniciarContador(numero);
+              }
+              //Cancela a vigilia
+              observador.unobserve(item.target);
+            }, index*100);
+          }
+        });
+    });
+    //Inicia a vigilia, mandando a constante observador observe cada curiosidade
+    curiosidades.forEach(item => {
+      observador.observe(item);
+    });
+    //Script dos materiais didaticos
+    const destaque = document.querySelector(".material-destaque");
+    const miniaturas = document.querySelectorAll(".miniatura");
+    miniaturas.forEach(item => {
+      item.addEventListener("click", (event) => {
+        event.preventDefault();
+        destaque.classList.add("fade");
+        setTimeout(() => {
+          const minDestaque = document.querySelector(".ativa");
+          minDestaque.classList.remove("ativa");
+          item.classList.add("ativa");
+          document.getElementById("titulo-destaque")
+            .textContent = item.dataset.titulo;
+          document.getElementById("descricao-destaque")
+            .textContent = item.dataset.desc;
+          document.getElementById("img-destaque")
+            .src = item.dataset.img;
+          document.getElementById("link-destaque")
+            .href = item.dataset.link;
+          document.getElementById("botao-destaque")
+            .href = item.dataset.link;
+          destaque.classList.remove("fade");
+        }, 300);
+      });
+    });
+  </script>  
+</body>
