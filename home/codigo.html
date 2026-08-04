@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<!--─── HTML ────────────────────────────────────────-->
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Línguas e Culturas — COLTEC · UFMG</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="">
+  <link href="https://fonts.googleapis.com/css2?family=Miranda+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<!--─── CSS ────────────────────────────────────────-->
+<style>
+    /* ── RESET GLOBAL ─────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:    #000000;
+      --white:    #ffffff;
+      --muted:    #666666;
+      --border:   rgba(0,0,0,0.1);
+      --hover-bg: #f5f5f5;
+      --ease:     cubic-bezier(0.4, 0, 0.2, 1);
+      --font:     'Miranda Sans', sans-serif;
+    }
+
+    body {
+      font-family: var(--font);
+      background: transparent;
+      -webkit-font-smoothing: antialiased;
+    }
+    /*----------------------------------------------- CSS DO CABEÇALHO -----------------------------------------------*/
+    /* ── HEADER ─────────────────────────────────────────────────────── */
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      z-index: 100;
+    }
+
+    .header-inner {
+      width: 100%;
+      padding: 0 4%;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* ── LOGO ───────────────────────────────────────────────────────── */
+    .header-inner .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      flex-shrink: 0;
+      margin-right: 3%;
+    }
+
+    .header-inner .logo-mark {
+      width: clamp(44px, 4vw, 52px);
+      height: clamp(44px, 4vw, 52px);
+      flex-shrink: 0;
+      display: block;
+    }
+
+    .header-inner .logo-name {
+      font-size: clamp(14px, 1.2vw, 17px);
+      font-weight: 600;
+      color: var(--black);
+      display: block;
+    }
+
+    .header-inner .logo-sub {
+      font-size: clamp(9px, 0.7vw, 10px);
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-top: 3px;
+      display: block;
+    }
+
+    /* ── NAV (desktop) ──────────────────────────────────────────────── */
+    .header-inner nav {
+      display: flex;
+      align-items: stretch;
+      height: 100%;
+      flex: 1;
+    }
+
+    .header-inner .nav-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-inner .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 0 clamp(8px, 1.2vw, 16px);
+      font-size: clamp(12px, 1vw, 13.5px);
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none !important;
+      cursor: pointer;
+      height: 100%;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .header-inner .nav-item:hover > .nav-link {
+      color: var(--black);
+      border-bottom-color: var(--black);
+    }
+
+    .header-inner .chevron {
+      width: 13px;
+      height: 13px;
+      opacity: 0.4;
+      transition: transform 0.2s var(--ease);
+      flex-shrink: 0;
+    }
+
+    .header-inner .nav-item:hover > .nav-link .chevron {
+      transform: rotate(180deg);
+      opacity: 0.7;
+    }
+
+    /* ── DROPDOWN ───────────────────────────────────────────────────── */
+    .header-inner .dropdown {
+      position: absolute;
+      top: calc(100% + 1px);
+      left: 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--black);
+      border-radius: 0 0 10px 10px;
+      min-width: 200px;
+      padding: 6px 0;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-6px);
+      transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+    }
+
+    /* evita que dropdowns nos últimos itens “escapem” para fora da tela */
+    .header-inner .nav-item:last-child .dropdown,
+    .header-inner .nav-item:nth-last-child(2) .dropdown {
+      left: auto;
+      right: 0;
+    }
+
+    /* ponte invisível entre o nav-link e o dropdown para o mouse não "cair" */
+    .header-inner .nav-item::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 12px;
+    }
+
+    .header-inner .nav-item:hover .dropdown {
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0);
+      transition-delay: 0s;
+      z-index: 2;
+    }
+
+    .header-inner .nav-item:not(:hover) .dropdown {
+      transition-delay: 0s;
+    }
+
+    .header-inner .dropdown-link {
+      display: block;
+      padding: 10px 20px;
+      font-size: 13.5px;
+      color: #333;
+      text-decoration: none !important;
+      transition: background 0.15s;
+    }
+
+    .header-inner .dropdown-link:hover {
+      background: var(--hover-bg);
+      color: var(--black);
+    }
+
+    .header-inner .dropdown-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 4px 0;
+    }
+
+    /* Línguas em grid */
+    .header-inner .dropdown.languages {
+      min-width: 240px;
+      padding: 10px;
+    }
+
+    .header-inner .dd-section-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 2px 8px 8px;
+    }
+
+    .header-inner .lang-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+    }
+
+    .header-inner .lang-chip {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #333;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .header-inner .lang-chip:hover {
+      background: var(--hover-bg);
+      color: var(--black);
+    }
+
+    /* evita cor azul herdada de temas/plugins do WordPress */
+    header .nav-link,
+    header .nav-link:link,
+    header .nav-link:visited {
+      color: var(--muted) !important;
+    }
+
+    header .nav-item:hover > .nav-link,
+    header .nav-item:hover > .nav-link:visited {
+      color: var(--black) !important;
+    }
+
+    header .dropdown-link,
+    header .dropdown-link:link,
+    header .dropdown-link:visited,
+    header .lang-chip,
+    header .lang-chip:link,
+    header .lang-chip:visited,
+    header .mobile-link,
+    header .mobile-link:link,
+    header .mobile-link:visited,
+    header .mobile-sub a,
+    header .mobile-sub a:link,
+    header .mobile-sub a:visited {
+      color: #333 !important;
+    }
+
+    header .mobile-link,
+    header .mobile-link:link,
+    header .mobile-link:visited {
+      color: var(--black) !important;
+    }
+
+    /* ── HAMBÚRGUER ─────────────────────────────────────────────────── */
+    .hamburger {
+      display: none;           /* escondido no desktop */
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      margin-left: auto;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      height: 2px;
+      background: var(--black);
+      border-radius: 2px;
+      transition: transform 0.25s var(--ease), opacity 0.2s;
+    }
+
+    /* animação → X quando aberto */
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── MENU MOBILE ────────────────────────────────────────────────── */
+    .mobile-menu {
+      display: none;           /* escondido no desktop */
+      position: absolute;
+      top: 68px;
+      left: 0;
+      width: 100%;
+      background: var(--white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      overflow-y: auto;
+      max-height: calc(100vh - 68px);
+    }
+
+    .mobile-menu.open { display: block; }
+
+    /* item simples */
+    .mobile-menu .mobile-link {
+      display: block;
+      padding: 14px 6%;
+      min-height: 44px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--black);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .mobile-menu .mobile-link:hover { background: var(--hover-bg); }
+
+    /* grupo com submenu */
+    .mobile-menu .mobile-group summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 6%;
+      min-height: 44px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--black);
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+    }
+
+    .mobile-menu .mobile-group summary::-webkit-details-marker { display: none; }
+
+    .mobile-menu .mobile-group summary svg {
+      width: 14px;
+      height: 14px;
+      opacity: 0.4;
+      transition: transform 0.2s var(--ease);
+    }
+
+    .mobile-menu .mobile-group[open] summary svg { transform: rotate(180deg); opacity: 0.7; }
+
+    .mobile-menu .mobile-sub {
+      background: var(--hover-bg);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mobile-menu .mobile-sub a {
+      display: block;
+      padding: 11px 8%;
+      min-height: 44px;
+      font-size: 14px;
+      color: #333 !important;
+      text-decoration: none !important;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mobile-menu .mobile-sub a:last-child { border-bottom: none; }
+    .mobile-menu .mobile-sub a:hover { color: var(--black); }
+
+    /* tablet e telas médias: prioriza menu hambúrguer para evitar quebra do nav */
+    @media (max-width: 1024px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      header { position: relative; } /* para o menu mobile se posicionar certo */
+      .header-inner { height: 64px; }
+      .mobile-menu {
+        top: 64px;
+        max-height: calc(100vh - 64px);
+      }
+    }
+
+    /* mobile menor: reduz ruído visual do logo e preserva espaço útil */
+    @media (max-width: 480px) {
+      .header-inner { padding: 0 5%; }
+      .logo { gap: 10px; margin-right: 0; }
+      .logo-mark {
+        width: 36px;
+        height: 36px;
+      }
+      .logo-sub { display: none; }
+      .logo-name { font-size: 13px; }
+      .hamburger {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    .nav-link:focus-visible,
+    .dropdown-link:focus-visible,
+    .mobile-link:focus-visible,
+    .mobile-sub a:focus-visible,
+    .mobile-group summary:focus-visible,
+    .hamburger:focus-visible {
+      outline: 2px solid var(--black);
+      outline-offset: 2px;
+    }
+
+    /*----------------------------------------------- CSS DO SELETOR DE IDIOMAS -----------------------------------------------*/
+    .seletor-idiomas .cabecalho {
+        font-family: "Miranda Sans", Times, serif !important;
+        letter-spacing: 2px;
+        font-size: 45px;
+        color: #000;
+        margin-top: 40px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .seletor-idiomas .filtro-idiomas {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+    .seletor-idiomas .circulo {
+        display: inline-block;
+        width: 125px;
+        height: 125px;
+        perspective: 1000px;
+        text-decoration: none;
+    }
+    .seletor-idiomas .circulo-inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+
+        border-radius: 50%;
+    }
+    .seletor-idiomas .circulo.animando .circulo-inner {
+        transform: rotateY(180deg) scale(1.05);
+    }
+    .seletor-idiomas .frente, .seletor-idiomas .verso {
+        color: white;
+        background-color: goldenrod;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        border-radius: 50%;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        backface-visibility: hidden;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-weight: bold;
+        font-size: 18px;
+        font-family: "Miranda Sans", Times, serif;
+    }
+    .seletor-idiomas .espanhol .verso {
+        background-image: url(https://cdn-icons-png.flaticon.com/512/197/197593.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: rotateY(180deg);
+    }
+    .seletor-idiomas .frances .verso {
+        background-image: url(https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/03/Copia-de-frances-20261.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat:no-repeat;
+        transform: rotateY(180deg);
+    }
+    .seletor-idiomas .mandarim .verso {
+        background-image: url(https://cdn-icons-png.flaticon.com/512/197/197375.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat:no-repeat;
+        transform: rotateY(180deg);
+    }
+    .seletor-idiomas .japones .verso {
+        background-image: url(https://cdn-icons-png.flaticon.com/512/197/197604.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat:no-repeat;
+        transform: rotateY(180deg);
+    }
+    .seletor-idiomas .italiano .verso {
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc4ItvnXU5d6JQX3hrfbemeK7Na8lr5uIenA&s);
+        background-size: cover;
+        background-position: center;
+        background-repeat:no-repeat;
+        transform: rotateY(180deg);
+    }
+    .seletor-idiomas .latim .verso {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d3/Roman_Empire_Flag.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat:no-repeat;
+        transform: rotateY(180deg);
+    }
+    .seletor-idiomas .grego .verso {
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT28GqF1oJPJ5HyCKljpvMF51lZC01Oxdv2sQ&s);
+        background-size: cover;
+        background-position: center;
+        background-repeat:no-repeat;
+        transform: rotateY(180deg);
+    }
+
+    /* Animacoes */
+    .seletor-idiomas .fade-up {
+        opacity: 0;
+        transform: translateY(20px);
+
+        animation: fadeUp 1s ease forwards;
+        animation-delay: 0.3s;
+    }
+    @keyframes fadeUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /*----------------------------------------------- CSS DO CARROSSEL -----------------------------------------------*/
+    
+   .custom-carousel {
+        position: relative;
+        max-width: 90%;
+        margin: 40px auto 0;
+        overflow: hidden;
+        width: 100%;
+        border-radius: 120px 40px 120px 40px / 80px 40px 80px 40px !important;        
+    }
+    .custom-track {
+        display: flex;
+        transition: transform 0.6s ease;
+    }
+    .carousel-slide {
+        min-width: 100%;
+        flex: 0 0 100%;
+        border-radius: inherit;
+    }
+    .carousel-slide img {
+        display: block;
+        width: 100%;
+        height: 650px;
+        object-fit: cover;
+        border-radius: inherit;
+        object-position: center center;
+    }
+
+    /* Ajuste individual por foto */
+    .foto-1 img { object-position: center 40%; }
+    .foto-2 img { object-position: center 40%; }
+    .foto-3 img { object-position: center 38%; }
+    .foto-4 img { object-position: center 30%; }
+    .foto-5 img { object-position: center 40%; }
+    .foto-6 img { object-position: center center; }
+    .foto-7 img { object-position: center 25%; }
+    .foto-8 img { object-position: center center; }
+    .foto-9 img { object-position: center center; }
+    .foto-10 img { object-position: center 20%; }
+    .foto-11 img { object-position: center 40%; }
+    .foto-12 img { object-position: center 40%; }
+    .foto-13 img { object-position: center 40%; }
+
+    .carousel-prev, .carousel-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.2s ease;
+        background: rgba(0,0,0,0.5);
+        color: white;
+        border: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .carousel-prev:hover, .carousel-next:hover {
+        transform: translateY(-50%) scale(1.05);
+    }
+    .carousel-prev { left: 10px; }
+    .carousel-next { right: 10px; }
+
+    .carousel-dots {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .carousel-dots span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 5px;
+        background: #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .carousel-dots .active {
+        background: #2a7dbf;
+    }
+
+    /*----------------------------------------------- CSS DOS DESTAQUES -----------------------------------------------*/
+    .subtitulo {
+        /*Ativa display flexivel para o subtitulo*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: black;
+        font-family: "Miranda Sans", Helvetica, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        gap: 10px;
+        padding: 20px;
+    }
+    /*Atribui estilo aos containers antes (a esquerda) e depois (a direita) de subtitulo*/
+    .subtitulo::before, .subtitulo::after {
+        content:"";
+        border-radius: 10px;
+        align-items: center;
+        flex: 1;
+        height: 4px;
+        background:goldenrod;
+    }
+
+    .destaque {
+        font-family: "Miranda Sans", Helvetica, sans-serif;
+        color:white;
+        background-color:#92b300;
+
+        height: 200px;
+        border-radius: 20px;
+
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        align-items: center;
+
+        margin-top: 20px;
+        overflow: hidden;
+        margin-left: 25px;
+        margin-right: 25px;
+
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        cursor: pointer;
+    }
+    .destaque:hover {
+        color: white;
+        transform: scale(1.02);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        text-decoration: none !important;
+    }
+    .imgMain {
+        margin-left: 10px;
+        width: 100%;
+        height: 90%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .destaque-content {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .destaque-content h3 {
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+    .descricao {
+        color: white;
+        margin-left: 30px;
+    }
+    .categoria {
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 5px;
+        margin-top: 0px;
+    }
+    .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px;
+
+        background-color: goldenrod;
+        border-radius: 50%;
+    }
+    .icon img {
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
+    }
+    .nomeCat {
+        margin: 0; 
+        font-size: 15px;
+        font-family: "Miranda Sans", Helvetica, sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    /*----------------------------------------------- CSS DOS SUBTITULOS -----------------------------------------------*/
+    .subtitulo {
+        /*Ativa display flexivel para o subtitulo*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: black;
+        font-family: "Miranda Sans", Helvetica, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        gap: 10px;
+        padding: 20px;
+    }
+    /*Atribui estilo aos containers antes (a esquerda) e depois (a direita) de subtitulo*/
+    .subtitulo::before, .subtitulo::after {
+        content:"";
+        border-radius: 10px;
+        align-items: center;
+        flex: 1;
+        height: 4px;
+        background:goldenrod;
+    }
+
+    /*----------------------------------------------- CSS DO CATALOGO DE LIVROS DIDATICOS -----------------------------------------------*/
+    .secaoCatalogo {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      padding: 20px;
+    }
+    .livro {
+        font-family: "Miranda Sans", Helvetica, sans-serif;
+        font-weight: 400;
+        text-align: center;
+        text-decoration: none;
+      color: black;
+      background: transparent;
+      border-radius: 0;
+      overflow: visible;
+      padding: 0;
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .livro h3 {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.3;
+      color: black;
+      font-weight: 700;
+      padding: 0 6px;
+    }
+    .imgCard {
+        width: 100%;
+      aspect-ratio: 3 / 4;
+        object-fit: cover;
+      border-radius: 14px;
+      display: block;
+    }
+    .pandemico .imgCard {
+        object-position: center 45%;
+    }
+    .japones .imgCard {
+        object-position: center 55%;
+    }
+    .latim .imgCard {
+        object-position: center 60%;
+    }
+    .frances1 .imgCard {
+        object-position: center top;
+    }
+    .frances2 .imgCard {
+        object-position: center 10%;
+    }
+    .frances3 .imgCard {
+        object-position: center center;
+    }
+    .italiano .imgCard {
+        object-position: center center;
+    }
+    .grego .imgCard {
+        object-position: center 80%;
+    }
+
+    .livro:hover {
+        text-decoration: none;
+      color: black;
+      transform: translateY(-4px);
+    }
+
+    @media (max-width: 960px) {
+      .secaoCatalogo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .secaoCatalogo {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /*CSS DA NOSSA MISSAO*/
+
+    .subtitulo {
+        /*Ativa display flexivel para o subtitulo*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: black;
+        font-family: "Miranda Sans", Helvetica, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        gap: 10px;
+        padding: 20px;
+    }
+    /*Atribui estilo aos containers antes (a esquerda) e depois (a direita) de subtitulo*/
+    .subtitulo::before, .subtitulo::after {
+        content:"";
+        border-radius: 10px;
+        align-items: center;
+        flex: 1;
+        height: 4px;
+        background:goldenrod;
+    }
+    .presentation {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: clamp(250px, 50vh, 500px);
+    }
+    .presImg {
+        flex-basis: 50%;
+        border-radius: 20px;
+        height: 85%;
+        overflow: hidden;
+        align-self: center;
+        margin-left: 10px;
+    }
+    .presContent {
+        flex-basis: 50%;
+    }
+    .presImg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .presEffect {
+        margin-top: 45px;
+        margin-left: 10px;
+        margin-bottom: 5px;
+        font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 30px;
+        color: black;
+    }
+    .text {
+        font-size: 25px;
+        font-family: "Miranda Sans", Helvetica, sans-serif;
+        align-self: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: justify;
+    }
+
+  </style>
+</head>
+
+  <!--INICIO DO CORPO DA PAGINA-->
+<body>
+    <!--Cabecalho-->
+  <header>
+    <div class="header-inner">
+
+      <!-- LOGO -->
+      <a href="#" class="logo">
+        <svg class="logo-mark" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Línguas - Culturas" role="img">
+          <g transform="translate(40,40)">
+            <polygon points="0,-34 10,-12 0,-8 -10,-12" fill="none" stroke="#E0196A" stroke-width="2.2" stroke-linejoin="round"/>
+            <g transform="rotate(60)"><polygon points="0,-34 10,-12 0,-8 -10,-12" fill="none" stroke="#F27B22" stroke-width="2.2" stroke-linejoin="round"/></g>
+            <g transform="rotate(120)"><polygon points="0,-34 10,-12 0,-8 -10,-12" fill="none" stroke="#0DC9A2" stroke-width="2.2" stroke-linejoin="round"/></g>
+            <g transform="rotate(180)"><polygon points="0,-34 10,-12 0,-8 -10,-12" fill="none" stroke="#3B9EE8" stroke-width="2.2" stroke-linejoin="round"/></g>
+            <g transform="rotate(240)"><polygon points="0,-34 10,-12 0,-8 -10,-12" fill="none" stroke="#8C5CF7" stroke-width="2.2" stroke-linejoin="round"/></g>
+            <g transform="rotate(300)"><polygon points="0,-34 10,-12 0,-8 -10,-12" fill="none" stroke="#C2E020" stroke-width="2.2" stroke-linejoin="round"/></g>
+            <circle cx="0" cy="0" r="2" fill="#ffffff" stroke="#ccc" stroke-width="0.5"/>
+          </g>
+        </svg>
+        <div>
+          <span class="logo-name">Línguas - Culturas</span>
+          <span class="logo-sub">COLTEC · UFMG</span>
+        </div>
+      </a>
+
+      <!-- NAV DESKTOP -->
+      <nav>
+
+        <div class="nav-item">
+          <div class="nav-link">
+            Línguas
+            <svg class="chevron" viewBox="0 0 16 16" fill="none">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="dropdown languages">
+            <div class="dd-section-label">Idiomas do projeto</div>
+            <div class="lang-grid">
+              <a class="lang-chip" href="#">Espanhol</a>
+              <a class="lang-chip" href="#">Mandarim</a>
+              <a class="lang-chip" href="#">Francês</a>
+              <a class="lang-chip" href="#">Japonês</a>
+              <a class="lang-chip" href="#">Italiano</a>
+              <a class="lang-chip" href="#">Latim</a>
+              <a class="lang-chip" href="#">Grego</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <div class="nav-link">
+            Tareas de Casa
+            <svg class="chevron" viewBox="0 0 16 16" fill="none">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="dropdown">
+            <a class="dropdown-link" href="#">1º Trimestre</a>
+            <a class="dropdown-link" href="#">2º Trimestre</a>
+            <a class="dropdown-link" href="#">3º Trimestre</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <div class="nav-link">
+            Publicações
+            <svg class="chevron" viewBox="0 0 16 16" fill="none">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="dropdown">
+            <a class="dropdown-link" href="#">Livro teórico</a>
+            <a class="dropdown-link" href="#">Livros didáticos</a>
+            <a class="dropdown-link" href="https://sites.google.com/teiacoltec.org/francophonart/in%C3%ADcio">Site Francês</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-link" href="https://www.coltec.ufmg.br/coltec-ufmg/?page_id=17531&preview=true">Videoblogs</a>
+            <a class="dropdown-link" href="#">Reportagens</a>
+            <a class="dropdown-link" href="#">Podcasts</a>
+            <a class="dropdown-link" href="#">Prêmios</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-link" href="#">Exposição Yo Artista</a>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-link" href="#">Eventos de Formação Docente</a>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-link" href="#">Quem somos</a>
+        </div>
+
+        <div class="nav-item">
+          <a class="nav-link" href="#">Sobre o projeto</a>
+        </div>
+
+      </nav>
+
+      <!-- HAMBÚRGUER (só mobile) -->
+      <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+    <!-- MENU MOBILE -->
+    <div class="mobile-menu" id="mobile-menu">
+
+      <details class="mobile-group">
+        <summary>
+          Línguas
+          <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mobile-sub">
+          <a href="#">Espanhol</a>
+          <a href="#">Mandarim</a>
+          <a href="#">Francês</a>
+          <a href="#">Japonês</a>
+          <a href="#">Italiano</a>
+          <a href="#">Latim</a>
+          <a href="#">Grego</a>
+        </div>
+      </details>
+
+      <details class="mobile-group">
+        <summary>
+          Tareas de Casa
+          <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mobile-sub">
+          <a href="#">1º Trimestre</a>
+          <a href="#">2º Trimestre</a>
+          <a href="#">3º Trimestre</a>
+        </div>
+      </details>
+
+      <details class="mobile-group">
+        <summary>
+          Publicações
+          <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mobile-sub">
+          <a href="#">Livro teórico</a>
+          <a href="#">Livros didáticos</a>
+          <a href="https://sites.google.com/teiacoltec.org/francophonart/in%C3%ADcio">Site Francês</a>
+          <a href="#">Videoblogs</a>
+          <a href="#">Reportagens</a>
+          <a href="#">Podcasts</a>
+          <a href="#">Prêmios</a>
+        </div>
+      </details>
+
+      <a class="mobile-link" href="#">Exposição Yo Artista</a>
+
+      <a class="mobile-link" href="#">Eventos de Formação Docente</a>
+
+      <a class="mobile-link" href="#">Quem somos</a>
+      <a class="mobile-link" href="#">Sobre o projeto</a>
+
+    </div>
+  </header>
+
+  <!--SELETOR DE IDIOMAS-->
+  <section class="seletor-idiomas">
+        <div class="filtro-idiomas fade-up">
+        <a href="" class="circulo espanhol">
+            <div class="circulo-inner">
+                <div class="frente">Espanhol</div>
+                <div class="verso">
+                </div>
+            </div>
+        </a>
+
+        <a href="" class="circulo mandarim">
+            <div class="circulo-inner">
+                <div class="frente">Mandarim</div>
+                <div class="verso"></div>
+            </div>
+        </a>
+        <a href="" class="circulo frances">
+            <div class="circulo-inner">
+                <div class="frente">Francês</div>
+                <div class="verso">
+                </div>
+            </div>
+        </a>
+
+        <a href="" class="circulo japones">
+            <div class="circulo-inner">
+                <div class="frente">Japonês</div>
+                <div class="verso">
+                </div>
+            </div>
+        </a>
+
+        <a href="" class="circulo italiano">
+            <div class="circulo-inner">
+                <div class="frente">Italiano</div>
+                <div class="verso">
+                </div>
+            </div>
+        </a>
+
+        <a href="" class="circulo latim">
+            <div class="circulo-inner">
+                <div class="frente">Latim</div>
+                <div class="verso">
+                </div>
+            </div>
+        </a>
+
+        <a href="" class="circulo grego">
+            <div class="circulo-inner">
+                <div class="frente">Grego</div>
+                <div class="verso">
+                </div>
+            </div>
+        </a>
+    </div>
+  </section>
+  <!--Carrossel-->
+  <section class="carrossel">
+    <div class="custom-carousel">
+      <div class="custom-track">
+        <div class="carousel-slide foto-1"><img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/IMG_4407-scaled.jpg" alt="Foto 1" /></div>
+        <div class="carousel-slide foto-2"><img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/03/IMG_4145-scaled.jpg" alt="Foto 2" /></div>
+        <div class="carousel-slide foto-3"><img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/IMG_4583-scaled.jpg" alt="Foto 3" /></div>
+        <div class="carousel-slide foto-4"><img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/IMG_4549-scaled.jpg" alt="Foto 4" /></div>
+        <div class="carousel-slide foto-5"><img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/IMG_4451-scaled.jpg" alt="Foto 5" /></div>
+        <div class="carousel-slide foto-6"><img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/03/IMG_4383-scaled.jpg" alt="Foto 6" /></div>
+        <div class="carousel-slide foto-7"><img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/IMG_4458-scaled.jpg" alt="Foto 7" /></div>
+        <div class="carousel-slide foto-8"><img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/IMG_4589-scaled.jpg" alt="Foto 8" /></div>
+        <div class="carousel-slide foto-9"><img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/IMG_4545-scaled.jpg" alt="Foto 9" /></div>
+        <div class="carousel-slide foto-10"><img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/IMG_4464-2-1-scaled.jpg" alt="Foto 10" /></div>
+        <div class="carousel-slide foto-11"><img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/IMG_4721-2-scaled.jpg" alt="Foto 11" /></div>
+        <div class="carousel-slide foto-12"><img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/IMG_4710-scaled.jpg" alt="Foto 12" /></div>
+        <div class="carousel-slide foto-13"><img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/IMG_4718-1-scaled.jpg" alt="Foto 13" /></div>
+      </div>
+      <div class="carousel-dots"> </div>
+      <button class="carousel-prev">❮</button> 
+      <button class="carousel-next">❯</button>
+    </div>
+  </section>
+
+  <!--SUBTITULO LIVROS DIDATICOS-->
+  <h1 class="subtitulo"> Livros Didáticos e Teóricos </h1>
+
+  <!--LIVROS DIDATICOS-->
+  <section class="secaoCatalogo">
+
+    <a href="https://canva.link/788x2d17g5bq5nb" class="livro pandemico">
+      <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/Experiencias-Ensino.png" class="imgCard">
+      <h3>Experiências do Ensino de Línguas no Período Pandêmico no Coltec</h3>
+    </a>
+            
+    <a href="https://www.canva.com/design/DAGtP_79ueA/U49dBBzpc4t1j-dWX_SzJw/watch" class="livro japones">
+      <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/Japones.png" class="imgCard">
+        <h3>Livro de Japonês</h3>
+    </a>
+
+    <a href="https://www.canva.com/design/DAG1BTAJ6g4/Dkw4XLGzykUfz0pf45yYiQ/view?utm_content=DAG1BTAJ6g4&utm_campaign=designshare&utm_medium=link&utm_source=viewer" class="livro latim">
+        <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/Latim.png" class="imgCard">
+        <h3>Livro de Latim</h3>
+    </a>
+
+    <a href="https://www.canva.com/design/DAGcUe5GBx8/ccynI9bwmA5rFbpj74rDLg/view?utm_content=DAGcUe5GBx8&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8fc10f5804" class="livro frances1">
+        <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/Art-Et-Francophonie.png" class="imgCard">
+        <h3>Art et Francophonie</h3>
+    </a>
+
+    <a href="https://canva.link/sbq6r8u1sbddaed" class="livro frances2">
+        <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/Cahier-dexercices.png" class="imgCard">
+        <h3>Cahier D’exercises</h3>
+    </a>
+
+    <a href="https://canva.link/8gpqfusxzfwbzjs" class="livro frances3">
+        <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/Mon-Petit-Journal.png" class="imgCard">
+        <h3>Mon Petit Journal</h3>
+    </a>
+
+    <a href="https://canva.link/j2bdy8hd3iyn6xa" class="livro italiano">
+        <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/Copia-de-LIVRO-DE-RECEITAS-DE-ITALIANO-2026.png" class="imgCard">
+        <h3>Le Mie Ricette</h3>
+    </a>
+
+    <a href="https://www.canva.com/design/DAGtP-W00qU/gAGPW6OIVhLmpRs0b24SXg/view?utm_content=DAGtP-W00qU&utm_campaign=designshare&utm_medium=link&utm_source=viewer" class="livro grego">
+        <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/04/Grego-Antigo.png" class="imgCard">
+        <h3>Livro de Grego</h3>
+    </a>
+
+  </section>
+
+  <!--SUBTITULO DESTAQUES-->
+  <h1 class="subtitulo">Destaques</h1>
+
+  <!--DESTAQUES-->
+  <a href="" class="destaque">
+
+    <img src="https://tse2.mm.bing.net/th/id/OIP.wjN7jAdy5evtymlw1-AZogHaE7?rs=1&pid=ImgDetMain&o=7&rm=3" class="imgMain"> 
+    <div class="destaque-content">
+      <div class="categoria">
+        <div class="icon">
+          <img src="https://cdn-icons-png.flaticon.com/512/81/81460.png">
+        </div>
+        <p class="nomeCat">Notícia</p>
+      </div>
+  
+      <h3>Inscrições abertas para o intercâmbio à China!</h3>
+      <p class="descricao">- A janela de inscrições vai de 01/01 a 12/10!</p>
+    </div>
+
+  </a>
+
+  <a href="" class="destaque">
+
+    <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/03/IMG_5708-scaled.jpg" class="imgMain"> 
+    <div class="destaque-content">
+      <div class="categoria">
+        <div class="icon">
+          <img src="https://cdn-icons-png.flaticon.com/512/483/483031.png">
+        </div>
+        <p class="nomeCat">Podcast</p>
+      </div>
+  
+      <h3>Áudios da Exposição "Yo Artista"</h3>
+      <p class="descricao">- Obras produzidas pelos estudantes sendo expostas!</p>
+    </div>
+
+  </a>
+
+  <!--SUBTITULO NOSSA MISSAO-->
+  <h1 class="subtitulo">Nossa Missão</h1>
+
+  <!--NOSSA MISSAO HTML-->
+  <div class="presentation">
+      <div class="presImg">
+          <img src="https://www.coltec.ufmg.br/coltec-ufmg/wp-content/uploads/2026/03/IMG_4083-scaled.jpg" alt="">
+      </div>
+      <div class="presContent">
+          <p class="presEffect">Frase de Efeito</p>
+          <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget purus diam. Duis velit metus, tincidunt vel nulla id, accumsan porta mauris. 
+                          Sed nec interdum turpis, id faucibus nibh. Donec eu leo pretium, bibendum lacus ac, semper risus. Mauris condimentum posuere lobortis. Integer congue fringilla tristique. 
+                          In ornare, nisi in tristique faucibus, arcu felis varius leo, eu venenatis justo orci ut orci.
+          </p>
+      </div>
+    </div>
+
+  <!--Aqui, adicionarei a proxima secao HTML-->
+  
+  <!--─── JAVASCRIPT ────────────────────────────────────────-->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  //JS do cabecalho
+  const btn  = document.getElementById('hamburger');
+  const menu = document.getElementById('mobile-menu');
+
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    btn.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  //JS do Seletor
+  document.querySelectorAll(".circulo").forEach(el => {
+            el.addEventListener("mouseenter", () => {
+                el.classList.add("animando");
+            });
+            el.addEventListener("mouseleave", () => {
+                setTimeout(() => {
+                    el.classList.remove("animando");
+                }, 600);
+            });
+        });
+
+  //JS do Carrossel
+  const track = document.querySelector(".custom-track");
+    const slides = document.querySelectorAll(".carousel-slide");
+    const dotsContainer = document.querySelector(".carousel-dots");
+
+  if (track && dotsContainer && slides.length) {
+    let index = 0;
+    let interval;
+
+    slides.forEach((_, i) => { 
+      const dot = document.createElement("span");
+      dot.addEventListener("click", () => {
+        index = i;
+        updateSlide();
+        resetAutoplay();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    function updateSlide() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      document.querySelectorAll(".carousel-dots span")
+        .forEach(dot => dot.classList.remove("active"));
+      document.querySelectorAll(".carousel-dots span")[index]
+        .classList.add("active");
+    }
+
+    const nextButton = document.querySelector(".carousel-next");
+    const prevButton = document.querySelector(".carousel-prev");
+
+    if (nextButton) {
+    nextButton.onclick = () => {
+      index = (index + 1) % slides.length;
+      updateSlide();
+      resetAutoplay();
+    };
+    }
+
+    if (prevButton) {
+    prevButton.onclick = () => {
+      index = (index - 1 + slides.length) % slides.length;
+      updateSlide();
+      resetAutoplay();
+    };
+    }
+
+    function startAutoplay() {
+      interval = setInterval(() => {
+        index = (index + 1) % slides.length;
+        updateSlide();
+      }, 4000);
+    }
+    function resetAutoplay() {
+      clearInterval(interval);
+      startAutoplay();
+    }
+
+    updateSlide();
+    startAutoplay();
+  }
+  //Aqui, adicionarei a proxima secao JS
+  });
+</script>
+
+</body>
+</html>
