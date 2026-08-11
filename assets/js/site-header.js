@@ -36,13 +36,13 @@
           <div class="dropdown languages">
             <div class="dd-section-label">Idiomas do projeto</div>
             <div class="lang-grid">
-              <a class="lang-chip" href="#">Espanhol</a>
-              <a class="lang-chip" href="#">Mandarim</a>
+              <a class="lang-chip" href="em-construcao.html">Espanhol</a>
+              <a class="lang-chip" href="em-construcao.html">Mandarim</a>
               <a class="lang-chip" href="id-frances.html">Francês</a>
-              <a class="lang-chip" href="#">Japonês</a>
-              <a class="lang-chip" href="#">Italiano</a>
-              <a class="lang-chip" href="#">Latim</a>
-              <a class="lang-chip" href="#">Grego</a>
+              <a class="lang-chip" href="em-construcao.html">Japonês</a>
+              <a class="lang-chip" href="em-construcao.html">Italiano</a>
+              <a class="lang-chip" href="em-construcao.html">Latim</a>
+              <a class="lang-chip" href="em-construcao.html">Grego</a>
             </div>
           </div>
         </div>
@@ -55,9 +55,9 @@
             </svg>
           </div>
           <div class="dropdown">
-            <a class="dropdown-link" href="#">1º Trimestre</a>
-            <a class="dropdown-link" href="#">2º Trimestre</a>
-            <a class="dropdown-link" href="#">3º Trimestre</a>
+            <a class="dropdown-link" href="em-construcao.html">1º Trimestre</a>
+            <a class="dropdown-link" href="em-construcao.html">2º Trimestre</a>
+            <a class="dropdown-link" href="em-construcao.html">3º Trimestre</a>
           </div>
         </div>
 
@@ -69,14 +69,14 @@
             </svg>
           </div>
           <div class="dropdown">
-            <a class="dropdown-link" href="#">Livro teórico</a>
-            <a class="dropdown-link" href="#">Livros didáticos</a>
+            <a class="dropdown-link" href="em-construcao.html">Livro teórico</a>
+            <a class="dropdown-link" href="em-construcao.html">Livros didáticos</a>
             <a class="dropdown-link" href="id-frances.html">Site Francês</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-link" href="videoblogs.html">Videoblogs</a>
-            <a class="dropdown-link" href="#">Reportagens</a>
-            <a class="dropdown-link" href="#">Podcasts</a>
-            <a class="dropdown-link" href="#">Prêmios</a>
+            <a class="dropdown-link" href="em-construcao.html">Reportagens</a>
+            <a class="dropdown-link" href="em-construcao.html">Podcasts</a>
+            <a class="dropdown-link" href="em-construcao.html">Prêmios</a>
           </div>
         </div>
 
@@ -85,7 +85,7 @@
         </div>
 
         <div class="nav-item">
-          <a class="nav-link" href="#">Eventos de Formação Docente</a>
+          <a class="nav-link" href="em-construcao.html">Eventos de Formação Docente</a>
         </div>
 
         <div class="nav-item">
@@ -93,7 +93,7 @@
         </div>
 
         <div class="nav-item">
-          <a class="nav-link" href="#">Sobre o projeto</a>
+          <a class="nav-link" href="em-construcao.html">Sobre o projeto</a>
         </div>
 
       </nav>
@@ -116,13 +116,13 @@
           <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </summary>
         <div class="mobile-sub">
-          <a href="#">Espanhol</a>
-          <a href="#">Mandarim</a>
+          <a href="em-construcao.html">Espanhol</a>
+          <a href="em-construcao.html">Mandarim</a>
           <a href="id-frances.html">Francês</a>
-          <a href="#">Japonês</a>
-          <a href="#">Italiano</a>
-          <a href="#">Latim</a>
-          <a href="#">Grego</a>
+          <a href="em-construcao.html">Japonês</a>
+          <a href="em-construcao.html">Italiano</a>
+          <a href="em-construcao.html">Latim</a>
+          <a href="em-construcao.html">Grego</a>
         </div>
       </details>
 
@@ -132,9 +132,9 @@
           <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </summary>
         <div class="mobile-sub">
-          <a href="#">1º Trimestre</a>
-          <a href="#">2º Trimestre</a>
-          <a href="#">3º Trimestre</a>
+          <a href="em-construcao.html">1º Trimestre</a>
+          <a href="em-construcao.html">2º Trimestre</a>
+          <a href="em-construcao.html">3º Trimestre</a>
         </div>
       </details>
 
@@ -144,22 +144,22 @@
           <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </summary>
         <div class="mobile-sub">
-          <a href="#">Livro teórico</a>
-          <a href="#">Livros didáticos</a>
+          <a href="em-construcao.html">Livro teórico</a>
+          <a href="em-construcao.html">Livros didáticos</a>
           <a href="id-frances.html">Site Francês</a>
           <a href="videoblogs.html">Videoblogs</a>
-          <a href="#">Reportagens</a>
-          <a href="#">Podcasts</a>
-          <a href="#">Prêmios</a>
+          <a href="em-construcao.html">Reportagens</a>
+          <a href="em-construcao.html">Podcasts</a>
+          <a href="em-construcao.html">Prêmios</a>
         </div>
       </details>
 
       <a class="mobile-link" href="yoartista.html">Exposição Yo Artista</a>
 
-      <a class="mobile-link" href="#">Eventos de Formação Docente</a>
+      <a class="mobile-link" href="em-construcao.html">Eventos de Formação Docente</a>
 
       <a class="mobile-link" href="equipe.html">Quem somos</a>
-      <a class="mobile-link" href="#">Sobre o projeto</a>
+      <a class="mobile-link" href="em-construcao.html">Sobre o projeto</a>
 
     </div>
   </header>

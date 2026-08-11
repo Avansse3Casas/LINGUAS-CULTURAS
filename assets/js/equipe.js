@@ -1,8 +1,8 @@
 // Para adicionar ou remover alguém, edite apenas esta lista.
   const membros = [
-    { nome: "Nome do membro", foto: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80", formacao: "Graduação ou área de formação", funcao: "Bolsista de extensão", lattes: "#" },
-    { nome: "Nome do membro", foto: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80", formacao: "Graduação ou área de formação", funcao: "Bolsista de iniciação científica", lattes: "#" },
-    { nome: "Nome do membro", foto: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80", formacao: "Graduação ou área de formação", funcao: "Colaborador(a)", lattes: "#" }
+    { nome: "Nome do membro", foto: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80", formacao: "Graduação ou área de formação", funcao: "Bolsista de extensão", lattes: "em-construcao.html" },
+    { nome: "Nome do membro", foto: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80", formacao: "Graduação ou área de formação", funcao: "Bolsista de iniciação científica", lattes: "em-construcao.html" },
+    { nome: "Nome do membro", foto: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80", formacao: "Graduação ou área de formação", funcao: "Colaborador(a)", lattes: "em-construcao.html" }
   ];
   document.getElementById("team-grid").innerHTML = membros.map((membro) => `
     <a class="member-card" href="${membro.lattes}" target="_blank" rel="noopener noreferrer" aria-label="Ver currículo Lattes de ${membro.nome}">
