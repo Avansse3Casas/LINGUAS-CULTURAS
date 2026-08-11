@@ -632,7 +632,8 @@
     .destaque {
         font-family: "Miranda Sans", Helvetica, sans-serif;
         color:white;
-        background-color:#92b300;
+        background-color: goldenrod;
+        text-decoration: none;
 
         height: 200px;
         border-radius: 20px;
@@ -690,7 +691,7 @@
         justify-content: center;
         padding: 6px;
 
-        background-color: goldenrod;
+        background-color: white;
         border-radius: 50%;
     }
     .icon img {
@@ -709,7 +710,7 @@
     .banner {
         position: relative; 
         margin: auto;
-        height: 60vh;
+        height: 80vh;
         max-width: 95%;
         border-radius: 60px;
         overflow: hidden;
@@ -784,7 +785,7 @@
     /*----------------------------------------------- CSS DO CATALOGO DE LIVROS DIDATICOS -----------------------------------------------*/
     .secaoCatalogo {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 24px;
       padding: 20px;
     }
@@ -794,8 +795,8 @@
         text-align: center;
         text-decoration: none;
       color: black;
-      background: transparent;
-      border-radius: 0;
+      background: #e8c264;
+      border-radius: 25px;
       overflow: visible;
       padding: 0;
       transition: transform 0.3s ease;

@@ -454,7 +454,7 @@
             inset: 0;
             content: "";
             position: absolute;
-            background: rgba(0,0,0,0.4);
+            background: rgba(0,0,0,0.6);
             z-index: -1;
         }
         .titulo {
@@ -607,20 +607,29 @@
             font-size: clamp(16px, 1.8vw, 22px);
         }
         .materiais .capa-destaque {
+            display: block;
             aspect-ratio: 12/16;
-            width: min(100%, 340px);
+            width: 100%;
             height: auto;
-            border-radius: 25px;
-            box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+            border-radius: inherit;
         }
         .materiais .capa-container {
           position: relative;
+          width: min(100%, 340px);
+          line-height: 0;
           justify-self: center;
+          filter: drop-shadow(0 14px 28px rgba(0,0,0,0.18));
         }
         .materiais .capa-container a {
+          position: relative;
           display: block;
+          line-height: 0;
+          overflow: hidden;
+          border-radius: 25px;
+          isolation: isolate;
         }
-        .materiais .capa-container:hover .overlay{
+        .materiais .capa-container:hover .overlay,
+        .materiais .capa-container a:focus-visible .overlay {
           opacity: 1;
         }
         .materiais .overlay {
@@ -631,11 +640,16 @@
           justify-content: center;
           align-items: center;
           background: rgba(0,0,0,0.4);
-          border-radius: 25px;
+          border-radius: inherit;
           opacity: 0;
           transition: opacity 0.3s ease;
           backdrop-filter: blur(1px);
           cursor: pointer;  
+        }
+        .materiais .capa-container a:focus-visible,
+        .materiais .miniatura:focus-visible {
+          outline: 3px solid #b8860b;
+          outline-offset: 4px;
         }
         .materiais .button {
           position: relative;
@@ -711,6 +725,7 @@
         .materiais .miniatura.ativa {
           border-color: goldenrod;
           border-radius: 30px;
+          background: rgba(218, 165, 32, 0.08);
         }
         /*-----------CTA E OUTROS IDIOMAS-----------------------------*/
         .cta-inscricao,
