@@ -407,7 +407,7 @@
       align-items: center;
       min-height: 310px;
       padding: clamp(18px, 3vw, 34px);
-      border-radius: 999px;
+      border-radius: clamp(35px, 5vw, 70px);
       background:
         radial-gradient(circle at 92% 12%, rgba(255,255,255,0.48), transparent 22%),
         linear-gradient(135deg, #ffd51e, #ffc400 48%, #ffda47);
