@@ -4,7 +4,7 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Dois personagens sorrindo nas cores bege, branca e preta, sendo um amarrado com linhas pretas em um relógio de cor preta, branca e vermelha e outro em cima de uma escada nas cores pretas e brancas. No plano de fundo se destacam as cores cinza e branca e um chão na cor marrom escuro.",
     "imagem": "assets/obras/obra-001.jpg",
-    "audio": "assets/audios-yoartista/Ana-Luiza-Caetano.m4a"
+    "audio": ""
   },
   {
     "autor": "Gabriel Moreira",
@@ -18,7 +18,7 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Fundo colorido nas cor vermelha, azul, verde, laranja e amarelo com uma flor no plano de destaque com um caule na cor verde escuro, folhas na cor verde claro, pétalas na cor rosa claro e um miolo na cor amarela.",
     "imagem": "assets/obras/obra-003.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/Ana-Luiza-Caetano.m4a"
   },
   {
     "autor": "Pedro Markowicz e Davi Oswaldo",
