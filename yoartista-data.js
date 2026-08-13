@@ -4,7 +4,7 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Dois personagens sorrindo nas cores bege, branca e preta, sendo um amarrado com linhas pretas em um relógio de cor preta, branca e vermelha e outro em cima de uma escada nas cores pretas e brancas. No plano de fundo se destacam as cores cinza e branca e um chão na cor marrom escuro.",
     "imagem": "assets/obras/obra-001.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/Ana-Luiza-Caetano.m4a"
   },
   {
     "autor": "Gabriel Moreira",
@@ -259,7 +259,7 @@ const yoArtistaObras = [
     "audio": ""
   },
   {
-    "autor": "branca, ponteiros cinzas e borda rosa claro.",
+    "autor": "Perí Machado de Azevedo",
     "turma": "105",
     "descricao": "Fundo divido em duas cores, laranja e vermelho e azul escuro e azul claro. Em destaque no centro está o personagem Coelho branco de olhos vermelhos de “Alice no País das Maravilhas”, no qual segura um relógio derretido na cor",
     "imagem": "assets/obras/obra-038.jpg",
