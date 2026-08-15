@@ -84,5 +84,67 @@ document.addEventListener('DOMContentLoaded', () => {
     updateSlide();
     startAutoplay();
   }
+
+  const listaDestaques = document.getElementById('lista-destaques');
+
+  if (listaDestaques) {
+    fetch(new URL('data/destaques.json', document.baseURI))
+      .then((response) => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.json();
+      })
+      .then((destaques) => {
+        if (!Array.isArray(destaques)) throw new Error('Formato de dados inválido.');
+
+        destaques.forEach((destaque) => {
+          const card = document.createElement('a');
+          card.className = 'destaque';
+          card.href = destaque.url;
+          card.target = '_blank';
+          card.rel = 'noopener noreferrer';
+          card.setAttribute('aria-label', `Abrir destaque: ${destaque.nome || 'sem título'}`);
+
+          if (destaque.capa) {
+            const imagem = document.createElement('img');
+            imagem.className = 'imgMain';
+            imagem.src = destaque.capa;
+            imagem.alt = `Capa do destaque: ${destaque.nome || 'sem título'}`;
+            card.append(imagem);
+          } else {
+            card.classList.add('destaque--sem-capa');
+          }
+
+          const conteudo = document.createElement('div');
+          conteudo.className = 'destaque-content';
+
+          if (destaque.tipo) {
+            const categoria = document.createElement('div');
+            categoria.className = 'categoria';
+            const tipo = document.createElement('p');
+            tipo.className = 'nomeCat';
+            tipo.textContent = destaque.tipo;
+            categoria.append(tipo);
+            conteudo.append(categoria);
+          }
+
+          const titulo = document.createElement('h3');
+          titulo.textContent = destaque.nome || 'Destaque';
+          conteudo.append(titulo);
+
+          if (destaque.briefing) {
+            const descricao = document.createElement('p');
+            descricao.className = 'descricao';
+            descricao.textContent = destaque.briefing;
+            conteudo.append(descricao);
+          }
+
+          card.append(conteudo);
+          listaDestaques.append(card);
+        });
+      })
+      .catch((error) => {
+        console.warn('Não foi possível carregar os destaques:', error.message);
+      });
+  }
   //Aqui, adicionarei a proxima secao JS
   });

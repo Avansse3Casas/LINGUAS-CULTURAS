@@ -462,7 +462,7 @@
     .destaque-img { z-index: auto; }
     .hero-content { position: relative; z-index: 2; width: min(700px, 86%); height: 100%; padding: clamp(38px, 7vw, 96px); display: flex; flex-direction: column; justify-content: flex-end; color: var(--white); }
     .hero-kicker, .section-kicker { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.4px; }
-    .quote { font-size: clamp(30px, 4vw, 58px); line-height: 1.08; font-weight: 600; }
+    .quote { font-size: clamp(28px, 3vw, 50px); line-height: 1.08; font-weight: 600; }
     .missao { max-width: 610px; margin-top: 28px; font-size: 17px; color: rgba(255,255,255,.88); }
     .missao h1 { font-size: 16px; margin-bottom: 8px; color: var(--white); }
     .content-section { width: min(1180px, 90%); margin: 0 auto; padding: clamp(72px, 9vw, 128px) 0; }

@@ -650,6 +650,17 @@
         transition: transform 0.2s ease, box-shadow 0.2s ease;
         cursor: pointer;
     }
+    #lista-destaques {
+        display: grid;
+        gap: 20px;
+        margin: 0 25px;
+    }
+    #lista-destaques .destaque {
+        margin: 0;
+    }
+    .destaque--sem-capa {
+        grid-template-columns: 1fr;
+    }
     .destaque:hover {
         color: white;
         transform: scale(1.02);

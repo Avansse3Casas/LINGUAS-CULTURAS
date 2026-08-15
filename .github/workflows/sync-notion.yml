@@ -1,0 +1,39 @@
+name: Sincronizar destaques do Notion
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 5 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Gerar dados de Destaques
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATA_SOURCE_ID: ${{ vars.NOTION_DATA_SOURCE_ID }}
+        run: node scripts/sync-notion.js
+
+      - name: Registrar atualização quando houver mudança
+        run: |
+          if git diff --quiet -- data/destaques.json; then
+            echo "Sem alterações em data/destaques.json."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/destaques.json
+          git commit -m "chore: sincronizar destaques do Notion"
+          git push
