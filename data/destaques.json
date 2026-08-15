@@ -6,5 +6,37 @@
     "briefing": "Viagem de 15 dias inclui atividades em Wuhan e Pequim, com aulas de idioma, imersão cultural e visitas a laboratórios de tecnologia de ponta; programa é financiado pelo Instituto Confúcio",
     "capa": "https://paranaibamais.com.br/wp-content/uploads/2026/06/Alunos-da-UFMG-1.jpg",
     "ordem": 1
+  },
+  {
+    "nome": "Estudantes do Coltec/UFMG viajam à China para intercâmbio cultural e cursos de mandarim",
+    "url": "https://agenciamg.com.br/2026/06/13/intercambio-estudantes-ufmg-china/",
+    "tipo": "REPORTAGEM",
+    "briefing": "Dois estudantes do Colégio Técnico (Coltec) da UFMG embarcarão para a China em julho para um intercâmbio de 15 dias. Arthur Augusto Lara Matos e Miguel Ângelo Rodrigues de Araújo foram […]",
+    "capa": "https://agenciamg.com.br/wp-content/uploads/2026/06/agenciamg-408-840x447.avif",
+    "ordem": 2
+  },
+  {
+    "nome": "Há 11 anos, parceria entre Coltec e Instituto Confúcio oferta aulas gratuitas de mandarim na UFMG",
+    "url": "https://www.youtube.com/watch?v=Je0VmlMsa5k&t=2s",
+    "tipo": "VÍDEO",
+    "briefing": "Nesta semana, os estudantes do Colégio Técnico da UFMG, Arthur Lara e Miguel Araújo, embarcaram para um intercâmbio na China. A oportunidade veio através da parceria nascida em 2013, entre o Coltec e o Instituto Confúcio da UFMG",
+    "capa": "https://i.ytimg.com/vi/Je0VmlMsa5k/hqdefault.jpg?sqp=-oaymwErCNACELwBSFryq4qpAx0IARUAAIhCGAHYAQHiAQoIGBACGAY4AUABuAL3GA==&rs=AOn4CLCDzyj-IHpV_HAdcNE4e89STBsEaw",
+    "ordem": 3
+  },
+  {
+    "nome": "Contagem regressiva: estudantes do Coltec embarcam para a China",
+    "url": "https://www.ufmg.br/comunicacao/noticias/internacional/contagem-regressiva-estudantes-do-coltec-embarcam-para-a-china/",
+    "tipo": "REPORTAGEM",
+    "briefing": "Acompanhados de professora, Arthur Lara e Miguel Rodrigues farão curso de mandarim no país e visitarão laboratórios de robótica",
+    "capa": "https://www.ufmg.br//app/uploads/2026/06/55326062670_46ea1d66d5_k-864x445.jpg",
+    "ordem": 4
+  },
+  {
+    "nome": "De malas prontas: estudantes do Coltec embarcam para intercâmbio tecnológico e cultural na China",
+    "url": "https://www.ufmg.br/comunicacao/radio-ufmg-educativa/publicacoes/institucional/de-malas-prontas-estudantes-do-coltec-embarcam-para-intercambio-tecnologico-e-cultural-na-china/",
+    "tipo": "PODCAST",
+    "briefing": "Financiada pelo Instituto Confúcio, eles embarcam com um roteiro repleto de aprendizados e atividades culturais por Wuhan e Pequim",
+    "capa": "https://www.ufmg.br//app/uploads/2025/09/Thumb-horizontal-Expresso.png",
+    "ordem": 5
   }
 ]
