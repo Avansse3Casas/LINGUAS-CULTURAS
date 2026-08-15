@@ -18,7 +18,7 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Fundo colorido nas cor vermelha, azul, verde, laranja e amarelo com uma flor no plano de destaque com um caule na cor verde escuro, folhas na cor verde claro, pétalas na cor rosa claro e um miolo na cor amarela.",
     "imagem": "assets/obras/obra-003.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/Ana-Luiza-Caetano.m4a"
   },
   {
     "autor": "Pedro Markowicz e Davi Oswaldo",
@@ -259,7 +259,7 @@ const yoArtistaObras = [
     "audio": ""
   },
   {
-    "autor": "branca, ponteiros cinzas e borda rosa claro.",
+    "autor": "Perí Machado de Azevedo",
     "turma": "105",
     "descricao": "Fundo divido em duas cores, laranja e vermelho e azul escuro e azul claro. Em destaque no centro está o personagem Coelho branco de olhos vermelhos de “Alice no País das Maravilhas”, no qual segura um relógio derretido na cor",
     "imagem": "assets/obras/obra-038.jpg",
