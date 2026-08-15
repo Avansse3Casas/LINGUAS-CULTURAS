@@ -36,13 +36,13 @@
           <div class="dropdown languages">
             <div class="dd-section-label">Idiomas do projeto</div>
             <div class="lang-grid">
-              <a class="lang-chip" href="em-construcao.html">Espanhol</a>
-              <a class="lang-chip" href="em-construcao.html">Mandarim</a>
+              <a class="lang-chip" href="idioma-espanhol.html">Espanhol</a>
+              <a class="lang-chip" href="idioma-mandarim.html">Mandarim</a>
               <a class="lang-chip" href="id-frances.html">Francês</a>
-              <a class="lang-chip" href="em-construcao.html">Japonês</a>
-              <a class="lang-chip" href="em-construcao.html">Italiano</a>
-              <a class="lang-chip" href="em-construcao.html">Latim</a>
-              <a class="lang-chip" href="em-construcao.html">Grego</a>
+              <a class="lang-chip" href="idioma-japones.html">Japonês</a>
+              <a class="lang-chip" href="idioma-italiano.html">Italiano</a>
+              <a class="lang-chip" href="idioma-latim.html">Latim</a>
+              <a class="lang-chip" href="idioma-grego.html">Grego</a>
             </div>
           </div>
         </div>
@@ -116,13 +116,13 @@
           <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </summary>
         <div class="mobile-sub">
-          <a href="em-construcao.html">Espanhol</a>
-          <a href="em-construcao.html">Mandarim</a>
+          <a href="idioma-espanhol.html">Espanhol</a>
+          <a href="idioma-mandarim.html">Mandarim</a>
           <a href="id-frances.html">Francês</a>
-          <a href="em-construcao.html">Japonês</a>
-          <a href="em-construcao.html">Italiano</a>
-          <a href="em-construcao.html">Latim</a>
-          <a href="em-construcao.html">Grego</a>
+          <a href="idioma-japones.html">Japonês</a>
+          <a href="idioma-italiano.html">Italiano</a>
+          <a href="idioma-latim.html">Latim</a>
+          <a href="idioma-grego.html">Grego</a>
         </div>
       </details>
 

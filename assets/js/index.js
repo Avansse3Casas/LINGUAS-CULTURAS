@@ -120,6 +120,26 @@ document.addEventListener('DOMContentLoaded', () => {
           if (destaque.tipo) {
             const categoria = document.createElement('div');
             categoria.className = 'categoria';
+            const iconesPorTipo = {
+              reportagem: 'assets/icons/reportagem-icon.png',
+              podcast: 'assets/icons/podcast-icon.png',
+              video: 'assets/icons/video-icon.png',
+            };
+            const chaveTipo = destaque.tipo
+              .normalize('NFD')
+              .replace(/[\u0300-\u036f]/g, '')
+              .toLowerCase();
+            const caminhoIcone = iconesPorTipo[chaveTipo];
+
+            if (caminhoIcone) {
+              const icone = document.createElement('span');
+              icone.className = 'icon';
+              const imagemIcone = document.createElement('img');
+              imagemIcone.src = caminhoIcone;
+              imagemIcone.alt = '';
+              icone.append(imagemIcone);
+              categoria.append(icone);
+            }
             const tipo = document.createElement('p');
             tipo.className = 'nomeCat';
             tipo.textContent = destaque.tipo;
