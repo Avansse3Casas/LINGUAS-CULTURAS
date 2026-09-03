@@ -533,12 +533,12 @@
         margin: 40px auto 0;
         overflow: hidden;
         width: 100%;
-        height: 70vw;
         border-radius: 120px 40px 120px 40px / 80px 40px 80px 40px !important;        
     }
     .custom-track {
         display: flex;
         transition: transform 0.6s ease;
+        height: 33vw;
     }
     .carousel-slide {
         min-width: 100%;
@@ -568,19 +568,6 @@
     .foto-15 img { object-position: center 40%; }
     .foto-16 img { object-position: 60% center; }
     .foto-17 img { object-position: center 40%; }
-
-    /*.foto-2 img { object-position: center 40%; }
-    .foto-3 img { object-position: center 38%; }
-    .foto-4 img { object-position: center 30%; }
-    .foto-5 img { object-position: center 40%; }
-    .foto-6 img { object-position: center center; }
-    .foto-7 img { object-position: center 25%; }
-    .foto-8 img { object-position: center center; }
-    .foto-9 img { object-position: center center; }
-    .foto-10 img { object-position: center 20%; }
-    .foto-11 img { object-position: center 40%; }
-    .foto-12 img { object-position: center 40%; }
-    .foto-13 img { object-position: center 40%; }*/
 
     .carousel-prev, .carousel-next {
         position: absolute;
