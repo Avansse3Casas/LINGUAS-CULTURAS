@@ -556,12 +556,11 @@
     /* Ajuste individual por foto */
     .foto-1 img { object-position: center 40%; }
     .foto-2 img { object-position: center 40%; }
-    .foto-3 img { object-position: center 40%; }
+    .foto-3 img { object-position: center 30%; }
     .foto-5 img { object-position: center 40%; }  
     .foto-6 img { object-position: center 40%; }
     .foto-7 img { object-position: 40% 55%; }
     .foto-8 img { object-position: center 20%; }
-    .foto-9 img { object-position: center 40%; }
     .foto-11 img { object-position: center 40%; }
     .foto-12 img { object-position: center 40%; }
     .foto-14 img { object-position: 40% center; }
