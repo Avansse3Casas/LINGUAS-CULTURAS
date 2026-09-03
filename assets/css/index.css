@@ -555,7 +555,9 @@
 
     /* Ajuste individual por foto */
     .foto-1 img { object-position: center 40%; }
-    .foto-2 img { object-position: center 40%; }
+    
+
+    /*.foto-2 img { object-position: center 40%; }
     .foto-3 img { object-position: center 38%; }
     .foto-4 img { object-position: center 30%; }
     .foto-5 img { object-position: center 40%; }
@@ -566,7 +568,7 @@
     .foto-10 img { object-position: center 20%; }
     .foto-11 img { object-position: center 40%; }
     .foto-12 img { object-position: center 40%; }
-    .foto-13 img { object-position: center 40%; }
+    .foto-13 img { object-position: center 40%; }*/
 
     .carousel-prev, .carousel-next {
         position: absolute;
