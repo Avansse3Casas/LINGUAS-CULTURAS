@@ -18,7 +18,7 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Fundo colorido nas cor vermelha, azul, verde, laranja e amarelo com uma flor no plano de destaque com um caule na cor verde escuro, folhas na cor verde claro, pétalas na cor rosa claro e um miolo na cor amarela.",
     "imagem": "assets/obras/obra-003.jpg",
-    "audio": "assets/audios-yoartista/Ana-Luiza-Caetano.m4a"
+    "audio": "assets/audios-yoartista/102/Ana-Luiza-Caetano-102.m4a"
   },
   {
     "autor": "Pedro Markowicz e Davi Oswaldo",
@@ -144,14 +144,14 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Quadrado central: nas cores brancas. Retângulo: fundo azul claro com manchas na cor marrom. Faca nas cores cinza, preta e branca e tomate na cor vermelha e rosa claro.",
     "imagem": "assets/obras/obra-021.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Amanda-Carolina-Soares-de-Jesus-102.mp3"
   },
   {
     "autor": "Fernanda Soares Souza",
     "turma": "102",
     "descricao": "Fundo: nas cores azul claro, azul escuro e branca com um escrito de assinatura, número 102 e a data 05/10/25. No centro: Um olho nas cores bege claro, marrom e cílios de cor preta. A íris do olho é dividida em cinco partes: uma seria um galho marrom com folhas verdes, uma em um fundo cinza, outra seria um fundo de mar, outra com fundo bege e um fio de sangue vermelho, e outro colorido nas cores roxa, rosa, verde e amarela. Como pupila se encontra a representação de uma bússola com vários ponteiros e uma âncora.",
     "imagem": "assets/obras/obra-022.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Fernanda-Soares-Souza-102.mp3"
   },
   {
     "autor": "Paulo Valenntino Cassemiro Lamac",
@@ -242,7 +242,7 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Floresta de relógios, com caule na cor verde claro, e as flores como relógios nas cores dourados, branco e preto. Com céu azulado e fases da lua na cor amarela e branca.",
     "imagem": "assets/obras/obra-035.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Maria-Vitoria-102.oga"
   },
   {
     "autor": "João Lucas e Samuel Vieira",
@@ -270,7 +270,7 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Vidraceiro em formato de casa do filme “A bela e a Fera”",
     "imagem": "assets/obras/obra-039.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Ana-Clara-Oliveira-102.mp3"
   },
   {
     "autor": "Ana Beatriz de Souza da Silva",
@@ -291,14 +291,14 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Retrato em família, com um menino loiro de pele branca com blusa do brasil, mulher loira com olhos escuros, pele branca e blusa azul, homem negro com barba e cabelos escuros de olhos escuros e blusa verde, menina de cabelos cacheados pretos e pele preta com blusa roza e mulher negra de cabelos escuros e blusa vermelha, com cachorro de cor branca em fundo laranja.",
     "imagem": "assets/obras/obra-042.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Lília-Reges-da-Silva-Nunes-102.m4a"
   },
   {
     "autor": "Rafaela de Costa Souza",
     "turma": "102",
     "descricao": "Flores de cor azul em caules de cor verde com raminhos de cor laranja e amarela. Com borboleta em tons de azul e petro ao lado em um fundo de cor cinza claro.",
     "imagem": "assets/obras/obra-043.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Rafaela-da-Costa-Souza-102.mp3"
   },
   {
     "autor": "Bruna Pinto Rocha e Rafaela Monteiro",
@@ -354,7 +354,7 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Fundo: céu azul e chão na cor verde escuro. Em destaque duas flores, margaridas, de pétalas brancas, miolo amarelo e caule verde claro.",
     "imagem": "assets/obras/obra-051.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Lais-Prado-e-Sofia-Barbosa-102.m4a"
   },
   {
     "autor": "Suzane Pechir Lauar Vitorino",
@@ -382,7 +382,7 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Fundo: céu azul com nuvens brancas e sol amarelo. Em destaque retrato de Frida Kahlo com roupa colorida e flores na cabeça.",
     "imagem": "assets/obras/obra-055.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Cecília-e-Júlia-Emanuelly-102.mov"
   },
   {
     "autor": "Nataly Machado Silva",
@@ -445,7 +445,7 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Floresta com grama na cor verde e céu nas cores azul escuro e azul claro e um rio na cor azul claro. Na floresta é possível perceber uma árvore na cor marrom e no lugar das folhas existem dois relógios derretidos nas cores laranja escuro, amarela e preta.",
     "imagem": "assets/obras/obra-064.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Mariane-Souza-de-Oliveira-102.oga"
   },
   {
     "autor": "Rherysson Carlos e Anna Loren Ramalho",
@@ -459,7 +459,7 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Fundo: na cor amarela. Em destaque uma flor de pétalas alaranjadas e vermelha com folhas verde escuro ao lado.",
     "imagem": "assets/obras/obra-066.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Maria-Fernanda-Pires-Cachiado-102.m4a"
   },
   {
     "autor": "Lara Golcalves Duraes e Lucas Chaia Santana",
@@ -487,14 +487,14 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Fundo: céu azul, com coração em tons de rosa e vermelho, chão nas cor marrom. Em destaque uma árvore com tronco e raízes na cor marrom e folhas em tons de verde com mulher de cor branca pendurada na árvore com cabelos castanhos e roupa azul escura.",
     "imagem": "assets/obras/obra-070.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Júlia-Konzen-102.m4a"
   },
   {
     "autor": "Artur Natalino de Freitas",
     "turma": "102",
     "descricao": "Fundo: parede na cor verde musgo e chão na cor marrom, estante na cor marrom com livros em vermelho e amarelo e vaso de flor com girassol, janela com vista para um céu estrelado e em degradê em tons de azul. Em destaque uma cama com coberta azul e uma nuvem de pensamentos em amarelo e branco.",
     "imagem": "assets/obras/obra-071.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Artur-Natalino-de-Freitas-102.mp3"
   },
   {
     "autor": "Autor não identificado",
@@ -529,21 +529,21 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Paisagem de pôr do sol, com céu nas cores marrom laranja, amarelo e branco. Campo em tons de verde com montanhas e árvores em verde. Beatriz Teodora Santos Silvestre",
     "imagem": "assets/obras/obra-076.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Raquel-Alana-Santos-Raimundo-102.oga"
   },
   {
     "autor": "Beatriz da Rocha Castro Carvalho",
     "turma": "102",
     "descricao": "Fundo na cor preta. Em destaque flor com pétalas laranjas, miolo em formato de olho rosa com pupila rosa e caule n=em tons de branco e roxo com flores verdes.",
     "imagem": "assets/obras/obra-077.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Beatriz-Carvalho-102.m4a"
   },
   {
     "autor": "Luiz Filipe de Oliveira Silva",
     "turma": "102",
     "descricao": "Fundo preto estrelado e em destaque uma bola em tons de laranja co raios em branco saindo da mesma.",
     "imagem": "assets/obras/obra-078.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Luiz-102.oga"
   },
   {
     "autor": "Autor não identificado",
@@ -585,7 +585,7 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Fundo de cor branca e preto com lua cheia em branco e cinza. Em destaque uma bola branca contornada por uma linha de borda vermelha e interior amarelo, com caixa embaixo em preto e vermelho e raios em azul claro saindo do objeto.",
     "imagem": "assets/obras/obra-084.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Theo-Firmino-Hsieh-102.mp4"
   },
   {
     "autor": "Júlia Viana de Azevedo e Sofia Schimidt Tolentino Santos",
@@ -634,14 +634,14 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Fundo preto em destaque com formato de cabeça. Dentro da cabeça é possível ver diversas paredes com faces, uma mulher e quadros de corpos, em tons de rosa, branco, azul, amarelo, cinza e bege claro com vermelho.",
     "imagem": "assets/obras/obra-091.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Sofia-Dias-102.m4a"
   },
   {
     "autor": "Daniel Santanna Greco",
     "turma": "102",
     "descricao": "Fundo: parede em verde claro e mesa em tom de marrom. Em destaque uma vasilha azul com flores dentro, flores rosas, amarelas, verdes e folhas verdes.",
     "imagem": "assets/obras/obra-092.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Daniel-Santanna-Greco-102.mp3"
   },
   {
     "autor": "Laisse Emanuele Carvalho Ferreira",
@@ -690,7 +690,7 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Fundo em tons de roxo e azul. Em destaque 4 pessoas se abraçando, todas de pele clara e cabelos castanhos, a menina com blusa rosa, calça preta e bolsa cinza, a mulher com blusa vermelha, calça azul e lenço vermelho, o menino com blusa azul, calça verde e chapéu de palha e homem com blusa verde, calça cinza, segurando um chapéu de palha e relógio no pulso.",
     "imagem": "assets/obras/obra-099.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Beatriz-Gaspar-102.m4a"
   },
   {
     "autor": "folhas e um olho no centro dela de cor azul.",
@@ -704,7 +704,7 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Fundo: céu avermelhado com tons de laranja e amarelo, com montanhas ao fundo em cinza escuro e claro e chão na cor marrom. Em destaque um elefante cinza com pernas longas, quase de girafas, com um galho junto de um relógio derretido e em cima do animal uma escultura cinza.",
     "imagem": "assets/obras/obra-101.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Maysa-102.mp4"
   },
   {
     "autor": "Arthur do Carmo e Jean Costa",
@@ -718,7 +718,7 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Fundo: dividido em quatro partes, em tons de azul, verde, roxo, laranja, amarelo, vermelho, com flores, sol, janela, e lua. Em destaque uma menina de pele parda, cabelos escuros, olhos pretos e boca rosa. Ela usa uma blusa roxa e uma calça jeans azul, e segura um gato frajola, em tons de preto e branco.",
     "imagem": "assets/obras/obra-103.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/102/Ana-Clara-dos-Reis-102.m4a"
   },
   {
     "autor": "Autor não identificado",
