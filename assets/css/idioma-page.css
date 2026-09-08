@@ -13,6 +13,29 @@
 
 .idioma-banner-placeholder { z-index: -2; }
 
+.info-icone-texto,
+.info-icone-placeholder {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  color: var(--accent, #355d8c);
+  background: color-mix(in srgb, var(--accent, #355d8c) 10%, white);
+  font-family: "Miranda Sans", sans-serif;
+  font-size: clamp(24px, 4vw, 46px);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.info-icone-placeholder {
+  padding: 10px;
+  border: 2px dashed color-mix(in srgb, var(--accent, #355d8c) 55%, white);
+  font-size: clamp(10px, 1vw, 13px);
+  line-height: 1.15;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .descricao .presImg .idioma-placeholder-foto {
   width: 100%;
   min-height: 260px;

@@ -419,7 +419,7 @@
     /*---------------------------- BANNER -----------------------------------*/
     .banner {
         width: 100%;
-        height: clamp(400px, 30vh, 2000px);
+        height: clamp(220px, 28vw, 360px);
         display: flex;
         position: relative; 
         align-items: center;
@@ -583,4 +583,10 @@
     }
     .t106 {
         background-color:darksalmon;
+    }
+
+    @media (max-width: 620px) {
+        .banner {
+            height: clamp(190px, 52vw, 280px);
+        }
     }
