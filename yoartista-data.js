@@ -130,14 +130,14 @@ const yoArtistaObras = [
     "turma": "104",
     "descricao": "A descrição será divida em duas seções para melhor entendimento. Na primeira seção, ocupando o lado esquerdo e meio de uma tela em formato retangular, é possível observar um coelho segurando um relógio na cor branca, uma cama nas cores branca, vermelha, preta e marrom, uma árvore na cor marrom e um chão na cor verde e um olho bem no centro nas cores branca, bege, preta e azul e simulando nuvens na pupila, todos esses componentes estão em um fundo de cor azul. Na segunda seção, ao lado direito é possível analisar um rato nas cores cinza e rosa claro, uma velha nas cores branca, marrom e preta com chamas vermelhas, laranjas e amarelas e um caveira na cor cinza e branca, tudo em um fundo na cor preta.",
     "imagem": "assets/obras/obra-019.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/104/Raphael-e-Adrian-104.m4a"
   },
   {
     "autor": "Luisa Sampaio e Gabriel Dias",
     "turma": "104",
     "descricao": "Relógio derretido com fundo em degradê nas cores vermelha, laranja e amarelas com números e ponteiros na cor preta marcando 10:30 e borda na cor dourada. Em um fundo marrom e azul.",
     "imagem": "assets/obras/obra-020.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/104/Luisa-Sampaio-e-Gabriel-Dias-104.mp3"
   },
   {
     "autor": "Amanda Carolina Soares de Jesus",
@@ -417,7 +417,7 @@ const yoArtistaObras = [
     "turma": "104",
     "descricao": "Paisagem de montanha branca, coberta em neve, com lago nas cores azul, preto e verde. Com uma pequena floresta no canto direito e no canto esquerdo em cima uma lua cheia branca reluzente.",
     "imagem": "assets/obras/obra-060.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/104/Joao-Victor-da-Silva-Barbosa-104.aac"
   },
   {
     "autor": "Alice Guimarães",
@@ -452,7 +452,7 @@ const yoArtistaObras = [
     "turma": "104",
     "descricao": "Fundo: céu em degradê nas cores branca, azul escuro e claro, roxa com duas luas cheias em cinza, com uma floresta em preto. Em destaque a silhueta de uma mulher com cabelos longos e um planeta enorme embaixo.",
     "imagem": "assets/obras/obra-065.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/104/Rherysson-e-Anna-Loren-104.opus"
   },
   {
     "autor": "Maria Fernanda Pires Cachiado",
@@ -557,7 +557,7 @@ const yoArtistaObras = [
     "turma": "104",
     "descricao": "Fundo rosa com cactos verde com pontos preto, em destaque tubarão de meme feitos por ia em tons de azul e cinza.",
     "imagem": "assets/obras/obra-080.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/104/Arthur-Bahia-e-Henrique-104.m4a"
   },
   {
     "autor": "Ellen Dias e Marília Oliveira",
@@ -578,7 +578,7 @@ const yoArtistaObras = [
     "turma": "104",
     "descricao": "Espiral com contorno preto e tons alternados entre azul claro e cinza escuro e claro, com pontos em amarelo no meio.",
     "imagem": "assets/obras/obra-083.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/104/Heitor-Freitas-e-Andre-Luiz-104.m4a"
   },
   {
     "autor": "Theo Firmino Hsieh",
@@ -739,7 +739,7 @@ const yoArtistaObras = [
     "turma": "104",
     "descricao": "Fundo em tons de vermelho, laranja e amarelo, com olho castanho em um fundo preto no canto superior esquerdo. Em fundo existem diversos conjuntos de prédios cinzas, em destaque duas pessoas, uma completamente branca e outra em tom bege segurando um bebê, ao lado uma bomba em tons de cinza, vermelho e branco ao lado de uma pessoa com máscara de gás cinza e embaixo uma pessoa branca cobrindo o rosto de roupa marrom.",
     "imagem": "assets/obras/obra-106.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/104/Ayla-Ana-e-Anthonela-Cordoval-104.mov"
   },
   {
     "autor": "Autor não identificado",
