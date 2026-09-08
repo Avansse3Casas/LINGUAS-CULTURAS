@@ -32,7 +32,7 @@ const yoArtistaObras = [
     "turma": "101",
     "descricao": "Mulher de pele negra, cabelos castanhos, olhos castanhos e lábios rosas com roupas na cor roxa e vermelha e lágrimas nas cores azul claro e branca. A mulher está presente em um fundo de ondas nas cores vermelho, laranja escuro, laranja claro e amarela.",
     "imagem": "assets/obras/obra-005.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/101/Ana-Sophia-e-Rayssa-Coelho-101.m4a"
   },
   {
     "autor": "Pero Rubens e Miguel Antunes",
@@ -102,7 +102,7 @@ const yoArtistaObras = [
     "turma": "101",
     "descricao": "Bailarina de pele branca e cabelos castanhos, sua roupa é na cor rosa claro. A personagem está em cima de uma bola na cor vermelha que está no meio de um lago. No plano de fundo é possível observar uma floresta com árvores e um céu estrelado e uma lua.",
     "imagem": "assets/obras/obra-015.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/101/Marina-Gabrielle-101.opus"
   },
   {
     "autor": "Fernanda Gabriela e Lorena Pereira",
@@ -116,7 +116,7 @@ const yoArtistaObras = [
     "turma": "101",
     "descricao": "Floresta com grama na cor verde e céu nas cores azul escuro e azul claro e um rio na cor azul claro. Na floresta é possível perceber uma árvore na cor marrom e no lugar das folhas existem dois relógios derretidos nas cores laranja escuro, amarela e preta.",
     "imagem": "assets/obras/obra-017.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/101/Gabriella-Eduarda-101.m4a"
   },
   {
     "autor": "Thalita Lisboa",
@@ -214,7 +214,7 @@ const yoArtistaObras = [
     "turma": "101",
     "descricao": "Encenação do nascimento de uma criança, com mãe, irmã e pai. Dois pássaros, um na cor branca e outro na cor amarela. Fundo de prédios e casas nas cores rosa escuro, laranja, rosa claro, roxa, amarela, verde escuro e preta.",
     "imagem": "assets/obras/obra-031.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/101/Ana-Beatriz-da-Cunha-e-Rebeca-de-Souza.mp3"
   },
   {
     "autor": "Pedro Guilherme Pereira Morais",
@@ -277,14 +277,14 @@ const yoArtistaObras = [
     "turma": "101",
     "descricao": "Relógio derretido em destaque com borda rosa, fundo amarelo e ponteiros e números na cor cinza. Fundo em rosa com flores nas cores azul escuro, azul claro, laranja, rosa e amarelo.",
     "imagem": "assets/obras/obra-040.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/101/Ana-Beatriz-Souza-101.m4a"
   },
   {
     "autor": "Maria Vitória dos Santos Neves",
     "turma": "101",
     "descricao": "Mulher em destaque de pele branca, cabelos azuis escuro, com sobrancelha preta, olhos pretos e boca rosa escuro de roupa branca. Em um fundo de céu estrelado nas cores preta e tons de cinza com uma lua cheia branca.",
     "imagem": "assets/obras/obra-041.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/101/Maria-Vitoria-101.m4a"
   },
   {
     "autor": "Lilia Reges da Silva Nunes",
@@ -305,14 +305,14 @@ const yoArtistaObras = [
     "turma": "101",
     "descricao": "Fundo: céu azul com nuvens brancas, montanhas verde escuro e verde claro. Duas mulheres de cabelos castanhos, pele branca, uma com vestido azul e outra com vestido laranja. Ambas estão sentadas em cadeiras brancas e uma mesa cinza com adereços para tomar chá.",
     "imagem": "assets/obras/obra-044.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/101/Bruna-e-Rafaela-101.m4a"
   },
   {
     "autor": "Mariana Elias e Rayssa Gonçaves",
     "turma": "101",
     "descricao": "Fundo de cor preta e destaque nas cores cinza claro e branco com pinceladas de forma aleatórias em branco.",
     "imagem": "assets/obras/obra-045.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/101/Rayssa-Gonçalves-e-Mariana.mp3"
   },
   {
     "autor": "Isaac Machado e Isaac Gomes",
@@ -326,7 +326,7 @@ const yoArtistaObras = [
     "turma": "101",
     "descricao": "Em destaque uma mulher com pele de tigre, laranja com listras pretas. Com olhos e cabelo em um tom de castanho, usando um óculos amarelo. De fundo em cor roxa, três rosas, uma ramo de folha verde, um sol amarelo e um pássaro azul e rosa.",
     "imagem": "assets/obras/obra-047.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/101/Isabela-Gomes-101.opus"
   },
   {
     "autor": "Henrique dos Santos Cardoso",
@@ -340,7 +340,7 @@ const yoArtistaObras = [
     "turma": "101",
     "descricao": "Mulher de pele parda com cabelos e olhos castanhos e boca da cor vermelha. Camisa e faixa de cor branca com ramos de folhas verde, com calça preta. Escrito em ambos os braços “COLTEC UFMG” de cor vermelha. Em um fundo colorido laranja, amarelo, vermelho, verde e azul com pontos pretos.",
     "imagem": "assets/obras/obra-049.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/101/Larissa-Vitoria-101.m4a"
   },
   {
     "autor": "Pablo Henryque e Milena Roque",
@@ -375,7 +375,7 @@ const yoArtistaObras = [
     "turma": "101",
     "descricao": "Fundo: galáxia nas cores azul e preto. Em destaque três objetos: dois relógios derretidos nas cores preto, branco e dourado e um círculo em formato de espiral em dourado e laranja.",
     "imagem": "assets/obras/obra-054.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/101/Júlia-Roldão-101.mp4"
   },
   {
     "autor": "Julia Emanuely e Cecilia Souza",
@@ -389,7 +389,7 @@ const yoArtistaObras = [
     "turma": "101",
     "descricao": "Paisagem de um pôr do sol no mal, céu em degradê nas cores laranja, amarelo, rosa, e tons de azul com sol em branco e mar nas em tons de azul com ondas.",
     "imagem": "assets/obras/obra-056.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/101/Nataly-101.mov"
   },
   {
     "autor": "Bernardo Makelle e Rafel Sousa",
@@ -508,7 +508,7 @@ const yoArtistaObras = [
     "turma": "101",
     "descricao": "Fundo: galáxia de fundo azul com manchas de tons em azul e roxo e verde e marrom, com outros planetas ao fundo. Em destaque a silhueta do planeta de saturno em laranja.",
     "imagem": "assets/obras/obra-073.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/101/Rafael-Félix-Gonçalves-101.mp3"
   },
   {
     "autor": "Diogo Silva e João Gabriel Tenorio",
@@ -522,7 +522,7 @@ const yoArtistaObras = [
     "turma": "101",
     "descricao": "Fundo: Céu estrelado com meia lua em degradê nas cores azul e roxo, com castelos e chão em verde. Em destaque se encontra um bruxo com roupas nas cores verde escuro, um caldeirão preto com verde e uma lápide marrom.",
     "imagem": "assets/obras/obra-075.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/101/Sophia-Evelyn-Costa-Lage-101.mp3"
   },
   {
     "autor": "Raquel Alana Santos Raimundo",
@@ -571,7 +571,7 @@ const yoArtistaObras = [
     "turma": "101",
     "descricao": "Lado esquerdo, fundo em branco com moldura laranja e em destaque uma mulher feita em tons de azul com cabelo liso e olhos laranja. Lado direito, fundo branco com moldura azul e uma mulher feita em tons de laranja com cabelo cacheado e olhos azuis.",
     "imagem": "assets/obras/obra-082.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/101/Emmanuelly-Victoria-Lara-Alves-101.m4a"
   },
   {
     "autor": "André Luiz e Heitor Freitas",
@@ -592,7 +592,7 @@ const yoArtistaObras = [
     "turma": "101",
     "descricao": "Fundo na cor preta e em tons de cinza. Em destaque cinco flores, na cor amarela, rosa, azul, rosa e laranja, todas com caules e folhas em verde claro.",
     "imagem": "assets/obras/obra-085.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/101/Sofia-Schmidt-e-Julia-Viana-101.m4a"
   },
   {
     "autor": "Autor não identificado",
@@ -606,7 +606,7 @@ const yoArtistaObras = [
     "turma": "101",
     "descricao": "Fundo em tons de azul, com pontos brancos. Em destaque cinco objetos, um livro branco, uma escola com escrito COLTEC, uma casa laranja com telhado marrom, um relógio derretido cinza e seis livros nas cores verde, marrom, cinza, amarelo, laranja e vinho.",
     "imagem": "assets/obras/obra-087.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/101/Emília-Miranda-e-Isabela-Rodrigues-101.m4a"
   },
   {
     "autor": "Elen Maria Quintão Macedo",
