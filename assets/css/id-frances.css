@@ -431,7 +431,7 @@
         /*---------------------------- BANNER -----------------------------------*/
         .banner {
             width: 100%;
-            height: clamp(280px, 42vw, 520px);
+            height: clamp(220px, 28vw, 360px);
             display: flex;
             position: relative; 
             align-items: center;
@@ -987,7 +987,7 @@
         }
         @media (max-width: 620px) {
           .banner {
-            height: clamp(240px, 70vw, 360px);
+            height: clamp(190px, 52vw, 280px);
           }
           .subtitulo {
             gap: 8px;
