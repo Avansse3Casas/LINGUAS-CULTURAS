@@ -11,7 +11,7 @@ const yoArtistaObras = [
     "turma": "103",
     "descricao": "Lado esquerdo da tela- Fundo na cor azul com mar na cor vermelha e preta com \"sol\" na cor branca, vermelha e amarela. Metade de uma face com pele na cor rosa claro e cabelo na cor laranja escuro e laranja claro. Lado direito da tela- Fundo na cor azul escuro e azul clara com estrelas nas cores amarela e branca com lua nas cores amarela e branca.",
     "imagem": "assets/obras/obra-002.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/103/Gabriel-Moreira-Freitas-Primo-103.m4a"
   },
   {
     "autor": "Ana Luiza Caetano da Silva",
@@ -39,7 +39,7 @@ const yoArtistaObras = [
     "turma": "103",
     "descricao": "Casa no estilo japonês nas cores marrom claro e marrom escuro com telhado na cor azul escuro. A casa está presente em um jardim nas cores verde claro e verde escuro com bambus nas cores verde claro e verde escuro com um caminho na cor marrom claro. No plano de fundo é possível ver duas montanhas nas cores cinza claro e cinza escuro com um sol vermelho e nuvens cinzas. Escrito em chines ao lado.",
     "imagem": "assets/obras/obra-006.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/103/Miguel-A-e-Pedro-R-102.mp3"
   },
   {
     "autor": "Ana Maria Schuchter e Cauã Rocha",
@@ -53,7 +53,7 @@ const yoArtistaObras = [
     "turma": "103",
     "descricao": "Colégio Técnico da UFMG, nas cores rosa claro, amarela, vermelha, preta e branca, coberto por relógios derretidos, nas cores amarelas e pretas, em um ambiente com árvores e chão, nas cores marrom e verde. No plano de fundo existe um céu nas cores amarela, laranja e vermelho com nuvens na cor azul. Contém uma placa com o escrito \"Colégio Técnico\".",
     "imagem": "assets/obras/obra-008.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/103/Gabriel-Theodoro-e-Risley-Roque-103.mp3"
   },
   {
     "autor": "Emily Siqueira Ferreira",
@@ -67,7 +67,7 @@ const yoArtistaObras = [
     "turma": "103",
     "descricao": "Peixe nas cor laranja e amarelo com olho, dentro do peixe, na cor branca, preta e marrom em um fundo no mar na core azul com algas na cor verde claro e vermelho.",
     "imagem": "assets/obras/obra-010.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/103/Arthur-Pierre-Rodrigues-Silva-103.oga"
   },
   {
     "autor": "Gabriel Henrique dos Reis Marques",
@@ -81,7 +81,7 @@ const yoArtistaObras = [
     "turma": "103",
     "descricao": "Jogo futebol com três jogadores, sendo dois com a bola no pé e um goleiro em um fundo amarelo. O primeiro jogador tem a pele negra, cabelo vermelho, com olhos castanhos e lábios vermelhos, usando um uniforme nas cores vermelha e branca com o sapato na cor preta. O segundo jogador tem a pele branca, cabelo castanho e olhos pretos, com um uniforme nas cores, laranja, branca e azul, meias na cor laranja e branca e sapatos na cor marrom.",
     "imagem": "assets/obras/obra-012.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/103/Davi-Bicalho-e-João-Gabriel-103.mp3"
   },
   {
     "autor": "André Werckma e Miguel Augusto",
@@ -95,7 +95,7 @@ const yoArtistaObras = [
     "turma": "103",
     "descricao": "Astronauta na cor cinza sentado em um planeta na cor vermelha, ao seu lado direito se encontra um foguete nas cores amarelo, vermelho, azul claro e cinza claro em um fundo de céu estrelado na cor preta.",
     "imagem": "assets/obras/obra-014.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/103/Mariana-Luzia-dos-Santos-Cardoso-Silva-e-Samuel-Oliveira-Couto-103.m4a"
   },
   {
     "autor": "Marina Gabrielle de Souza Araújo",
@@ -109,7 +109,7 @@ const yoArtistaObras = [
     "turma": "103",
     "descricao": "Em primeiro plano é possível ver duas árvores de cor verde escuro. No meio da tela é possível observar um lago de cor azul claro e azul escuro e em cima é possível ver um bola em formato circular, um olho, nas cores branca, azul claro e preta e ao redor uma \"crosta\" de gelo na cor azul gelo. No fundo se encontra um céu estrelado e em degradê.",
     "imagem": "assets/obras/obra-016.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/103/Lorena-Pereira-e-Fernanda-Gabriela-103.mp3"
   },
   {
     "autor": "Gabriella Eduarda Fidelis da Silva",
@@ -165,7 +165,7 @@ const yoArtistaObras = [
     "turma": "103",
     "descricao": "Fundo na cor amarela. Representação de uma máquina industrial nas cores cinza claro e escuro com uma logo de uma flor rosa claro. A produção da máquina seria as pétalas da flor em um feixe de luz nas cores branca e rosa claro. Em cima do objeto existe uma árvore com tronco na cor marrom e folhas na cor verde.",
     "imagem": "assets/obras/obra-024.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/103/Noemy-B-S-e-Rosana-P-M-103.mp3"
   },
   {
     "autor": "Ana Maria Heringer e Gustavo Azevedo",
@@ -347,7 +347,7 @@ const yoArtistaObras = [
     "turma": "103",
     "descricao": "Fundo: céu em tons de azul e laranja com pássaros sobrevoando e palmeiras nas cores marrom e verde com montanhas em verde e lago, que representa a lagoa da Pampulha. Em destaque a Igrejinha da Pampulha nos tons de azul está coberta por pingos em laranja, ao seu lado uma capivara marrom e um poste na cor preta.",
     "imagem": "assets/obras/obra-050.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/103/Milena-Roque-e-Pablo-Henryque-103.mp3"
   },
   {
     "autor": "Laís Prado e Sofia Barbosa",
@@ -435,10 +435,10 @@ const yoArtistaObras = [
   },
   {
     "autor": "Davi Starling e Miguel Caputo",
-    "turma": "Turma não informada",
+    "turma": "103",
     "descricao": "Releitura da obra “Viva la Vida” de Frida Kahlo, melancias em diversos formatos.",
     "imagem": "assets/obras/obra-063.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/103/Davi-Starling-e-Miguel-Caputo-103.mp4"
   },
   {
     "autor": "Mariane Souza de Oliveira",
@@ -732,7 +732,7 @@ const yoArtistaObras = [
     "turma": "103",
     "descricao": "Fundo na cor preta e azul com sol laranja, estrela amarela e círculo amarelo. Em destaque uma mulher de pele branca, cabelos pretos e roupas roxas sentada, ao redor de uma fogueira e uma torre verde com um ponto amarelo em cima",
     "imagem": "assets/obras/obra-105.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/103/Davi-Martins-e-Miguel-Batista-103.m4a"
   },
   {
     "autor": "Anthonela Cordoval Ribeiro e Ayla Ana Alves Pereira",
