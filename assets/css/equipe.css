@@ -498,12 +498,12 @@
     .member-project span { display: block; margin-bottom: 4px; color: var(--black); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
     .member-link { display: flex; align-items: center; justify-content: space-between; margin-top: 26px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 13px; font-weight: 700; }
     @media (max-width: 820px) {
-      .foto-destaque { max-width: 94%; min-height: 580px; border-radius: 20px; }
+      .foto-destaque { max-width: 94%; min-height: 500px; height: auto; border-radius: 20px; }
       .foto-destaque::after { background: linear-gradient(0deg, rgba(0,0,0,.82), rgba(0,0,0,.18)); }
-      .hero-content { width: 100%; padding: 34px; }
+      .hero-content { width: 100%; min-height: 500px; padding: 34px; }
       .section-heading, .coordinator { grid-template-columns: 1fr; }
       .coordinator-photo { width: min(340px, 82vw); margin: auto; }
       .book-grid { grid-template-columns: 1fr; gap: 30px; }
       .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
-    @media (max-width: 520px) { .team-grid { grid-template-columns: 1fr; } .section-heading { gap: 18px; } .content-section { width: 88%; } .quote { font-size: 32px; } }
+    @media (max-width: 520px) { .team-grid { grid-template-columns: 1fr; } .section-heading { gap: 18px; } .content-section { width: 88%; padding: 56px 0; } .quote { font-size: 30px; } .foto-destaque, .hero-content { min-height: 460px; } .hero-content { padding: 26px; } .missao { margin-top: 20px; font-size: 15px; } }
