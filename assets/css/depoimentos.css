@@ -1,0 +1,99 @@
+.depoimentos-section {
+  width: min(1180px, 94vw);
+  margin: 0 auto clamp(52px, 8vw, 96px);
+}
+
+.depoimentos-intro {
+  max-width: 720px;
+  margin: -8px auto 28px;
+  color: #5e5e5e;
+  font-family: "Miranda Sans", sans-serif;
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.55;
+  text-align: center;
+}
+
+.depoimentos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 24px);
+}
+
+.depoimento-card {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.depoimento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.13);
+}
+
+.depoimento-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1024 / 284;
+  object-fit: contain;
+  background: #f4f4f4;
+}
+
+.depoimento-card figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 13px 16px;
+  color: #565656;
+  font-family: "Miranda Sans", sans-serif;
+  font-size: 13px;
+}
+
+.depoimento-idioma {
+  flex-shrink: 0;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.depoimento-autor {
+  overflow: hidden;
+  font-weight: 650;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (max-width: 700px) {
+  .depoimentos-section { width: 94vw; }
+  .depoimentos-grid { grid-template-columns: 1fr; }
+  .depoimento-card { border-radius: 12px; }
+  .depoimento-card figcaption { padding: 11px 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .depoimento-card { transition: none; }
+}
