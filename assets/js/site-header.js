@@ -76,7 +76,7 @@
             <a class="dropdown-link" href="videoblogs.html">Videoblogs</a>
             <a class="dropdown-link" href="em-construcao.html">Reportagens</a>
             <a class="dropdown-link" href="em-construcao.html">Podcasts</a>
-            <a class="dropdown-link" href="em-construcao.html">Prêmios</a>
+            <a class="dropdown-link" href="premios.html">Prêmios</a>
           </div>
         </div>
 
@@ -150,7 +150,7 @@
           <a href="videoblogs.html">Videoblogs</a>
           <a href="em-construcao.html">Reportagens</a>
           <a href="em-construcao.html">Podcasts</a>
-          <a href="em-construcao.html">Prêmios</a>
+          <a href="premios.html">Prêmios</a>
         </div>
       </details>
 

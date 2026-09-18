@@ -79,7 +79,148 @@
 .projeto-destaque p { color: rgba(255,255,255,.84); font-size: 18px; line-height: 1.55; }
 .projeto-destaque h2 { margin: 0; font-size: clamp(30px, 4vw, 48px); }
 
+/* A página de Mandarim prioriza registros audiovisuais no lugar de materiais didáticos. */
+body[data-idioma="mandarim"] .banner .imgBanner {
+  object-position: center 43%;
+}
+
+body[data-idioma="mandarim"] .info h3 {
+  white-space: nowrap;
+}
+
+body[data-idioma="mandarim"] .info-icone-texto {
+  color: #000;
+  background: transparent;
+}
+
+body[data-idioma="mandarim"] .cta-card {
+  background:
+    linear-gradient(120deg, rgba(255,255,255,.94) 0%, rgba(255,248,232,.78) 58%, rgba(255,248,232,.6) 100%),
+    url("../fotos-mandarim/mandarim7.jpeg") center 58% / cover;
+}
+
+.videos-idioma {
+  width: min(1180px, 94vw);
+  margin: clamp(56px, 8vw, 96px) auto 0;
+}
+
+.videos-cabecalho {
+  display: grid;
+  grid-template-columns: minmax(280px, .9fr) minmax(280px, 1.1fr);
+  gap: clamp(24px, 6vw, 80px);
+  align-items: end;
+  margin-bottom: clamp(24px, 4vw, 42px);
+}
+
+.videos-kicker {
+  margin: 0 0 7px;
+  color: var(--accent, #9e2c2c);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.videos-cabecalho h2 {
+  margin: 0;
+  font-size: clamp(38px, 6vw, 68px);
+  line-height: 1;
+  letter-spacing: -.035em;
+}
+
+.videos-cabecalho > p {
+  margin: 0;
+  color: #59544f;
+  font-size: clamp(16px, 1.8vw, 20px);
+  line-height: 1.65;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 24px);
+}
+
+.video-card {
+  grid-column: span 2;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(33,18,18,.08);
+}
+
+.video-card:nth-child(2) {
+  grid-column: span 3;
+}
+
+.video-card--destaque {
+  grid-column: span 3;
+  color: #fff;
+  background: #721f24;
+  border-color: transparent;
+}
+
+.video-embed {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #160d0d;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-copy {
+  padding: clamp(18px, 2.5vw, 28px);
+}
+
+.video-copy p {
+  margin: 0 0 8px;
+  color: var(--accent, #9e2c2c);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.video-card--destaque .video-copy p { color: #ffc9b7; }
+.video-copy h3 { margin: 0; font-size: clamp(20px, 2.2vw, 30px); line-height: 1.15; }
+.video-copy span { display: block; margin-top: 10px; color: #68605b; font-size: 15px; line-height: 1.55; }
+.video-card--destaque .video-copy span { color: rgba(255,255,255,.78); }
+.video-copy a {
+  display: inline-flex;
+  gap: 7px;
+  align-items: center;
+  margin-top: 16px;
+  color: var(--accent, #9e2c2c);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.video-copy a:hover { text-decoration: underline; }
+.video-card--destaque .video-copy a { color: #fff; }
+
+body[data-idioma="mandarim"] .galeria .foto-grande img { object-position: center 48%; }
+body[data-idioma="mandarim"] .galeria .foto-vertical img { object-position: center 28%; }
+
 @media (max-width: 760px) {
   .projeto-destaque a { grid-template-columns: 1fr; }
   .projeto-destaque img { min-height: 180px; }
+  .videos-cabecalho { grid-template-columns: 1fr; gap: 14px; }
+  .videos-grid { grid-template-columns: 1fr; }
+  .video-card,
+  .video-card:nth-child(2),
+  .video-card--destaque { grid-column: auto; }
+  body[data-idioma="mandarim"] .cta-card {
+    background:
+      linear-gradient(135deg, rgba(255,255,255,.94), rgba(255,248,232,.75)),
+      url("../fotos-mandarim/mandarim7.jpeg") center / cover;
+  }
 }

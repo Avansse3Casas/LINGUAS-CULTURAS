@@ -14,13 +14,31 @@ const idiomas = {
   mandarim: {
     nome: 'Mandarim', efeito: 'Escuta, escrita e encontros culturais', cor: '#9e2c2c',
     apresentacao: 'As atividades de mandarim convidam a conhecer modos de escrita, pronúncia e práticas culturais ligadas às comunidades de língua chinesa. O percurso valoriza curiosidade, escuta e aproximações cuidadosas entre contextos culturais.',
+    banner: 'assets/fotos-mandarim/int_china.jpg',
+    bannerAlt: 'Estudantes e professores reunidos na Competição de Proficiência em Língua Chinesa de 2025',
+    apresentacaoImagem: 'assets/fotos-mandarim/mandarim1.jpeg',
+    apresentacaoAlt: 'Aula de mandarim com estudantes do COLTEC',
+    ocultarMateriais: true,
     curiosidades: [
       { titulo: '+1 bilhão', texto: 'De falantes nativos', icone: 'pessoas' },
-      { numero: 4, sufixo: ' + neutro', texto: 'Tons que podem alterar o significado das palavras', simbolo: '♪' },
-      { titulo: '汉字', texto: 'Caracteres chineses usados na escrita', simbolo: '汉字' },
+      { titulo: '4 + 1', texto: 'Quatro tons principais e um tom neutro podem alterar o significado das palavras', simbolo: '♪' },
+      { titulo: '汉字', texto: 'Caracteres chineses usados na escrita', simbolo: '中文' },
       { titulo: 'ONU', texto: 'O chinês é uma das seis línguas oficiais', icone: 'onu' },
     ],
     materiais: [],
+    videos: [
+      { id: 'UfIPVEc12aA', embed: 'https://www.youtube.com/embed/UfIPVEc12aA?si=80GwDDz3La_HnPJL', titulo: 'Intercâmbio 2026: teaser', descricao: 'Um minuto para conhecer os primeiros momentos dessa experiência internacional.', destaque: true, etiqueta: 'Em destaque · 1 minuto' },
+      { id: 'fsrPLzWOcLc', embed: 'https://www.youtube.com/embed/fsrPLzWOcLc?si=NcH5HbPWdU9OutnF', titulo: 'Intercâmbio 2026: experiência completa', descricao: 'Um registro mais completo das vivências, dos encontros e dos aprendizados do intercâmbio.', etiqueta: 'Intercâmbio' },
+      { id: 'tK7rlQSG158', embed: 'https://www.youtube.com/embed/tK7rlQSG158?si=s8ialLlyCq13PC_9', titulo: 'Instituto Confúcio UFMG', descricao: 'Um registro da parceria e das ações de difusão da língua e da cultura chinesas.', etiqueta: 'Acervo' },
+      { id: 'iN7JHNAhEtg', embed: 'https://www.youtube.com/embed/iN7JHNAhEtg?si=5tp3cWm_BYO_DOdT', titulo: 'Instituto Confúcio UFMG 2', descricao: 'Mais um registro das atividades e experiências promovidas pelo Instituto Confúcio na UFMG.', etiqueta: 'Acervo' },
+      { id: '9i5OOKh5ygo', embed: 'https://www.youtube.com/embed/9i5OOKh5ygo?si=gvQ-QZ8Vw5ftr8ag', titulo: 'Oficina Chinese Knot no COLTEC', descricao: 'Uma oficina cultural realizada com estudantes do COLTEC.', etiqueta: 'Acervo' },
+    ],
+    galeria: [
+      { src: 'assets/fotos-mandarim/mandarim4.jpeg', alt: 'Estudantes utilizando carimbos chineses durante uma atividade em sala', legenda: 'Escrita e cultura em sala', classe: 'foto-grande' },
+      { src: 'assets/fotos-mandarim/mandarim2.jpeg', alt: 'Caderno com impressão de um carimbo chinês vermelho', legenda: 'Marcas da aprendizagem', classe: 'foto' },
+      { src: 'assets/fotos-mandarim/mandarim3.jpeg', alt: 'Estudante experimentando um carimbo chinês no caderno', legenda: 'Experimentação e descoberta', classe: 'foto' },
+      { src: 'assets/fotos-mandarim/mandarim6.jpg', alt: 'Estudante apresentando um texto em mandarim durante competição de proficiência', legenda: 'Mandarim além da sala de aula', classe: 'foto-vertical' },
+    ],
   },
   japones: {
     nome: 'Japonês', efeito: 'Escrita, narrativas e culturas do Japão', cor: '#ad3646',
@@ -95,9 +113,30 @@ function materiais(idioma) {
   return `<div class="material-destaque"><div class="capa-container"><a id="link-destaque" href="${principal.link}" target="_blank" rel="noopener noreferrer"><img id="img-destaque" class="capa-destaque" src="${principal.capa}" alt="Capa de ${principal.titulo}"><div class="overlay"><span class="button">Ver material</span></div></a></div><div class="texto-destaque"><h3 id="titulo-destaque">${principal.titulo}</h3><p id="descricao-destaque">${principal.descricao}</p><a id="botao-destaque" class="botao-destaque" href="${principal.link}" target="_blank" rel="noopener noreferrer">Acessar material</a></div></div><div class="grade-miniaturas">${miniaturas}</div>`;
 }
 
-function galeria() {
+function galeria(idioma) {
+  if (idioma.galeria?.length === 4) {
+    const [grande, quadradaUm, quadradaDois, vertical] = idioma.galeria;
+    const foto = (item) => `<figure class="${item.classe}"><img src="${item.src}" alt="${item.alt}" loading="lazy"><figcaption class="overlay"><h3>${item.legenda}</h3></figcaption></figure>`;
+    return `<section class="galeria"><h1 class="subtitulo">Galeria</h1><div class="galeria-grid">${foto(grande)}<div class="galeria-coluna">${foto(quadradaUm)}${foto(quadradaDois)}</div>${foto(vertical)}</div></section>`;
+  }
   const placeholder = (classe, texto) => `<div class="${classe}"><div class="idioma-placeholder-foto">${texto}</div><div class="overlay"><h3>Registro em breve</h3></div></div>`;
   return `<section class="galeria"><h1 class="subtitulo">Galeria</h1><div class="galeria-grid">${placeholder('foto-grande', 'Imagem grande em atualização')}<div class="galeria-coluna">${placeholder('foto', 'Imagem quadrada em atualização')}${placeholder('foto', 'Imagem quadrada em atualização')}</div>${placeholder('foto-vertical', 'Imagem vertical em atualização')}</div></section>`;
+}
+
+function videos(idioma) {
+  if (!idioma.videos?.length) return '';
+  const cards = idioma.videos.map((video) => `<article class="video-card${video.destaque ? ' video-card--destaque' : ''}"><div class="video-embed"><iframe width="560" height="315" src="${video.embed || `https://www.youtube.com/embed/${video.id}`}" title="${video.titulo}" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="video-copy"><p>${video.etiqueta}</p><h3>${video.titulo}</h3><span>${video.descricao}</span><a href="https://youtu.be/${video.id}" target="_blank" rel="noopener noreferrer">Assistir no YouTube <b aria-hidden="true">↗</b></a></div></article>`).join('');
+  return `<section class="videos-idioma" aria-labelledby="videos-title"><div class="videos-cabecalho"><div><p class="videos-kicker">Encontros em movimento</p><h2 id="videos-title">Vivências em vídeo</h2></div><p>Do cotidiano das aulas ao intercâmbio internacional, acompanhe alguns momentos da trajetória do mandarim no projeto.</p></div><div class="videos-grid">${cards}</div></section>`;
+}
+
+function imagemBanner(idioma) {
+  if (idioma.banner) return `<img class="imgBanner" src="${idioma.banner}" alt="${idioma.bannerAlt || ''}">`;
+  return '<div class="imgBanner idioma-banner-placeholder">Imagem do idioma em atualização</div>';
+}
+
+function imagemApresentacao(idioma) {
+  if (idioma.apresentacaoImagem) return `<img src="${idioma.apresentacaoImagem}" alt="${idioma.apresentacaoAlt || `Atividade de ${idioma.nome}`}">`;
+  return '<div class="idioma-placeholder-foto">Imagem e registros das atividades<br>em atualização</div>';
 }
 
 function explorar(idAtual) {
@@ -144,7 +183,10 @@ function renderizarPaginaIdioma() {
   document.documentElement.style.setProperty('--accent', idioma.cor);
   document.title = `${idioma.nome} — Línguas e Culturas`;
   const projeto = idioma.projeto ? `<section class="projeto-destaque"><a href="${idioma.projeto.link}"><img src="${idioma.projeto.imagem}" alt="Imagem da ${idioma.projeto.titulo}"><div><p>Projeto em destaque</p><h2>${idioma.projeto.titulo}</h2><p>${idioma.projeto.texto}</p></div></a></section>` : '';
-  raiz.innerHTML = `<section class="banner"><div class="imgBanner idioma-banner-placeholder">Imagem do idioma em atualização</div><h1 class="titulo">${idioma.nome}</h1></section><section class="descricao"><h1 class="subtitulo">Sobre o idioma</h1><div class="presentation"><div class="presImg"><div class="idioma-placeholder-foto">Imagem e registros das atividades<br>em atualização</div></div><div class="presContent"><p class="presEffect">${idioma.efeito}</p><p class="text">${idioma.apresentacao}</p></div></div></section><section class="curiosidades">${idioma.curiosidades.map(cardInfo).join('')}</section>${projeto}<section class="materiais"><h1 class="subtitulo">Materiais e publicações</h1>${materiais(idioma)}</section>${galeria()}<div data-depoimentos-section data-idioma="${id}"></div><section class="cta-inscricao"><div class="cta-card"><div class="cta-icone" aria-hidden="true">✦</div><div class="cta-texto"><h2>Gostou do ${idioma.nome}?</h2><p>Participe gratuitamente das oficinas do projeto Línguas e Culturas. Aprenda, compartilhe experiências e descubra o mundo pelo idioma.</p></div><a class="cta-botao" href="em-construcao.html">Quero participar</a></div></section><section class="explorar-idiomas"><div class="explorar-card"><div class="idiomas-icone" aria-hidden="true">◎</div><div class="explorar-texto"><h2>Explore outros idiomas</h2><p>Cada língua abre uma nova janela para o mundo. Conheça também as outras frentes do projeto.</p></div><div class="filtro-idiomas">${explorar(id)}</div></div></section>`;
+  const secaoMateriais = idioma.ocultarMateriais ? '' : `<section class="materiais"><h1 class="subtitulo">Materiais e publicações</h1>${materiais(idioma)}</section>`;
+  const iconePessoas = '<svg viewBox="0 0 24 24" fill="none"><path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="1.8"/><path d="M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 19c.6-3.2 2.1-5 4.5-5s3.9 1.8 4.5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M11.5 19c.6-3.2 2.1-5 4.5-5s3.9 1.8 4.5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';
+  const iconeGlobo = '<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 12h17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M12 3c2.3 2.4 3.4 5.4 3.4 9S14.3 18.6 12 21c-2.3-2.4-3.4-5.4-3.4-9S9.7 5.4 12 3Z" stroke="currentColor" stroke-width="1.8"/></svg>';
+  raiz.innerHTML = `<section class="banner">${imagemBanner(idioma)}<h1 class="titulo">${idioma.nome}</h1></section><section class="descricao"><h1 class="subtitulo">Sobre o idioma</h1><div class="presentation"><div class="presImg">${imagemApresentacao(idioma)}</div><div class="presContent"><p class="presEffect">${idioma.efeito}</p><p class="text">${idioma.apresentacao}</p></div></div></section><section class="curiosidades">${idioma.curiosidades.map(cardInfo).join('')}</section>${projeto}${secaoMateriais}${videos(idioma)}${galeria(idioma)}<div data-depoimentos-section data-idioma="${id}"></div><section class="cta-inscricao"><div class="cta-card"><div class="cta-icone" aria-hidden="true">${iconePessoas}</div><div class="cta-texto"><h2>Gostou do ${idioma.nome}?</h2><p>Participe gratuitamente das oficinas do projeto Línguas e Culturas. Aprenda, compartilhe experiências e descubra o mundo pelo idioma.</p></div><a class="cta-botao" href="em-construcao.html">Quero participar</a></div></section><section class="explorar-idiomas"><div class="explorar-card"><div class="idiomas-icone" aria-hidden="true">${iconeGlobo}</div><div class="explorar-texto"><h2>Explore outros idiomas</h2><p>Cada língua abre uma nova janela para o mundo. Conheça também as outras frentes do projeto.</p></div><div class="filtro-idiomas">${explorar(id)}</div></div></section>`;
   iniciarCuriosidades(raiz);
   raiz.querySelectorAll('.miniatura').forEach((miniatura) => miniatura.addEventListener('click', (evento) => {
     evento.preventDefault();
