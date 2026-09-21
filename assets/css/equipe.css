@@ -485,6 +485,9 @@
     .book:hover img { transform: translateY(-5px); }
     .book span { color: var(--muted); font-size: 13px; }
     .book strong { display: block; margin-top: 4px; line-height: 1.25; }
+    .book-chapter { align-items: start; }
+    .book-meta { margin-top: 8px; color: var(--muted); font-size: 12px; line-height: 1.4; }
+    .book-meta b { color: var(--black); }
     .team-band { background: #f4f5f3; }
     .team-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
     .member-card { min-height: 100%; padding: 24px; background: var(--white); border: 1px solid var(--border); border-radius: 8px; color: inherit; text-decoration: none; transition: transform .2s var(--ease), box-shadow .2s var(--ease); }
