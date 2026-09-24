@@ -6,7 +6,7 @@
 .depoimentos-intro {
   max-width: 720px;
   margin: -8px auto 28px;
-  color: #5e5e5e;
+  color: var(--color-text-muted, #555247);
   font-family: "Miranda Sans", sans-serif;
   font-size: clamp(15px, 1.5vw, 18px);
   line-height: 1.55;
@@ -23,9 +23,9 @@
   min-width: 0;
   margin: 0;
   overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.09);
+  border: 1px solid var(--color-border, rgba(26, 26, 26, 0.16));
   border-radius: 18px;
-  background: #fff;
+  background: var(--color-surface, #fff);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -41,7 +41,7 @@
   height: auto;
   aspect-ratio: 1024 / 284;
   object-fit: contain;
-  background: #f4f4f4;
+  background: var(--color-creme, #fdf8e8);
 }
 
 .depoimento-card figcaption {
@@ -50,7 +50,7 @@
   justify-content: space-between;
   gap: 16px;
   padding: 13px 16px;
-  color: #565656;
+  color: var(--color-text-muted, #555247);
   font-family: "Miranda Sans", sans-serif;
   font-size: 13px;
 }
@@ -59,8 +59,8 @@
   flex-shrink: 0;
   padding: 5px 10px;
   border-radius: 999px;
-  background: #111;
-  color: #fff;
+  background: var(--color-verde-escuro, #4c7a24);
+  color: var(--color-surface, #fff);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.5px;

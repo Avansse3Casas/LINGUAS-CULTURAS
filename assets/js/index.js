@@ -34,7 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let interval;
 
     slides.forEach((_, i) => { 
-      const dot = document.createElement("span");
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.setAttribute("aria-label", `Ir para a foto ${i + 1}`);
       dot.addEventListener("click", () => {
         index = i;
         updateSlide();
@@ -45,10 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateSlide() {
       track.style.transform = `translateX(-${index * 100}%)`;
-      document.querySelectorAll(".carousel-dots span")
-        .forEach(dot => dot.classList.remove("active"));
-      document.querySelectorAll(".carousel-dots span")[index]
-        .classList.add("active");
+      document.querySelectorAll(".carousel-dots button")
+        .forEach((dot, dotIndex) => {
+          const active = dotIndex === index;
+          dot.classList.toggle("active", active);
+          dot.setAttribute("aria-current", active ? "true" : "false");
+        });
     }
 
     const nextButton = document.querySelector(".carousel-next");

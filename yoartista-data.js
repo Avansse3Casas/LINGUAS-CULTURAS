@@ -88,7 +88,7 @@ const yoArtistaObras = [
     "turma": "105",
     "descricao": "Personagem de pele preta e cinza com cabeça em formato de um cubo mágico nas cores branca, verde, azul, vermelho, laranja com olhos na cor amarela, nariz na cor vermelha e boca na cor azul. No plano de fundo existem cinco mãos na cor cinza ao redor da cabeça em um fundo marrom.",
     "imagem": "assets/obras/obra-013.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/105/André-e-Miguel-105.m4a"
   },
   {
     "autor": "Mariana Luzia e Samuel Couto",
@@ -235,7 +235,7 @@ const yoArtistaObras = [
     "turma": "105",
     "descricao": "Dois dados, um de cor vermelha com os números três, seis e cinco nas cores brancas e outro na cor azul com os números cinco, três e um. Em um fundo marrom.",
     "imagem": "assets/obras/obra-034.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/105/Gabriel-Amancio-105.m4a"
   },
   {
     "autor": "Maria Vitoria do Carmo Silva",
@@ -249,7 +249,7 @@ const yoArtistaObras = [
     "turma": "105",
     "descricao": "Fundo de cor cinza com cenário de guerra em destaque, no fundo existem dois carros de tanque nas cores verde e marrom e um olho fechado em lágrimas na cor amarelo. Em destaque na esquerda, são quatro corpos no chão e mais dois que aparentam ser duas mulheres chorando, todos estão de roupa vermelha e laranja. Do lado direito existem três soldados de uniforme verde apontando armas de cor cinza a essas pessoas.",
     "imagem": "assets/obras/obra-036.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/105/João-Lucas-105.aac"
   },
   {
     "autor": "Isabel Santos Colen e Lucas Almeida Azevedo",
@@ -263,7 +263,7 @@ const yoArtistaObras = [
     "turma": "105",
     "descricao": "Fundo divido em duas cores, laranja e vermelho e azul escuro e azul claro. Em destaque no centro está o personagem Coelho branco de olhos vermelhos de “Alice no País das Maravilhas”, no qual segura um relógio derretido na cor",
     "imagem": "assets/obras/obra-038.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/105/Perí-105.ogg"
   },
   {
     "autor": "Ana Clara de Oliveira Assis",
@@ -466,7 +466,7 @@ const yoArtistaObras = [
     "turma": "105",
     "descricao": "fundo: na cor azul e chão de tom cinza e marrom, cortina nas cores roxa com corações vermelhos e faixa amarela. Em destaque uma menina de pele branca com cabelos castanhos presos, faixa vermelha. Vestido de cor rosa claro e rosa escuro com mangas brancas, a menina segura um ursinho de cor marrom e ao seu lado tem uma mesa de madeira e um gato branco.",
     "imagem": "assets/obras/obra-067.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/105/Lara-e-Lucas-105.m4a"
   },
   {
     "autor": "Gabriela Ferreira Silva",
@@ -711,7 +711,7 @@ const yoArtistaObras = [
     "turma": "105",
     "descricao": "Fundo: céu estrelado e meia lua em tons de roxo, com mar em azul e grama em verde. Em destaque se situa o personagem Gumball do desenhho “O íncrivel Mundo de Gumball”, um gato de pelo azul, com blusa bege e calça cinza.",
     "imagem": "assets/obras/obra-102.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista/105/Jean-e-Arthur-105.mp3"
   },
   {
     "autor": "Ana Clara dos Reis Gonçalves",
