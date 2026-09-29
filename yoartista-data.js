@@ -72,8 +72,8 @@ const yoArtistaObras = [
   {
     "autor": "Gabriel Henrique dos Reis Marques",
     "turma": "105",
-    "descricao": "Cabeça de pele clara, olhos azuis e boca na cor vermelha, como cabelo são pintadas árvores de galhos na cor marrom e folhas na cor verde. Logo ao lado é possível ver uma xícara na cor vermelha e de fundo um céu nas cores azul claro, azul escuro, vermelho, laranja e a m a r e l o .",
-    "imagem": "assets/obras/obra-011.jpg",
+    "descricao": "Cabeça de pele clara, olhos azuis e boca na cor vermelha, como cabelo são pintadas árvores de galhos na cor marrom e folhas na cor verde. Logo ao lado é possível ver uma xícara na cor vermelha e de fundo um céu nas cores azul claro, azul escuro, vermelho, laranja e amarelo.",
+    "imagem": "assets/obras/Pedro Markowicz y Davi Oswaldo_105(1).jpg",
     "audio": ""
   },
   {
@@ -191,14 +191,14 @@ const yoArtistaObras = [
   {
     "autor": "Gabriel Henrique",
     "turma": "105",
-    "descricao": "Em destaque no centro da tela se mostra uma mulher de pele parda, com olhos azuis e boca vermelha, cabelo na cor lilás claro . Segurando um tipo de lanterna em formato de lua na cor verde claro. A mulher usa uma saia de cor alaranjada. No fundo ela se encontra em uma casa com paredes na cor vermelha, teto na cor marrom e chão na cor bege claro e marrom. Na porta com caminho para uma área externa, existe uma escada na cor branca, com galhos de árvores secas e céu nas cores azul escuro e claro.",
+    "descricao": "Pessoa em destaque nas cores azul e amarela, com faixa nos olhos de cor marrom, como representação de um cabelo se encontra um vasto céu azul com cores como verde claro, amarelo, rosa claro, marrom, preto, branco, laranja e vermelho. Em volta da pessoa se encontram montanhas na cor marrom.",
     "imagem": "assets/obras/Gabriel Henrique_105.jpg",
     "audio": ""
   },
   {
     "autor": "Luana Texeira Correa",
     "turma": "101",
-    "descricao": "Pessoa em destaque nas cores azul e amarela, com faixa nos olhos de cor marrom, como representação de um cabelo se encontra um vasto céu azul com cores como verde claro, amarelo, rosa claro, marrom , preto, branco, laranja e vermelho. Em volta da pessoa se encontram montanhas na cor marrom.",
+    "descricao": "Em destaque no centro da tela se mostra uma mulher de pele parda, com olhos azuis e boca vermelha, cabelo na cor lilás claro. Segurando um tipo de lanterna em formato de lua na cor verde claro. A mulher usa uma saia de cor alaranjada. No fundo ela se encontra em uma casa com paredes na cor vermelha, teto na cor marrom e chão na cor bege claro e marrom. Na porta com caminho para uma área externa, existe uma escada na cor branca, com galhos de árvores secas e céu nas cores azul escuro e claro.",
     "imagem": "assets/obras/Luana Texeira Correa_101.jpg",
     "audio": ""
   },
@@ -261,7 +261,7 @@ const yoArtistaObras = [
   {
     "autor": "Perí Machado de Azevedo",
     "turma": "105",
-    "descricao": "Fundo divido em duas cores, laranja e vermelho e azul escuro e azul claro. Em destaque no centro está o personagem Coelho branco de olhos vermelhos de “Alice no País das Maravilhas”, no qual segura um relógio derretido na cor",
+    "descricao": "Fundo divido em duas cores, laranja e vermelho e azul escuro e azul claro. Em destaque no centro está o personagem Coelho branco de olhos vermelhos de “Alice no País das Maravilhas”, no qual segura um relógio derretido na cor branca, ponteiros cinzas e borda rosa claro.",
     "imagem": "assets/obras/Perí Machado de Azevedo_105 .jpg",
     "audio": "assets/audios-yoartista/105/Perí-105.ogg"
   },
@@ -310,14 +310,14 @@ const yoArtistaObras = [
   {
     "autor": "Mariana Elias e Rayssa Gonçaves",
     "turma": "101",
-    "descricao": "Fundo de cor preta e destaque nas cores cinza claro e branco com pinceladas de forma aleatórias em branco.",
+    "descricao": "Cena: caminho para um castelo de coração. Dois personagens, um coelho branco com roupa azul escuro segurando um relógio e uma menina loira de pele branca com vestido azul claro, sapatos pretos e faixa preta na cabeça. Ambos estão de frente para um relógio derretido e uma árvore com relógio derretido.",
     "imagem": "assets/obras/Mariana Elias Rezende Santos e Rayssa Goncalves Silva_101.jpg",
     "audio": "assets/audios-yoartista/101/Rayssa-Gonçalves-e-Mariana.mp3"
   },
   {
     "autor": "Isaac Machado e Isaac Gomes",
     "turma": "106",
-    "descricao": "Cena: caminho para um castelo de coração. Dois personagens, um coelho branco com roupa azul escuro segurando um relógio e uma menina loira de pele branca com vestido azul claro, sapatos pretos e faixa preta na cabeça. Ambos estão de frente para um relógio derretido e uma árvore com relógio derretido.",
+    "descricao": "Fundo de cor preta e destaque nas cores cinza claro e branco com pinceladas de forma aleatórias em branco.",
     "imagem": "assets/obras/Isaac Machado Demetrio de Morais e Isaac Gomes dos Santos_106.jpg",
     "audio": ""
   },
@@ -364,10 +364,10 @@ const yoArtistaObras = [
     "audio": ""
   },
   {
-    "autor": "preta e laranja. Em um fundo branco com moldura marrom.",
+    "autor": "Ana Clara Costa, Andressa Oliveira e Bernardo Daniel",
     "turma": "103",
-    "descricao": "Robô na cor cinza com olhos azuis pintando um quadro na cor vermelha,",
-    "imagem": "assets/obras/obra-053.jpg",
+    "descricao": "Robô na cor cinza com olhos azuis pintando um quadro na cor vermelha, preta e laranja. Em um fundo branco com moldura marrom.",
+    "imagem": "assets/obras/Ana Clara Costa, Andressa Oliveira y Bernardo Daniel_103.jpg",
     "audio": ""
   },
   {
@@ -470,14 +470,14 @@ const yoArtistaObras = [
   },
   {
     "autor": "Gabriela Ferreira Silva",
-    "turma": "105",
+    "turma": "101",
     "descricao": "Fundo na cor branca. Em destaque um animal veado, na cor preta, com um símbolo de alvo em cima.",
     "imagem": "assets/obras/Gabriela Ferreira Silva_101.jpg",
     "audio": ""
   },
   {
     "autor": "Matheus Vitor e Felipe de Jesus",
-    "turma": "101",
+    "turma": "105",
     "descricao": "Fundo: céu azul com nuvens e chão na cor verde com montanhas em marrom. Em destaque se encontra a torre de pisa em cinza.",
     "imagem": "assets/obras/Matheus Vitor Paulino Leão e Felipe de Jesus Castro_105.jpg",
     "audio": ""
@@ -499,7 +499,7 @@ const yoArtistaObras = [
   {
     "autor": "Rafael Félix Golcalves",
     "turma": "101",
-    "descricao": "Fundo: galáxia de fundo azul com manchas de tons em azul e roxo e verde e marrom, com outros planetas ao fundo. Em destaque a silhueta do planeta de saturno em laranja.",
+    "descricao": "Fundo em azul. Relógio nas cores brancas e preta com dois símbolos de ampulhetas na cor verde e branca ao lado.",
     "imagem": "assets/obras/rafael Félix Golcalves_101.jpg",
     "audio": "assets/audios-yoartista/101/Rafael-Félix-Gonçalves-101.mp3"
   },
@@ -520,21 +520,28 @@ const yoArtistaObras = [
   {
     "autor": "Raquel Alana Santos Raimundo",
     "turma": "102",
-    "descricao": "Paisagem de pôr do sol, com céu nas cores marrom laranja, amarelo e branco. Campo em tons de verde com montanhas e árvores em verde. Beatriz Teodora Santos Silvestre",
+    "descricao": "Paisagem de pôr do sol, com céu nas cores marrom laranja, amarelo e branco. Campo em tons de verde com montanhas e árvores em verde.",
     "imagem": "assets/obras/Raquel Alana Santos Raimundo_102.jpg",
     "audio": "assets/audios-yoartista/102/Raquel-Alana-Santos-Raimundo-102.oga"
   },
   {
-    "autor": "Beatriz da Rocha Castro Carvalho",
+    "autor": "Beatriz Teodora Santos Silvestre",
     "turma": "102",
     "descricao": "Fundo na cor preta. Em destaque flor com pétalas laranjas, miolo em formato de olho rosa com pupila rosa e caule n=em tons de branco e roxo com flores verdes.",
+    "imagem": "assets/obras/Beatriz Teodora Santos Silvestre_102 .jpg",
+    "audio": ""
+  },
+  {
+    "autor": "Beatriz da Rocha Castro Carvalho",
+    "turma": "102",
+    "descricao": "Fundo preto estrelado e em destaque uma bola em tons de laranja co raios em branco saindo da mesma.",
     "imagem": "assets/obras/Beatriz da Rocha Castro Carvalho_102.jpg",
     "audio": "assets/audios-yoartista/102/Beatriz-Carvalho-102.m4a"
   },
   {
     "autor": "Luiz Filipe de Oliveira Silva",
     "turma": "102",
-    "descricao": "Fundo preto estrelado e em destaque uma bola em tons de laranja co raios em branco saindo da mesma.",
+    "descricao": "Fundo: céu estrelado em tons de preto, azul, vermelho, laranja e amarelo com átomo no meio formando o sistema solar com a terra em foco principal.",
     "imagem": "assets/obras/Luiz Filipe de Oliveira Silva_102.jpg",
     "audio": "assets/audios-yoartista/102/Luiz-102.oga"
   },
@@ -618,8 +625,15 @@ const yoArtistaObras = [
   {
     "autor": "Laisse Emanuele Carvalho Ferreira",
     "turma": "106",
-    "descricao": "Fundo dividido em oito partes coloridas em azul, rosa claro, rosa escuro, verde, vermelho, laranja, bege e azul escuro e claro. Em destaque existe um ampulheta em tons de azul e rosa. Carlos Queiroz e João Arthur Mendes",
+    "descricao": "Fundo dividido em oito partes coloridas em azul, rosa claro, rosa escuro, verde, vermelho, laranja, bege e azul escuro e claro. Em destaque existe um ampulheta em tons de azul e rosa.",
     "imagem": "assets/obras/Laisse Emanuele Carvalho Ferreira_106.jpg",
+    "audio": ""
+  },
+  {
+    "autor": "Carlos Alexandre Martins Queiroz e João Arthur Mendes Mario",
+    "turma": "104",
+    "descricao": "Fundo em cinza e azul com esquemas químicos e em destaque uma cientista, mulher de pele branca e cabelo castanho preso em um coque, fazendo experimentos em uma mesa marrom.",
+    "imagem": "assets/obras/Carlos Alexandre Martins Queiroz e João Arthur Mendes Mario_104.jpg",
     "audio": ""
   },
   {
@@ -644,10 +658,10 @@ const yoArtistaObras = [
     "audio": "assets/audios-yoartista/102/Beatriz-Gaspar-102.m4a"
   },
   {
-    "autor": "folhas e um olho no centro dela de cor azul.",
+    "autor": "Gabriella Eduarda Fidelis da Silva",
     "turma": "101",
-    "descricao": "Fundo: céu em degradê em laranja, vermelho e amarelo, com chão em cor roxa e cinza. Em destaque árvore com tronco e galhos de cor rosa, sem",
-    "imagem": "assets/obras/obra-100.jpg",
+    "descricao": "Fundo: céu em degradê em laranja, vermelho e amarelo, com chão em cor roxa e cinza. Em destaque árvore com tronco e galhos de cor rosa, sem folhas e um olho no centro dela de cor azul.",
+    "imagem": "assets/obras/20251103_134745.jpg",
     "audio": ""
   },
   {
@@ -697,13 +711,6 @@ const yoArtistaObras = [
     "turma": "Turma não informada",
     "descricao": "",
     "imagem": "assets/obras/20251103_134642.jpg",
-    "audio": ""
-  },
-  {
-    "autor": "Autor não identificado",
-    "turma": "Turma não informada",
-    "descricao": "",
-    "imagem": "assets/obras/20251103_134745.jpg",
     "audio": ""
   },
   {
