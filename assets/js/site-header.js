@@ -70,9 +70,9 @@
           </div>
           <div class="dropdown">
             <a class="dropdown-link" href="em-construcao.html">Livro teórico</a>
-            <a class="dropdown-link" href="em-construcao.html">Livros didáticos</a>
             <a class="dropdown-link" href="id-frances.html">Site Francês</a>
             <div class="dropdown-divider"></div>
+            <a class="dropdown-link" href="biblioteca_digital.html">E-Books</a>
             <a class="dropdown-link" href="videoblogs.html">Videoblogs</a>
             <a class="dropdown-link" href="em-construcao.html">Reportagens</a>
             <a class="dropdown-link" href="em-construcao.html">Podcasts</a>

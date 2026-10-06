@@ -2,6 +2,8 @@ const idiomas = {
   espanhol: {
     nome: 'Espanhol', efeito: 'Língua, arte e América Latina', cor: '#b63a42',
     apresentacao: 'No Línguas - Culturas, o espanhol é uma porta para as múltiplas vozes da América Latina, da Espanha e das comunidades hispanofalantes. As propostas articulam língua, arte, circulação de ideias e experiências de internacionalização.',
+    banner: 'assets/fotos-espanhol/espanhol_abertura.jpeg',
+    bannerAlt: 'Ipê-rosa florido no campus da UFMG',
     curiosidades: [
       { numero: 500, prefixo: '+', texto: 'Milhões de falantes nativos', icone: 'pessoas' },
       { numero: 20, texto: 'Países soberanos têm o espanhol como língua oficial', icone: 'globo' },
