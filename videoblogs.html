@@ -35,6 +35,13 @@
       <div class="player-card">
         <div class="player-frame">
           <iframe id="videoPlayer" title="Reprodutor dos videoblogs" src="about:blank" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <a class="local-player-fallback" id="localPlayerFallback" href="#" target="_blank" rel="noopener noreferrer" hidden>
+            <img id="localPlayerThumbnail" alt="">
+            <span class="local-player-fallback__overlay">
+              <span class="local-player-fallback__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 7 8 5-8 5V7Z" fill="currentColor"/></svg></span>
+              <span><strong>Assistir no YouTube</strong><small>A reprodução incorporada funciona no Live Server e no site publicado.</small></span>
+            </span>
+          </a>
         </div>
         <div class="playerInfo" aria-live="polite">
           <div>

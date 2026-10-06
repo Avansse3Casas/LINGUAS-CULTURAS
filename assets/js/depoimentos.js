@@ -31,6 +31,17 @@ const depoimentosCursos = [
   },
 ];
 
+const depoimentosEmVideo = [
+  {
+    idioma: 'frances', idiomaNome: 'Francês', videoId: 'VRfMf7fcbqo',
+    autor: 'Lorena', curso: 'Desenvolvimento de Sistemas',
+  },
+  {
+    idioma: 'frances', idiomaNome: 'Francês', videoId: '90Rvchsx7vo',
+    autor: 'Cauã', curso: 'Eletrônica',
+  },
+];
+
 function criarCardDepoimento(depoimento) {
   return `<figure class="depoimento-card">
     <img src="${depoimento.imagem}" alt="" loading="lazy" decoding="async">
@@ -42,13 +53,37 @@ function criarCardDepoimento(depoimento) {
   </figure>`;
 }
 
+function criarCardVideo(depoimento) {
+  const urlYoutube = `https://www.youtube.com/watch?v=${depoimento.videoId}`;
+  const midia = window.location.protocol === 'file:'
+    ? `<a class="depoimento-video-preview" href="${urlYoutube}" target="_blank" rel="noopener noreferrer" aria-label="Assistir ao depoimento de ${depoimento.autor} no YouTube">
+        <img src="https://img.youtube.com/vi/${depoimento.videoId}/hqdefault.jpg" alt="Miniatura do depoimento de ${depoimento.autor}" loading="lazy">
+        <span aria-hidden="true">▶</span>
+      </a>`
+    : `<iframe src="https://www.youtube.com/embed/${depoimento.videoId}?rel=0&origin=${encodeURIComponent(window.location.origin)}" title="Depoimento de ${depoimento.autor} sobre as oficinas de francês" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+
+  return `<article class="depoimento-video-card">
+    <div class="depoimento-video-media">${midia}</div>
+    <div class="depoimento-video-copy">
+      <span class="depoimento-idioma">${depoimento.idiomaNome}</span>
+      <p>Depoimento em vídeo</p>
+      <h3>${depoimento.autor}</h3>
+      <span>${depoimento.curso}</span>
+      <a href="${urlYoutube}" target="_blank" rel="noopener noreferrer">Assistir no YouTube <b aria-hidden="true">↗</b></a>
+    </div>
+  </article>`;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('[data-depoimentos-section]').forEach((marcador) => {
     const idioma = marcador.dataset.idioma;
     const selecionados = idioma === 'todos'
       ? depoimentosCursos
       : depoimentosCursos.filter((depoimento) => depoimento.idioma === idioma);
-    if (!selecionados.length) {
+    const videosSelecionados = idioma === 'todos'
+      ? depoimentosEmVideo
+      : depoimentosEmVideo.filter((depoimento) => depoimento.idioma === idioma);
+    if (!selecionados.length && !videosSelecionados.length) {
       marcador.remove();
       return;
     }
@@ -59,7 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
     marcador.outerHTML = `<section class="depoimentos-section" aria-labelledby="depoimentos-${idioma}">
       <h2 id="depoimentos-${idioma}" class="subtitulo">${titulo}</h2>
       <p class="depoimentos-intro">${introducao}</p>
-      <div class="depoimentos-grid">${selecionados.map(criarCardDepoimento).join('')}</div>
+      ${videosSelecionados.length ? `<div class="depoimentos-videos">${videosSelecionados.map(criarCardVideo).join('')}</div>` : ''}
+      ${selecionados.length && videosSelecionados.length ? '<h3 class="depoimentos-subheading">Mais experiências compartilhadas</h3>' : ''}
+      ${selecionados.length ? `<div class="depoimentos-grid">${selecionados.map(criarCardDepoimento).join('')}</div>` : ''}
     </section>`;
   });
 });
