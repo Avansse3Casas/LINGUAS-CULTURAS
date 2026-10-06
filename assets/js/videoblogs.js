@@ -1,61 +1,59 @@
-//JS do Cabecalho
-    const btn  = document.getElementById('hamburger');
-    const menu = document.getElementById('mobile-menu');
+const cards = [...document.querySelectorAll('.video-card')];
+const player = document.querySelector('#videoPlayer');
+const videoNome = document.querySelector('#videoNome');
+const videoData = document.querySelector('#videoData');
+const videoTurma = document.querySelector('#videoTurma');
 
-    btn.addEventListener('click', () => {
-      const open = menu.classList.toggle('open');
-      btn.classList.toggle('open', open);
-      btn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
-    });
+const thumbnailQualities = ['maxresdefault', 'sddefault', 'hqdefault'];
 
-    //JS da pagina
-    const cards = document.querySelectorAll(".card");
-    const player = document.querySelector("#videoPlayer");
-    const videoNome = document.querySelector("#videoNome");
-    const videoData = document.querySelector("#videoData");
-    const videoTurma = document.querySelector("#videoTurma");
-    
-    /*Ativa o primeiro video e suas infos*/
-    const videoInicial = cards[0].dataset.video;
-    player.src = `https://www.youtube.com/embed/${videoInicial}`;
-    videoNome.textContent = cards[0].querySelector(".nome").textContent;
-    videoData.textContent = cards[0].querySelector(".data").textContent;
-    videoTurma.textContent = cards[0].querySelector(".turma").textContent;
-    /*Ativa o primeiro card*/
-    cards[0].classList.add("ativo");
+function loadThumbnail(image, videoId, attempt = 0) {
+  const quality = thumbnailQualities[attempt];
+  image.dataset.thumbnailAttempt = String(attempt);
+  image.src = `https://img.youtube.com/vi/${videoId}/${quality}.jpg`;
+}
 
-    cards.forEach(card => {
-        const videoId = card.dataset.video;
-        /*Adiciona as thumbs*/
-        card.querySelector(".thumb").src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+cards.forEach((card) => {
+  const image = card.querySelector('.thumb');
+  const videoId = card.dataset.video;
 
-        /*Monitora cliques*/
-        card.addEventListener("click", () => {
-            /*Adiciona efeito de ativo*/
-            cards.forEach(card => {
-                card.classList.remove("ativo");
-            });
-                card.classList.add("ativo");
+  image.addEventListener('error', () => {
+    const nextAttempt = Number(image.dataset.thumbnailAttempt) + 1;
+    if (nextAttempt < thumbnailQualities.length) loadThumbnail(image, videoId, nextAttempt);
+  });
 
-            /*Atualiza infos do player*/
-            const nome = card.querySelector(".nome").textContent;
-            const data = card.querySelector(".data").textContent;
-            const turma = card.querySelector(".turma").textContent;
-            videoNome.textContent = nome;
-            videoData.textContent = data;
-            videoTurma.textContent = turma;
+  image.addEventListener('load', () => {
+    const nextAttempt = Number(image.dataset.thumbnailAttempt) + 1;
+    const isYouTubePlaceholder = image.naturalWidth <= 120;
+    if (isYouTubePlaceholder && nextAttempt < thumbnailQualities.length) {
+      loadThumbnail(image, videoId, nextAttempt);
+    }
+  });
 
-            /*Atualiza cor do selo*/
-            const classeCor = card.querySelector(".turma").classList[1];
-            videoTurma.classList.remove(videoTurma.classList[1]);
-            videoTurma.classList.add(classeCor);
+  loadThumbnail(image, videoId);
+});
 
-            /*Troca o video e scrolla de volta para o player*/
-            player.src = `https://www.youtube.com/embed/${videoId}`;
-            player.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-            });
+function selectVideo(card, shouldScroll = false) {
+  cards.forEach((item) => {
+    const isSelected = item === card;
+    item.classList.toggle('active', isSelected);
+    item.setAttribute('aria-pressed', String(isSelected));
+  });
 
-        });
-    });
+  const { video, name, year, group } = card.dataset;
+  player.src = `https://www.youtube-nocookie.com/embed/${video}?rel=0`;
+  player.title = `Videoblog de ${name}`;
+  videoNome.textContent = name;
+  videoData.textContent = year;
+  videoTurma.textContent = `Turma ${group}`;
+
+  if (shouldScroll) {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelector('.player-card').scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'center' });
+  }
+}
+
+cards.forEach((card) => {
+  card.addEventListener('click', () => selectVideo(card, true));
+});
+
+if (cards.length > 0) selectVideo(cards[0]);
