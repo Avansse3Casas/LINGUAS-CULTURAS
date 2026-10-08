@@ -145,8 +145,8 @@
         </summary>
         <div class="mobile-sub">
           <a href="em-construcao.html">Livro teórico</a>
-          <a href="em-construcao.html">Livros didáticos</a>
           <a href="id-frances.html">Site Francês</a>
+          <a href="biblioteca_digital.html">E-Books</a>
           <a href="videoblogs.html">Videoblogs</a>
           <a href="em-construcao.html">Reportagens</a>
           <a href="em-construcao.html">Podcasts</a>
