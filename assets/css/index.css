@@ -389,6 +389,16 @@
         top: 64px;
         max-height: calc(100vh - 64px);
       }
+
+      /* Mantém todo o dropdown mobile branco, inclusive grupos abertos e links. */
+      header .mobile-menu,
+      header .mobile-menu .mobile-group,
+      header .mobile-menu .mobile-group summary,
+      header .mobile-menu .mobile-sub,
+      header .mobile-menu .mobile-sub a,
+      header .mobile-menu .mobile-link {
+        background-color: #ffffff !important;
+      }
     }
 
     /* mobile menor: reduz ruído visual do logo e preserva espaço útil */
