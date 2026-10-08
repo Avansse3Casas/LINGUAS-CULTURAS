@@ -45,6 +45,8 @@ const idiomas = {
   japones: {
     nome: 'Japonês', efeito: 'Escrita, narrativas e culturas do Japão', cor: '#ad3646',
     apresentacao: 'O japonês aproxima estudantes de sistemas de escrita, sonoridades e manifestações culturais do Japão. A aprendizagem combina observação, experimentação e diálogo com produções artísticas, narrativas e práticas do cotidiano.',
+    banner: 'assets/banners/banner_japones.jpeg',
+    bannerAlt: 'Ipê-rosa florido no campus da UFMG',
     curiosidades: [
       { numero: 3, texto: 'Sistemas de escrita: hiragana, katakana e kanji', simbolo: 'あ' },
       { numero: 120, prefixo: '+', texto: 'Milhões de falantes', icone: 'pessoas' },
@@ -56,6 +58,8 @@ const idiomas = {
   italiano: {
     nome: 'Italiano', efeito: 'Memória, arte e situações de comunicação', cor: '#16845b',
     apresentacao: 'O italiano permite investigar encontros entre língua, memória, deslocamentos, arte e cotidiano. As propostas de aprendizagem podem partir de situações comunicativas e de repertórios culturais diversos, sempre em diálogo com a experiência dos estudantes.',
+    banner: 'assets/banners/banner_italiano.jpeg',
+    bannerAlt: 'Estudantes exibindo pinturas produzidas em uma atividade cultural',
     curiosidades: [
       { titulo: 'Romance', texto: 'O italiano descende do latim', simbolo: 'LATIM' },
       { titulo: 'Dante', texto: 'Teve papel fundamental na consolidação do italiano literário', placeholder: 'livro' },
@@ -67,6 +71,8 @@ const idiomas = {
   latim: {
     nome: 'Latim', efeito: 'Palavras, histórias e mundos antigos', cor: '#962b2b',
     apresentacao: 'O latim é estudado como língua de textos, histórias e relações que continuam presentes em muitos aspectos do português e de outras línguas. O percurso propõe observar palavras, narrativas, cidades e formas de imaginar o mundo antigo.',
+    banner: 'assets/banners/banner_latim.jpeg',
+    bannerAlt: 'Área externa do COLTEC cercada por árvores',
     curiosidades: [
       { numero: 2000, prefixo: '+', texto: 'Anos de história documentada', placeholder: 'templo romano' },
       { numero: 5, texto: 'Grandes línguas românicas nasceram do latim', placeholder: 'árvore linguística' },
@@ -78,6 +84,8 @@ const idiomas = {
   grego: {
     nome: 'Grego Antigo', efeito: 'Alfabeto, narrativas e pensamento', cor: '#31739c',
     apresentacao: 'O grego antigo oferece contato com uma tradição escrita ampla e com questões que seguem atravessando filosofia, teatro, ciência, política e artes. As aulas podem transformar a leitura de textos e palavras em investigação histórica e cultural.',
+    banner: 'assets/banners/banner_grego.jpeg',
+    bannerAlt: 'Estojo de aquarela usado em uma atividade artística',
     curiosidades: [
       { numero: 3000, prefixo: '+', texto: 'Anos de registros escritos', placeholder: 'pergaminho' },
       { numero: 24, texto: 'Letras no alfabeto grego moderno', simbolo: 'Ω' },

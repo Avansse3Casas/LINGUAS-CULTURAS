@@ -495,7 +495,7 @@
     .coordinator-copy h2 { margin: 10px 0 8px; font-size: clamp(34px, 4vw, 54px); line-height: 1.05; }
     .coordinator-role { color: var(--color-verde-escuro); font-weight: 700; margin-bottom: 22px; }
     .coordinator-bio { color: var(--color-text); font-size: 17px; max-width: 680px; }
-    .lattes-button { display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; padding: 13px 18px; background: var(--color-verde-vibrante); color: var(--color-preto) !important; text-decoration: none; border: 2px solid var(--color-verde-escuro); border-radius: 6px; font-weight: 650; transition: transform .2s var(--ease), background .2s var(--ease); }
+    .lattes-button { display: inline-flex; align-items: center; gap: 10px; margin-top: 28px; padding: 13px 18px; background: var(--color-verde-vibrante); color: var(--color-preto) !important; text-decoration: none; border-radius: 6px; font-weight: 650; transition: transform .2s var(--ease), background .2s var(--ease); }
     .lattes-button:hover { background: var(--color-dourado); border-color: var(--color-dourado-escuro); transform: translateY(-2px); }
     .lattes-button:focus-visible, .book:focus-visible, .member-card:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
     .lattes-button svg { width: 18px; height: 18px; }

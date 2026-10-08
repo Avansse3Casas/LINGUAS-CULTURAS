@@ -15,7 +15,7 @@ const membros = [
   { nome: 'Marilina Parziale', foto: 'assets/fotos-carrossel/marilina.webp', formacao: 'Professora de Italiano', funcao: 'Parceira internacional do Consulado da Itália', projeto: 'Línguas-Culturas no COLTEC' },
   { nome: 'Rafael', foto: 'assets/fotos-carrossel/rafael.png', formacao: 'Técnico em Eletrônica', funcao: 'Pesquisador júnior — Bolsista FAPEMIG', projeto: 'Pesquisa sobre ensino e aprendizagem de línguas' },
   { nome: 'Anthonela', foto: 'assets/fotos-carrossel/anthonela.webp', formacao: 'Técnica em Desenvolvimento de Sistemas', funcao: 'Pesquisadora júnior — Bolsista FAPEMIG', projeto: 'Pesquisa sobre ensino e aprendizagem de línguas' },
-  { nome: 'Jéssica Juliana', foto: 'assets/fotos-carrossel/jebs.jpg', fotoPosicao: '0% 48%', formacao: 'Cinema — Belas Artes', funcao: 'Bolsista de extensão', projeto: 'Línguas-Culturas no COLTEC' },
+  { nome: 'Jebs Lima', foto: 'assets/fotos-carrossel/jebs.jpg', fotoPosicao: '0% 48%', formacao: 'Cinema — Belas Artes', funcao: 'Bolsista de extensão', projeto: 'Línguas-Culturas no COLTEC' },
 ];
 
 function iniciais(nome) {

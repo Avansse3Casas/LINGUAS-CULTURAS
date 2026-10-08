@@ -682,7 +682,6 @@
         font-family: "Miranda Sans", Helvetica, sans-serif;
         color: var(--color-text);
         background-color: var(--color-dourado);
-        border: 2px solid var(--color-dourado-escuro);
         text-decoration: none;
 
         min-height: 200px;
