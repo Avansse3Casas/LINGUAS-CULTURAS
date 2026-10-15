@@ -4,7 +4,7 @@ Cada página continua sendo um arquivo HTML independente, mas o código que defi
 aparência e comportamento foi separado para facilitar a manutenção.
 
 - `index.html`, `id-frances.html`, `equipe.html`, `videoblogs.html` e
-   `yoartista2025.html`: conteúdo e estrutura própria de cada página.
+   `yoartista2025.html` e `yoartista2026.html`: conteúdo e estrutura própria de cada página.
 - `assets/css/<pagina>.css`: estilos exclusivos daquela página.
 - `assets/js/<pagina>.js`: interações exclusivas daquela página.
 - `assets/js/site-header.js`: um único cabeçalho reutilizado por todas as páginas.
