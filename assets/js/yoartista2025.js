@@ -15,7 +15,12 @@ const btn = document.getElementById('hamburger');
     const search = document.getElementById('search');
     const emptyState = document.getElementById('empty-state');
     const audioPlayer = document.getElementById('audio-player');
+    const lightbox = document.getElementById('art-lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxClose = document.getElementById('lightbox-close');
     let activeButton = null;
+    let renderedItems = [];
 
     function playIcon() {
       return `
@@ -27,10 +32,13 @@ const btn = document.getElementById('hamburger');
     }
 
     function render(items) {
+      renderedItems = items;
       gallery.innerHTML = items.map((obra, index) => `
         <article class="art-card">
           <figure class="art-media">
-            <img src="${obra.imagem}" alt="Pintura de ${obra.autor}" loading="lazy">
+            <button class="art-image-button" type="button" data-image-index="${index}" aria-label="Ampliar pintura de ${obra.autor}">
+              <img src="${obra.imagem}" alt="Pintura de ${obra.autor}" loading="lazy">
+            </button>
           </figure>
           <div class="art-copy">
             <h2 class="art-title">${obra.autor}</h2>
@@ -65,6 +73,18 @@ const btn = document.getElementById('hamburger');
     });
 
     gallery.addEventListener('click', (event) => {
+      const imageButton = event.target.closest('.art-image-button');
+      if (imageButton) {
+        const obra = renderedItems[Number(imageButton.dataset.imageIndex)];
+        if (!obra) return;
+
+        lightboxImage.src = obra.imagem;
+        lightboxImage.alt = `Pintura de ${obra.autor}`;
+        lightboxTitle.textContent = obra.autor;
+        lightbox.showModal();
+        return;
+      }
+
       const button = event.target.closest('.audio-button');
       if (!button) return;
 
@@ -93,6 +113,18 @@ const btn = document.getElementById('hamburger');
       if (activeButton) {
         activeButton.querySelector('span').textContent = 'Ouvir audiodescrição';
       }
+    });
+
+    lightboxClose.addEventListener('click', () => lightbox.close());
+
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) lightbox.close();
+    });
+
+    lightbox.addEventListener('close', () => {
+      lightboxImage.src = '';
+      lightboxImage.alt = '';
+      lightboxTitle.textContent = '';
     });
 
     render(yoArtistaObras);

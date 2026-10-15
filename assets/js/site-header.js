@@ -81,7 +81,7 @@
         </div>
 
         <div class="nav-item">
-          <a class="nav-link" href="yoartista.html">Exposição Yo Artista</a>
+          <a class="nav-link" href="yoartista2025.html">Exposição Yo Artista</a>
         </div>
 
         <div class="nav-item">

@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Miranda+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/yoartista.css">
+  <link rel="stylesheet" href="assets/css/yoartista2025.css">
 </head>
 <body>
   <div data-site-header></div><script src="assets/js/site-header.js"></script>
@@ -42,7 +42,15 @@
 
   <audio id="audio-player" preload="none"></audio>
 
-  <script src="yoartista-data.js"></script>
-  <script src="assets/js/yoartista.js"></script>
+  <dialog class="art-lightbox" id="art-lightbox" aria-labelledby="lightbox-title">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Fechar imagem ampliada">&times;</button>
+      <img id="lightbox-image" src="" alt="">
+      <p class="lightbox-title" id="lightbox-title"></p>
+    </div>
+  </dialog>
+
+  <script src="yoartista2025-data.js"></script>
+  <script src="assets/js/yoartista2025.js"></script>
 </body>
 </html>
