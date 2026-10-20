@@ -70,7 +70,7 @@
           </div>
           <div class="dropdown">
             <a class="dropdown-link" href="em-construcao.html">Livro teórico</a>
-            <a class="dropdown-link" href="id-frances.html">Site Francês</a>
+            <a class="dropdown-link" href="https://sites.google.com/teiacoltec.org/francophonart/accueil?authuser=0">Site Francês</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-link" href="biblioteca_digital.html">E-Books</a>
             <a class="dropdown-link" href="videoblogs.html">Videoblogs</a>
@@ -81,7 +81,7 @@
         </div>
 
         <div class="nav-item">
-          <a class="nav-link" href="yoartista.html">Exposição Yo Artista</a>
+          <a class="nav-link" href="yoartista2026.html">Exposição Yo Artista</a>
         </div>
 
         <div class="nav-item">
@@ -145,8 +145,8 @@
         </summary>
         <div class="mobile-sub">
           <a href="em-construcao.html">Livro teórico</a>
-          <a href="em-construcao.html">Livros didáticos</a>
           <a href="id-frances.html">Site Francês</a>
+          <a href="biblioteca_digital.html">E-Books</a>
           <a href="videoblogs.html">Videoblogs</a>
           <a href="reportagens.html">Reportagens</a>
           <a href="reportagens.html#podcasts">Podcasts</a>
@@ -154,7 +154,7 @@
         </div>
       </details>
 
-      <a class="mobile-link" href="yoartista.html">Exposição Yo Artista</a>
+      <a class="mobile-link" href="yoartista2026.html">Exposição Yo Artista</a>
 
       <a class="mobile-link" href="em-construcao.html">Eventos de Formação Docente</a>
 

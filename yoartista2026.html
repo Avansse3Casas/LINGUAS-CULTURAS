@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exposição Yo Artista 2026 - Línguas e Culturas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Miranda+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/yoartista2025.css">
+  <link rel="stylesheet" href="assets/css/yoartista2026.css">
+</head>
+<body>
+  <div data-site-header></div>
+  <script src="assets/js/site-header.js"></script>
+
+  <main>
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <p class="eyebrow">Exposição de produções artísticas</p>
+        <h1 id="page-title">Yo Artista - 2026</h1>
+        <p class="lead">Releituras inspiradas em artistas hispânicos e hispanohablantes, com pinturas criadas por estudantes de espanhol do COLTEC UFMG.</p>
+      </div>
+      <aside class="meta-panel" aria-label="Informações da exposição">
+        <strong>Duração</strong>
+        <p>13/10/2026 a 13/02/2027</p>
+        <strong>Local</strong>
+        <p>2º e 3º andar - Colégio Técnico UFMG</p>
+        <strong>Idealização</strong>
+        <p>Prof. Dr. Fernanda Peçanha Carvalho</p>
+        <strong>Expografia e curadoria</strong>
+        <p>Alexia Miranda e Mariana Carvalho</p>
+        <strong>Curadoria digital</strong>
+        <p>Anthonela Ribeiro e Rafael Avansse</p>
+      </aside>
+    </section>
+
+    <section class="toolbar" aria-label="Ferramentas da galeria">
+      <p class="count" id="count"></p>
+      <input class="search" id="search" type="search" placeholder="Buscar por integrante ou turma" aria-label="Buscar obras">
+    </section>
+
+    <section class="gallery" id="gallery" aria-live="polite"></section>
+    <p class="empty-state" id="empty-state">Nenhuma obra encontrada.</p>
+  </main>
+
+  <audio id="audio-player" preload="none"></audio>
+
+  <dialog class="art-lightbox" id="art-lightbox" aria-labelledby="lightbox-title">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Fechar imagem ampliada">&times;</button>
+      <img id="lightbox-image" src="" alt="">
+      <p class="lightbox-title" id="lightbox-title"></p>
+    </div>
+  </dialog>
+
+  <script src="yoartista2026-data.js"></script>
+  <script src="assets/js/yoartista2026.js"></script>
+</body>
+</html>

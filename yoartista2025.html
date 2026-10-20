@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Miranda+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/yoartista.css">
+  <link rel="stylesheet" href="assets/css/yoartista2025.css">
 </head>
 <body>
   <div data-site-header></div><script src="assets/js/site-header.js"></script>
@@ -16,7 +16,7 @@
     <section class="intro" aria-labelledby="page-title">
       <div>
         <p class="eyebrow">Exposição de produções artísticas</p>
-        <h1 id="page-title">Yo Artista</h1>
+        <h1 id="page-title">Yo Artista - 2025</h1>
         <p class="lead">Releituras inspiradas em artistas hispânicos e hispanohablantes, com pinturas criadas por estudantes de espanhol do COLTEC UFMG.</p>
       </div>
       <aside class="meta-panel" aria-label="Informações da exposição">
@@ -24,10 +24,14 @@
         <p>30/09/2025 - 01/12/2025</p>
         <strong>Local</strong>
         <p>3º andar - Colégio Técnico UFMG</p>
+        <strong>Idealização</strong>
+        <p>Prof. Dr. Fernanda Peçanha Carvalho</p>
         <strong>Expografia e curadoria</strong>
         <p>Alexia Miranda e Jéssica Laura Gonçalves</p>
-        <strong>Curadoria digital</strong>
+        <strong>Curadoria</strong>
         <p>Prof. Dr. Eliezer Raimundo e Helena Costa</p>
+        <strong>Curadoria digital</strong>
+        <p>Anthonela Ribeiro e Rafael Avansse</p>
       </aside>
     </section>
 
@@ -42,7 +46,15 @@
 
   <audio id="audio-player" preload="none"></audio>
 
-  <script src="yoartista-data.js"></script>
-  <script src="assets/js/yoartista.js"></script>
+  <dialog class="art-lightbox" id="art-lightbox" aria-labelledby="lightbox-title">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Fechar imagem ampliada">&times;</button>
+      <img id="lightbox-image" src="" alt="">
+      <p class="lightbox-title" id="lightbox-title"></p>
+    </div>
+  </dialog>
+
+  <script src="yoartista2025-data.js"></script>
+  <script src="assets/js/yoartista2025.js"></script>
 </body>
 </html>

@@ -249,7 +249,7 @@
       top: 68px;
       left: 0;
       width: 100%;
-      background: var(--white);
+      background: #ffffff;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
       overflow-y: auto;
@@ -287,7 +287,7 @@
     .mobile-group[open] summary svg { transform: rotate(180deg); opacity: 0.7; }
 
     .mobile-sub {
-      background: var(--hover-bg);
+      background: #ffffff;
       border-bottom: 1px solid var(--border);
     }
 
@@ -436,6 +436,91 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+
+    .art-image-button {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: zoom-in;
+    }
+
+    .art-image-button img {
+      transition: transform 0.25s var(--ease);
+    }
+
+    .art-image-button:hover img {
+      transform: scale(1.035);
+    }
+
+    .art-lightbox {
+      width: min(94vw, 1100px);
+      max-width: none;
+      height: min(92vh, 900px);
+      max-height: none;
+      margin: auto;
+      padding: 0;
+      border: 0;
+      border-radius: 20px;
+      background: transparent;
+      overflow: visible;
+    }
+
+    .art-lightbox::backdrop {
+      background: rgba(12, 8, 2, 0.9);
+      backdrop-filter: blur(4px);
+    }
+
+    .lightbox-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 52px 22px 18px;
+      border-radius: 20px;
+      background: rgba(20, 15, 7, 0.96);
+    }
+
+    .lightbox-content img {
+      display: block;
+      max-width: 100%;
+      max-height: calc(100% - 48px);
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
+    .lightbox-title {
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--white);
+      color: var(--black);
+      font: 32px/1 Arial, sans-serif;
+      cursor: pointer;
+      transition: transform 0.18s var(--ease), background 0.18s var(--ease);
+    }
+
+    .lightbox-close:hover {
+      transform: scale(1.06);
+      background: var(--gold);
     }
 
     .art-copy {
@@ -591,6 +676,8 @@
     .mobile-group summary:focus-visible,
     .hamburger:focus-visible,
     .audio-button:focus-visible,
+    .art-image-button:focus-visible,
+    .lightbox-close:focus-visible,
     .search:focus-visible {
       outline: 2px solid var(--black);
       outline-offset: 2px;

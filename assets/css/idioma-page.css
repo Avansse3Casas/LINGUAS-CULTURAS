@@ -210,6 +210,18 @@ body[data-idioma="mandarim"] .cta-card {
 body[data-idioma="mandarim"] .galeria .foto-grande img { object-position: center 48%; }
 body[data-idioma="mandarim"] .galeria .foto-vertical img { object-position: center 28%; }
 
+body[data-idioma="italiano"] .banner .imgBanner {
+  object-position: center 40%;
+}
+
+body[data-idioma="latim"] .banner .imgBanner {
+  object-position: center 65%;
+}
+
+body[data-idioma="japones"] .banner .imgBanner {
+  object-position: center 50%;
+}
+
 @media (max-width: 760px) {
   .projeto-destaque a { grid-template-columns: 1fr; }
   .projeto-destaque img { min-height: 180px; }
