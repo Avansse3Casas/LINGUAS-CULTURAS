@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atividades para casa liberadas pelas oficinas do projeto Línguas-Culturas no COLTEC-UFMG.">
+  <title>Para casa — Línguas-Culturas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Miranda+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/equipe.css">
+  <link rel="stylesheet" href="assets/css/para-casa.css">
+</head>
+<body>
+  <div data-site-header></div>
+  <script src="assets/js/site-header.js"></script>
+
+  <main class="homework-page">
+    <section class="homework-hero" aria-labelledby="homework-title">
+      <div class="homework-wrap homework-hero__content">
+        <p class="homework-eyebrow">Atividades das oficinas</p>
+        <h1 id="homework-title">Para fazer<br><span>em casa</span></h1>
+        <p>Encontre aqui as atividades já liberadas pelos professores. O conteúdo é organizado por trimestre e atualizado ao longo do ano.</p>
+        <a href="#trimestres">Ver atividades <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="homework-hero__art" aria-hidden="true">
+        <span>¡Hola!</span><span>你好</span><span>Bonjour!</span><span>Ciao!</span>
+      </div>
+    </section>
+
+    <section class="homework-summary" aria-label="Resumo das atividades">
+      <div class="homework-wrap homework-summary__inner">
+        <div><strong id="total-atividades">—</strong><span>atividades liberadas</span></div>
+        <div><strong id="total-trimestres">—</strong><span>trimestres com conteúdo</span></div>
+        <p><span aria-hidden="true">✓</span> Somente atividades marcadas como liberadas pelos professores aparecem nesta página.</p>
+      </div>
+    </section>
+
+    <section class="homework-archive homework-wrap" id="trimestres" aria-labelledby="trimestres-title">
+      <header class="homework-intro">
+        <div>
+          <p class="homework-eyebrow">Ano letivo</p>
+          <h2 id="trimestres-title">Escolha o trimestre</h2>
+        </div>
+        <nav class="term-nav" aria-label="Navegação por trimestre">
+          <a href="#trimestre-1">1º trimestre</a>
+          <a href="#trimestre-2">2º trimestre</a>
+          <a href="#trimestre-3">3º trimestre</a>
+        </nav>
+      </header>
+
+      <div class="homework-status" id="homework-status" role="status">Carregando atividades…</div>
+
+      <section class="term-section" id="trimestre-1" aria-labelledby="trimestre-1-title">
+        <header class="term-heading"><div><span>01</span><h2 id="trimestre-1-title">Primeiro trimestre</h2></div><small id="trimestre-1-count"></small></header>
+        <div class="homework-grid" id="trimestre-1-grid"></div>
+      </section>
+
+      <section class="term-section" id="trimestre-2" aria-labelledby="trimestre-2-title">
+        <header class="term-heading"><div><span>02</span><h2 id="trimestre-2-title">Segundo trimestre</h2></div><small id="trimestre-2-count"></small></header>
+        <div class="homework-grid" id="trimestre-2-grid"></div>
+      </section>
+
+      <section class="term-section" id="trimestre-3" aria-labelledby="trimestre-3-title">
+        <header class="term-heading"><div><span>03</span><h2 id="trimestre-3-title">Terceiro trimestre</h2></div><small id="trimestre-3-count"></small></header>
+        <div class="homework-grid" id="trimestre-3-grid"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="assets/js/para-casa.js"></script>
+</body>
+</html>

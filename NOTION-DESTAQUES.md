@@ -1,6 +1,7 @@
 # Destaques alimentados pelo Notion
 
-Esta prova de conceito atualiza apenas a seção **Destaques** da página inicial.
+Esta integração atualiza a seção **Destaques** da página inicial e o acervo de
+**Reportagens e podcasts**.
 O navegador lê o arquivo público `data/destaques.json`; ele nunca recebe o token
 do Notion nem chama a API do Notion diretamente.
 
@@ -10,8 +11,8 @@ do Notion nem chama a API do Notion diretamente.
   publicados e produz o JSON simplificado.
 - `.github/workflows/sync-notion.yml`: executa a sincronização manualmente ou
   todos os dias e só cria um commit quando o JSON mudou.
-- `data/destaques.json`: dados que a página inicial consome. O arquivo inicial
-  vazio permite que o site funcione antes da primeira sincronização.
+- `data/destaques.json`: acervo publicado que a página inicial e a página de
+  reportagens consomem.
 - `index.html`, `assets/css/index.css` e `assets/js/index.js`: contêiner,
   aparência e renderização dos cards.
 
@@ -21,7 +22,10 @@ do Notion nem chama a API do Notion diretamente.
    `NOTION_TOKEN` com o token da Internal Connection.
 2. Na mesma tela, em **Variables**, crie `NOTION_DATA_SOURCE_ID` com o ID da
    data source `DESTAQUES` (não o ID da página que apenas contém a tabela).
-3. No Notion, abra a database original, use **••• → Add connections** e compartilhe
+3. Adicione à database uma propriedade de checkbox chamada `DESTAQUE`. Marque
+   apenas os itens que devem aparecer na home. Se nenhum estiver marcado, a home
+   usa os três primeiros itens definidos por `ORDEM`.
+4. No Notion, abra a database original, use **••• → Add connections** e compartilhe
    a database com essa Internal Connection. Ela precisa da capacidade **Read content**.
 
 ## Executar manualmente

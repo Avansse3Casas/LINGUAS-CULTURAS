@@ -55,9 +55,9 @@
             </svg>
           </div>
           <div class="dropdown">
-            <a class="dropdown-link" href="em-construcao.html">1º Trimestre</a>
-            <a class="dropdown-link" href="em-construcao.html">2º Trimestre</a>
-            <a class="dropdown-link" href="em-construcao.html">3º Trimestre</a>
+            <a class="dropdown-link" href="para-casa.html#trimestre-1">1º Trimestre</a>
+            <a class="dropdown-link" href="para-casa.html#trimestre-2">2º Trimestre</a>
+            <a class="dropdown-link" href="para-casa.html#trimestre-3">3º Trimestre</a>
           </div>
         </div>
 
@@ -74,8 +74,8 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-link" href="biblioteca_digital.html">E-Books</a>
             <a class="dropdown-link" href="videoblogs.html">Videoblogs</a>
-            <a class="dropdown-link" href="em-construcao.html">Reportagens</a>
-            <a class="dropdown-link" href="em-construcao.html">Podcasts</a>
+            <a class="dropdown-link" href="reportagens.html">Reportagens</a>
+            <a class="dropdown-link" href="reportagens.html#podcasts">Podcasts</a>
             <a class="dropdown-link" href="premios.html">Prêmios</a>
           </div>
         </div>
@@ -132,9 +132,9 @@
           <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </summary>
         <div class="mobile-sub">
-          <a href="em-construcao.html">1º Trimestre</a>
-          <a href="em-construcao.html">2º Trimestre</a>
-          <a href="em-construcao.html">3º Trimestre</a>
+          <a href="para-casa.html#trimestre-1">1º Trimestre</a>
+          <a href="para-casa.html#trimestre-2">2º Trimestre</a>
+          <a href="para-casa.html#trimestre-3">3º Trimestre</a>
         </div>
       </details>
 
@@ -148,8 +148,8 @@
           <a href="em-construcao.html">Livros didáticos</a>
           <a href="id-frances.html">Site Francês</a>
           <a href="videoblogs.html">Videoblogs</a>
-          <a href="em-construcao.html">Reportagens</a>
-          <a href="em-construcao.html">Podcasts</a>
+          <a href="reportagens.html">Reportagens</a>
+          <a href="reportagens.html#podcasts">Podcasts</a>
           <a href="premios.html">Prêmios</a>
         </div>
       </details>

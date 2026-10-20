@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reportagens e podcasts sobre as ações, pesquisas e experiências do projeto Línguas-Culturas no COLTEC-UFMG.">
+  <title>Reportagens e podcasts — Línguas-Culturas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Miranda+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/equipe.css">
+  <link rel="stylesheet" href="assets/css/reportagens.css">
+</head>
+<body>
+  <div data-site-header></div>
+  <script src="assets/js/site-header.js"></script>
+
+  <main class="press-page">
+    <section class="press-hero" aria-labelledby="press-title">
+      <div class="press-hero__shape press-hero__shape--one" aria-hidden="true"></div>
+      <div class="press-hero__shape press-hero__shape--two" aria-hidden="true"></div>
+      <div class="press-wrap press-hero__content">
+        <p class="press-eyebrow">Línguas-Culturas na mídia</p>
+        <h1 id="press-title">Reportagens<br><span>& podcasts</span></h1>
+        <p>Acompanhe notícias, entrevistas e produções em áudio que registram as ações e as histórias construídas pelo projeto.</p>
+        <a href="#acervo">Explorar o acervo <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="press-summary" aria-label="Resumo do acervo">
+      <div class="press-wrap press-summary__inner">
+        <div><strong id="total-publicacoes">—</strong><span>publicações</span></div>
+        <div><strong id="total-reportagens">—</strong><span>reportagens</span></div>
+        <div><strong id="total-podcasts">—</strong><span>podcasts</span></div>
+        <p>Um arquivo vivo, atualizado automaticamente a partir da base editorial do projeto.</p>
+      </div>
+    </section>
+
+    <section class="press-archive press-wrap" id="acervo" aria-labelledby="archive-title">
+      <header class="press-intro">
+        <div>
+          <p class="press-eyebrow">Arquivo completo</p>
+          <h2 id="archive-title">Histórias para ler e ouvir</h2>
+        </div>
+        <p>A seção reúne todas as reportagens e todos os podcasts publicados na nossa base. Os links abrem a fonte original em uma nova aba.</p>
+      </header>
+
+      <div class="press-status" id="press-status" role="status">Carregando publicações…</div>
+
+      <section class="press-group" id="reportagens" aria-labelledby="reportagens-title" hidden>
+        <div class="press-group__heading">
+          <div><img src="assets/icons/reportagem-icon.png" alt=""><h2 id="reportagens-title">Reportagens</h2></div>
+          <span id="reportagens-count"></span>
+        </div>
+        <div class="press-grid" id="reportagens-grid"></div>
+      </section>
+
+      <section class="press-group" id="podcasts" aria-labelledby="podcasts-title" hidden>
+        <div class="press-group__heading">
+          <div><img src="assets/icons/podcast-icon.png" alt=""><h2 id="podcasts-title">Podcasts</h2></div>
+          <span id="podcasts-count"></span>
+        </div>
+        <div class="press-grid" id="podcasts-grid"></div>
+      </section>
+    </section>
+
+    <section class="press-cta" aria-labelledby="press-cta-title">
+      <div class="press-wrap">
+        <p class="press-eyebrow">Continue explorando</p>
+        <h2 id="press-cta-title">Conheça também as produções audiovisuais dos estudantes.</h2>
+        <a href="videoblogs.html">Visitar os videoblogs <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/reportagens.js"></script>
+</body>
+</html>

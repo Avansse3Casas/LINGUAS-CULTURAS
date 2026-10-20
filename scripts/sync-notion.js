@@ -42,6 +42,7 @@ function mapEntry(page) {
     briefing: plainText(properties.BRIEFING?.rich_text),
     capa: fileUrl(properties.CAPA?.files),
     ordem: properties.ORDEM?.number ?? Number.MAX_SAFE_INTEGER,
+    destaque: properties.DESTAQUE?.checkbox === true,
   };
 }
 

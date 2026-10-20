@@ -100,7 +100,12 @@ document.addEventListener('DOMContentLoaded', () => {
       .then((destaques) => {
         if (!Array.isArray(destaques)) throw new Error('Formato de dados inválido.');
 
-        destaques.forEach((destaque) => {
+        const marcadosComoDestaque = destaques.filter((item) => item.destaque === true);
+        const destaquesPrincipais = marcadosComoDestaque.length
+          ? marcadosComoDestaque
+          : destaques.slice(0, 3);
+
+        destaquesPrincipais.forEach((destaque) => {
           const card = document.createElement('a');
           card.className = 'destaque';
           card.href = destaque.url;
