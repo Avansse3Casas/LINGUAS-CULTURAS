@@ -75,7 +75,6 @@
             <a class="dropdown-link" href="biblioteca_digital.html">E-Books</a>
             <a class="dropdown-link" href="videoblogs.html">Videoblogs</a>
             <a class="dropdown-link" href="reportagens.html">Reportagens</a>
-            <a class="dropdown-link" href="reportagens.html#podcasts">Podcasts</a>
             <a class="dropdown-link" href="premios.html">Prêmios</a>
           </div>
         </div>
@@ -149,7 +148,6 @@
           <a href="biblioteca_digital.html">E-Books</a>
           <a href="videoblogs.html">Videoblogs</a>
           <a href="reportagens.html">Reportagens</a>
-          <a href="reportagens.html#podcasts">Podcasts</a>
           <a href="premios.html">Prêmios</a>
         </div>
       </details>
