@@ -80,7 +80,16 @@
         </div>
 
         <div class="nav-item">
-          <a class="nav-link" href="yoartista2026.html">Exposição Yo Artista</a>
+          <div class="nav-link">
+            Exposições
+            <svg class="chevron" viewBox="0 0 16 16" fill="none">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="dropdown">
+            <a class="dropdown-link" href="yoartista2025.html">Yo Artista 2025</a>
+            <a class="dropdown-link" href="yoartista2026.html">Yo Artista 2026</a>
+          </div>
         </div>
 
         <div class="nav-item">
@@ -152,7 +161,16 @@
         </div>
       </details>
 
-      <a class="mobile-link" href="yoartista2026.html">Exposição Yo Artista</a>
+      <details class="mobile-group">
+        <summary>
+          Exposições
+          <svg viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </summary>
+        <div class="mobile-sub">
+          <a href="yoartista2025.html">Yo Artista 2025</a>
+          <a href="yoartista2026.html">Yo Artista 2026</a>
+        </div>
+      </details>
 
       <a class="mobile-link" href="em-construcao.html">Eventos de Formação Docente</a>
 
