@@ -5,7 +5,8 @@
     "tipo": "PODCAST",
     "briefing": "Financiada pelo Instituto Confúcio, eles embarcam com um roteiro repleto de aprendizados e atividades culturais por Wuhan e Pequim",
     "capa": "https://www.ufmg.br//app/uploads/2025/09/Thumb-horizontal-Expresso.png",
-    "ordem": 1
+    "ordem": 1,
+    "destaque": false
   },
   {
     "nome": "Há 11 anos, parceria entre Coltec e Instituto Confúcio oferta aulas gratuitas de mandarim na UFMG",
@@ -13,7 +14,8 @@
     "tipo": "VÍDEO",
     "briefing": "Nesta semana, os estudantes do Colégio Técnico da UFMG, Arthur Lara e Miguel Araújo, embarcaram para um intercâmbio na China. A oportunidade veio através da parceria nascida em 2013, entre o Coltec e o Instituto Confúcio da UFMG",
     "capa": "https://i.ytimg.com/vi/Je0VmlMsa5k/hqdefault.jpg?sqp=-oaymwErCNACELwBSFryq4qpAx0IARUAAIhCGAHYAQHiAQoIGBACGAY4AUABuAL3GA==&rs=AOn4CLCDzyj-IHpV_HAdcNE4e89STBsEaw",
-    "ordem": 3
+    "ordem": 3,
+    "destaque": false
   },
   {
     "nome": "Contagem regressiva: estudantes do Coltec embarcam para a China",
@@ -21,7 +23,8 @@
     "tipo": "REPORTAGEM",
     "briefing": "Acompanhados de professora, Arthur Lara e Miguel Rodrigues farão curso de mandarim no país e visitarão laboratórios de robótica",
     "capa": "https://www.ufmg.br//app/uploads/2026/06/55326062670_46ea1d66d5_k-864x445.jpg",
-    "ordem": 4
+    "ordem": 4,
+    "destaque": false
   },
   {
     "nome": "Alunos da UFMG vão para China com tudo pago em intercâmbio de mandarim e robótica",
@@ -29,6 +32,7 @@
     "tipo": "REPORTAGEM",
     "briefing": "Viagem de 15 dias inclui atividades em Wuhan e Pequim, com aulas de idioma, imersão cultural e visitas a laboratórios de tecnologia de ponta; programa é financiado pelo Instituto Confúcio",
     "capa": "https://paranaibamais.com.br/wp-content/uploads/2026/06/Alunos-da-UFMG-1.jpg",
-    "ordem": 5
+    "ordem": 5,
+    "destaque": false
   }
 ]
