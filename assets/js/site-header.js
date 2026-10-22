@@ -93,7 +93,7 @@
         </div>
 
         <div class="nav-item">
-          <a class="nav-link" href="em-construcao.html">Eventos de Formação Docente</a>
+          <a class="nav-link" href="eventos-formacao-docente.html">Eventos de Formação Docente</a>
         </div>
 
         <div class="nav-item">
@@ -172,7 +172,7 @@
         </div>
       </details>
 
-      <a class="mobile-link" href="em-construcao.html">Eventos de Formação Docente</a>
+      <a class="mobile-link" href="eventos-formacao-docente.html">Eventos de Formação Docente</a>
 
       <a class="mobile-link" href="equipe.html">Quem somos</a>
       <a class="mobile-link" href="em-construcao.html">Sobre o projeto</a>
