@@ -1,45 +1,191 @@
-.events-page .awards-eyebrow { color: #825b00; }
-.events-page .awards-hero .awards-eyebrow { color: #704400; }
-.event { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(32px, 5vw, 72px); align-items: start; padding-block: 70px; border-top: 1px solid #e8d9af; scroll-margin-top: 24px; }
-.event h2 { font-size: clamp(28px, 3.3vw, 44px); line-height: 1.12; letter-spacing: -.03em; overflow-wrap: anywhere; }
-.event-copy > p:not(.awards-eyebrow) { margin-top: 24px; color: #66563e; line-height: 1.75; }
-.event-copy .event-note { font-size: 13px; }
-.event-meta { display: grid; gap: 14px; padding-block: 24px; margin-top: 24px; border-block: 1px solid #e8d9af; }
-.event-meta dt { color: #825b00; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
-.event-meta dd { margin-top: 4px; font-size: 16px; }
-.event-materials { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: start; }
-.event-materials--single { grid-template-columns: minmax(0, 1fr); max-width: 420px; margin-inline: auto; }
-.event-poster { display: block; min-width: 0; color: #5b2f00; background: #fff1bc; text-decoration: none; border: 1px solid #e8d9af; box-shadow: 0 12px 30px #5b2f000d; }
-.event-poster img { width: 100%; height: auto; }
-.event-poster span { display: flex; justify-content: space-between; gap: 12px; padding: 14px; font-size: 12px; font-weight: 700; }
-.event-poster:hover span { background: #ffe58a; }
-.events-page a:focus-visible, .events-skip:focus-visible { outline: 3px solid #825b00; outline-offset: 5px; }
-.events-skip { position: absolute; left: 16px; top: -100px; padding: 12px 20px; background: white; z-index: 200; }
-.events-skip:focus { top: 12px; }
-@media(max-width: 800px) { .event { grid-template-columns: 1fr; padding-block: 44px; } .event-materials { max-width: 660px; width: 100%; } .event-materials--single { max-width: 420px; } }
-@media(max-width: 480px) { .event-materials { grid-template-columns: 1fr; } .event-poster { max-width: 420px; } }
-@media(prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+.events-page {
+  background: #fffaf0;
+  color: #17120a;
+}
 
-.events-page { background: #fffaf0; color: #17120a; }
-.events-list { padding-top: 18px; }
-.event:first-child { border-top: 0; }
-.event-year { display: inline-block; margin-left: 8px; padding: 4px 9px; color: #5b2f00; background: #ffe58a; border-radius: 4px; letter-spacing: .04em; }
+.events-page .awards-hero {
+  min-height: 390px;
+  color: #5b2f00;
+  background: linear-gradient(120deg, #ffdf5b, #ffd11a 65%, #efbd12);
+}
 
-/* Abertura ampla em amarelo, sem ornamentos. */
-.events-page .awards-hero { color: #5b2f00; background: linear-gradient(120deg, #ffdb48 0%, #ffd11a 60%, #efbd12 100%); }
-.events-page .awards-hero::before { content: none; }
-.events-page .awards-hero__content > p:not(.awards-eyebrow) { color: #63430b; }
-.events-page .awards-scroll { color: #5b2f00; }
+.events-page .awards-hero::before {
+  content: "";
+  opacity: .12;
+  background-image: repeating-linear-gradient(135deg, transparent 0 28px, #8b5900 28px 29px);
+  mask-image: linear-gradient(90deg, transparent 45%, #000);
+}
 
-/* O título mais longo precisa de largura e escala próprias para evitar uma terceira linha. */
+.events-page .awards-hero__content {
+  padding-block: clamp(50px, 6vw, 80px);
+}
+
+.events-page .awards-hero .awards-eyebrow {
+  display: inline-block;
+  padding: 8px 13px;
+  color: #704400;
+  border: 1px solid #9b6b004d;
+  border-radius: 4px;
+}
+
 .events-page .awards-hero h1 {
   max-width: 1000px;
   font-size: clamp(38px, 6vw, 80px);
-  line-height: 1;
+  line-height: 1.08;
+}
+
+.events-title-accent {
+  text-decoration: underline;
+  text-decoration-color: #fff4b0;
+  text-decoration-thickness: .08em;
+  text-underline-offset: .1em;
+}
+
+.events-page .awards-hero__content > p:not(.awards-eyebrow) {
+  margin-top: 26px;
+  color: #63430b;
+  font-size: 18px;
+}
+
+.events-page .awards-scroll,
+.events-page .awards-scroll span {
+  color: #5b2f00;
+}
+
+.events-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 34px 24px;
+  padding-block: 48px 64px;
+  align-items: start;
+}
+
+.event-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e8d9af;
+  border-radius: 8px;
+  background: #fffdf7;
+  scroll-margin-top: 24px;
+}
+
+.event-poster {
+  display: block;
+  color: #5b2f00;
+  background: #fff1bc;
+  text-decoration: none;
+}
+
+.event-poster img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  background: #f5eedb;
+}
+
+.event-poster > span {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 11px 16px;
+  border-block: 1px solid #e8d9af;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.event-poster:hover > span {
+  background: #ffe58a;
+}
+
+.event-card__copy {
+  padding: 18px;
+}
+
+.event-card__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #825b00;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.event-year {
+  flex-shrink: 0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #ffe58a;
+  color: #5b2f00;
+}
+
+.event-card h2 {
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: -.02em;
+  overflow-wrap: anywhere;
+}
+
+.event-card__date {
+  margin-top: 12px;
+  color: #825b00;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.event-card__summary {
+  margin-top: 10px;
+  color: #66563e;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.events-page a:focus-visible,
+.events-skip:focus-visible {
+  outline: 3px solid #825b00;
+  outline-offset: 4px;
+}
+
+.events-skip {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 200;
+  padding: 12px 20px;
+  background: #fff;
+}
+
+.events-skip:focus {
+  top: 12px;
+}
+
+@media (max-width: 950px) {
+  .events-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 600px) {
   .events-page .awards-hero h1 {
     font-size: clamp(30px, 8.5vw, 48px);
+  }
+
+  .events-page .awards-hero {
+    min-height: 350px;
+  }
+
+  .events-list {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-block: 32px 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
