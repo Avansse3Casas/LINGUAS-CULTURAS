@@ -4,7 +4,7 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Dois personagens sorrindo nas cores bege, branca e preta, sendo um amarrado com linhas pretas em um relógio de cor preta, branca e vermelha e outro em cima de uma escada nas cores pretas e brancas. No plano de fundo se destacam as cores cinza e branca e um chão na cor marrom escuro.",
     "imagem": "assets/obras2025/Samuel Queiroz Silva Molinari Alves_102.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista2025/102/Samuel-Molinari-102.m4a"
   },
   {
     "autor": "Gabriel Moreira",
@@ -221,7 +221,7 @@ const yoArtistaObras = [
     "turma": "106",
     "descricao": "Personagem em destaque com cabelo preto e pele azul clara, vermelha e branca. Roupa nas cores cinza claro, vermelha e verde água. Fundo em quadrados nas cores vermelhas e azul escuro.",
     "imagem": "assets/obras2025/Pedro Guilherme Pereira Morais_106.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista2025/106/Pedro-Guilherme-Pereira-106.m4a"
   },
   {
     "autor": "Juan Enzo Paranhos Chambi",
@@ -256,7 +256,7 @@ const yoArtistaObras = [
     "turma": "106",
     "descricao": "Cena de um casal, mulher de pele clara, cabelos escuro e vestido e chapéu amarelo e homem de pele clara, cabelos escuro e roupa preta, em um jantar em uma mesa cinza com bebidas e comidas. Em um fundo de paredes cinzas e chão e teto de flores rosas e vermelhas.",
     "imagem": "assets/obras2025/Isabel santos Colen Mendes e Lucas Almeida Azevedo_106.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista2025/106/Lucas-e-Isabel-106.mp3"
   },
   {
     "autor": "Perí Machado de Azevedo",
@@ -319,7 +319,7 @@ const yoArtistaObras = [
     "turma": "106",
     "descricao": "Fundo de cor preta e destaque nas cores cinza claro e branco com pinceladas de forma aleatórias em branco.",
     "imagem": "assets/obras2025/Isaac Machado Demetrio de Morais e Isaac Gomes dos Santos_106.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista2025/106/Isaac-Machado-e-Isaac-Gomes-106.mp4"
   },
   {
     "autor": "Isabela de Oliveira Gomes",
@@ -333,7 +333,7 @@ const yoArtistaObras = [
     "turma": "106",
     "descricao": "Em destaque um hexágono com várias caricaturas e desenhos dentro nas cores vermelha, amarelo, rosa, azul, cinza, laranja, branco e preto, em um fundo xadrez.",
     "imagem": "assets/obras2025/henrique dos Santos Cardoso_106.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista2025/106/Henrique-106.mp4"
   },
   {
     "autor": "Larissa Vitória de Almeida",
@@ -361,14 +361,14 @@ const yoArtistaObras = [
     "turma": "106",
     "descricao": "Gato tricolor, nas cores laranja, branco e preto com olhos amarelos.",
     "imagem": "assets/obras2025/Suzane Pechir Lauar Vitorino_106.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista2025/106/Suzane-106.m4a"
   },
   {
     "autor": "Ana Clara Costa, Andressa Oliveira e Bernardo Daniel",
     "turma": "103",
     "descricao": "Robô na cor cinza com olhos azuis pintando um quadro na cor vermelha, preta e laranja. Em um fundo branco com moldura marrom.",
     "imagem": "assets/obras2025/Ana Clara Costa, Andressa Oliveira y Bernardo Daniel_103.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista2025/103/Ana-Clara-Andressa-Bernardo-103.mp3"
   },
   {
     "autor": "Júlia Roldão Barreto Batista",
@@ -396,21 +396,21 @@ const yoArtistaObras = [
     "turma": "106",
     "descricao": "Fundo: céu em tons de azul e branco. Em destaque um trilho de trem azul e branco com vários trens na cor marrom e soltando fumaças nas cor cinza.",
     "imagem": "assets/obras2025/Bernardo Makelle Almeida de Oliveira e Rafael Sousa Avansse de Oliveira_106.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista2025/106/Rafael-e-Bernardo-106.m4a"
   },
   {
     "autor": "Antônio Henrique e Miguel Henrique",
     "turma": "106",
     "descricao": "Vaca com corpo de um planeta semelhante á saturno e com pés de humanos. Em seu fundo uma galáxia nas cores azul, roxo, cinza e preto. com outros planetas em volta.",
     "imagem": "assets/obras2025/Antônio Henrique Viatlino Vaz e Miguel Henrique Pereira Abreu_106 .jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista2025/106/Antonio-e-Miguel-106.mp3"
   },
   {
     "autor": "Douglas Araújo Soza",
     "turma": "106",
     "descricao": "Fundo: barco na cor marrom e chão quadriculado em preto e branco. Cinco pessoas presentes na tela: um homem com chapéu de palha e listra vermelha com roupa verde claro e cinza e de chinelo, ao seu lado em cima um homem de roupas vermelhas, amarela e branca com chapéu vermelho, ao seu lado embaixo um “pirata”, chapéu preto, roupas de soldado em vermelho, marrom e amarelo, ao seu lado em cima um homem de óculos com roupas roxa e azul, calça preta e sapato cinza e por fim um homem em pé com roupa em tons de azul.",
     "imagem": "assets/obras2025/Douglas Araújo Soza_106.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista2025/106/Douglas-Araujo-106.m4a"
   },
   {
     "autor": "João Victor da Silva Barbosa",
@@ -473,14 +473,14 @@ const yoArtistaObras = [
     "turma": "101",
     "descricao": "Fundo na cor branca. Em destaque um animal veado, na cor preta, com um símbolo de alvo em cima.",
     "imagem": "assets/obras2025/Gabriela Ferreira Silva_101.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista2025/101/Gabriela-Ferreira-Silva-101.m4a"
   },
   {
     "autor": "Matheus Vitor e Felipe de Jesus",
     "turma": "105",
     "descricao": "Fundo: céu azul com nuvens e chão na cor verde com montanhas em marrom. Em destaque se encontra a torre de pisa em cinza.",
     "imagem": "assets/obras2025/Matheus Vitor Paulino Leão e Felipe de Jesus Castro_105.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista2025/105/Matheus-e-Felipe-105.mp3"
   },
   {
     "autor": "Julia Leroy Kozen",
@@ -508,7 +508,7 @@ const yoArtistaObras = [
     "turma": "106",
     "descricao": "Personagem “Hornet” do jogo “Hollow Knight: Silksong”. Cabeça na cor branca e preta com roupa em tons de vermelho, com uma espada na cor cinza claro.",
     "imagem": "assets/obras2025/Diogo Silva Ventura e João Gabriel Tenorio Mendes_106.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista2025/106/Diogo-e-Joao-Gabriel-106.mp3"
   },
   {
     "autor": "Sophia Evelyn Costa Lage",
@@ -529,7 +529,7 @@ const yoArtistaObras = [
     "turma": "102",
     "descricao": "Fundo na cor preta. Em destaque flor com pétalas laranjas, miolo em formato de olho rosa com pupila rosa e caule n=em tons de branco e roxo com flores verdes.",
     "imagem": "assets/obras2025/Beatriz Teodora Santos Silvestre_102 .jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista2025/102/Beatriz-Teodora-102.m4a"
   },
   {
     "autor": "Beatriz da Rocha Castro Carvalho",
@@ -606,7 +606,7 @@ const yoArtistaObras = [
     "turma": "106",
     "descricao": "fundo: tons de vermelho em cima e azul embaixo com linhas pretas ao meio. Em destaque uma mulher de pele branca com cabelos ruivos avermelhados, sobrancelhas vermelhas, olhos em branco e boca em tom de vinho. Usa brincos amarelos, colar amarelo e blusa verde claro.",
     "imagem": "assets/obras2025/Valentina Vilela Bastos Diniz e Pedro Augusto Teles de Lima Paula_106.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista2025/106/Valentina-106.ogg"
   },
   {
     "autor": "Sofia da Costa Dias Ferreira",
@@ -627,14 +627,14 @@ const yoArtistaObras = [
     "turma": "106",
     "descricao": "Fundo dividido em oito partes coloridas em azul, rosa claro, rosa escuro, verde, vermelho, laranja, bege e azul escuro e claro. Em destaque existe um ampulheta em tons de azul e rosa.",
     "imagem": "assets/obras2025/Laisse Emanuele Carvalho Ferreira_106.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista2025/106/Laisse-Emanuele-106.m4a"
   },
   {
     "autor": "Carlos Alexandre Martins Queiroz e João Arthur Mendes Mario",
     "turma": "104",
     "descricao": "Fundo em cinza e azul com esquemas químicos e em destaque uma cientista, mulher de pele branca e cabelo castanho preso em um coque, fazendo experimentos em uma mesa marrom.",
     "imagem": "assets/obras2025/Carlos Alexandre Martins Queiroz e João Arthur Mendes Mario_104.jpg",
-    "audio": ""
+    "audio": "assets/audios-yoartista2025/104/João-Arthur-e-Carlos-Alexandre-104.m4a"
   },
   {
     "autor": "Leticia de Souza Costa",
