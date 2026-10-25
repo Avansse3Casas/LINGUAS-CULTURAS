@@ -97,11 +97,17 @@
         </div>
 
         <div class="nav-item">
-          <a class="nav-link" href="equipe.html">Quem somos</a>
+          <a class="nav-link" href="equipe.html">Projeto e equipe</a>
         </div>
 
         <div class="nav-item">
-          <a class="nav-link" href="em-construcao.html">Sobre o projeto</a>
+          <a class="nav-link" href="https://www.instagram.com/espanholcoltec/" target="_blank" rel="noopener noreferrer" aria-label="Instagram do projeto Línguas-Culturas" title="Instagram">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="17.5" cy="6.7" r="1.1" fill="currentColor"/>
+            </svg>
+          </a>
         </div>
 
       </nav>
@@ -174,8 +180,15 @@
 
       <a class="mobile-link" href="eventos-formacao-docente.html">Eventos de Formação Docente</a>
 
-      <a class="mobile-link" href="equipe.html">Quem somos</a>
-      <a class="mobile-link" href="em-construcao.html">Sobre o projeto</a>
+      <a class="mobile-link" href="equipe.html">Projeto e equipe</a>
+      <a class="mobile-link" href="https://www.instagram.com/espanholcoltec/" target="_blank" rel="noopener noreferrer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
+          <circle cx="17.5" cy="6.7" r="1.1" fill="currentColor"/>
+        </svg>
+        Instagram
+      </a>
 
     </div>
   </header>

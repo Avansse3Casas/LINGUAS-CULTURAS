@@ -14,7 +14,7 @@
 .idioma-banner-placeholder { z-index: -2; }
 
 .info-icone-texto,
-.info-icone-placeholder {
+.info-icone-vetor {
   display: grid;
   place-items: center;
   aspect-ratio: 1;
@@ -27,13 +27,29 @@
   line-height: 1;
 }
 
-.info-icone-placeholder {
-  padding: 10px;
-  border: 2px dashed color-mix(in srgb, var(--accent, #355d8c) 55%, white);
-  font-size: clamp(10px, 1vw, 13px);
-  line-height: 1.15;
+.info-icone-vetor {
+  padding: clamp(13px, 2vw, 22px);
+  color: #000;
+  background: transparent;
+}
+
+.info-icone-vetor svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Os títulos textuais precisam de menos destaque que os contadores numéricos. */
+body[data-idioma] .curiosidades .info h3:not(.numero) {
+  max-width: 100%;
+  font-size: clamp(24px, 2.15vw, 36px);
+  line-height: 1.08;
   text-align: center;
-  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+body[data-idioma] .curiosidades .info h3.numero {
+  font-size: clamp(30px, 2.7vw, 44px);
+  line-height: 1;
 }
 
 .descricao .presImg .idioma-placeholder-foto {
@@ -78,6 +94,80 @@
 .projeto-destaque div { padding: clamp(24px, 4vw, 48px); align-self: center; }
 .projeto-destaque p { color: rgba(255,255,255,.84); font-size: 18px; line-height: 1.55; }
 .projeto-destaque h2 { margin: 0; font-size: clamp(30px, 4vw, 48px); }
+
+.prefacio-livro {
+  position: relative;
+  display: grid;
+  grid-template-columns: clamp(72px, 10vw, 132px) minmax(0, 1fr);
+  gap: clamp(18px, 4vw, 48px);
+  width: min(1180px, 94vw);
+  margin: clamp(48px, 7vw, 84px) auto 0;
+  padding: clamp(28px, 5vw, 64px);
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--accent, #355d8c) 20%, white);
+  border-radius: 26px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--accent, #355d8c) 9%, white), #fff 58%);
+  box-shadow: 0 18px 46px rgba(30, 24, 18, .08);
+}
+
+.prefacio-marca {
+  color: var(--accent, #355d8c);
+  font-family: Georgia, serif;
+  font-size: clamp(92px, 13vw, 170px);
+  line-height: .72;
+  text-align: center;
+  opacity: .9;
+}
+
+.prefacio-conteudo { max-width: 850px; }
+
+.prefacio-kicker {
+  margin: 0 0 8px;
+  color: var(--accent, #355d8c);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.prefacio-conteudo h2 {
+  margin: 0;
+  font-size: clamp(30px, 4.4vw, 54px);
+  line-height: 1.03;
+  letter-spacing: -.035em;
+}
+
+.prefacio-conteudo blockquote {
+  margin: clamp(22px, 3vw, 34px) 0 18px;
+  padding-left: clamp(18px, 3vw, 30px);
+  border-left: 4px solid var(--accent, #355d8c);
+}
+
+.prefacio-conteudo blockquote p {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: clamp(21px, 2.6vw, 31px);
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.prefacio-contexto {
+  margin: 0;
+  color: #57514b;
+  font-size: clamp(16px, 1.7vw, 19px);
+  line-height: 1.65;
+}
+
+.prefacio-autoria {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 24px 0 0;
+  color: #28231f;
+}
+
+.prefacio-autoria span { color: #6d655f; font-size: 14px; }
 
 /* A página de Mandarim prioriza registros audiovisuais no lugar de materiais didáticos. */
 body[data-idioma="mandarim"] .banner .imgBanner {
@@ -215,8 +305,26 @@ body[data-idioma="italiano"] .banner .imgBanner {
 }
 
 body[data-idioma="latim"] .banner .imgBanner {
-  object-position: center 65%;
+  object-position: center 42%;
 }
+
+body[data-idioma="latim"] .cta-card {
+  background:
+    linear-gradient(120deg, rgba(255,255,255,.95) 0%, rgba(255,245,241,.78) 62%, rgba(255,245,241,.6) 100%),
+    url("../fotos-latim/IMG_4095.webp") center 44% / cover;
+}
+
+body[data-idioma="grego"] .banner .imgBanner { object-position: center 48%; }
+
+body[data-idioma="grego"] .cta-card {
+  background:
+    linear-gradient(120deg, rgba(255,255,255,.95) 0%, rgba(238,248,255,.78) 62%, rgba(238,248,255,.6) 100%),
+    url("../fotos-grego/IMG-20240709-WA0002.webp") center 45% / cover;
+}
+
+body[data-idioma="grego"] .galeria .foto-grande img { object-position: center 40%; }
+body[data-idioma="grego"] .galeria .galeria-coluna .foto:nth-child(2) img { object-position: center 68%; }
+body[data-idioma="grego"] .galeria .foto-vertical img { object-position: center 35%; }
 
 body[data-idioma="japones"] .banner .imgBanner {
   object-position: center 50%;
@@ -230,9 +338,30 @@ body[data-idioma="japones"] .banner .imgBanner {
   .video-card,
   .video-card:nth-child(2),
   .video-card--destaque { grid-column: auto; }
+  .prefacio-livro {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 28px 22px 32px;
+  }
+  .prefacio-marca {
+    height: 48px;
+    font-size: 100px;
+    line-height: .8;
+    text-align: left;
+  }
   body[data-idioma="mandarim"] .cta-card {
     background:
       linear-gradient(135deg, rgba(255,255,255,.94), rgba(255,248,232,.75)),
       url("../fotos-mandarim/mandarim7.jpeg") center / cover;
+  }
+  body[data-idioma="latim"] .cta-card {
+    background:
+      linear-gradient(135deg, rgba(255,255,255,.96), rgba(255,245,241,.78)),
+      url("../fotos-latim/IMG_4095.webp") center / cover;
+  }
+  body[data-idioma="grego"] .cta-card {
+    background:
+      linear-gradient(135deg, rgba(255,255,255,.96), rgba(238,248,255,.78)),
+      url("../fotos-grego/IMG-20240709-WA0002.webp") center / cover;
   }
 }
